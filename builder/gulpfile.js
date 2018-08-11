@@ -11,6 +11,7 @@ var fs = require('fs');
 const imagemin = require('gulp-imagemin');
 const imageminGuetzli = require('imagemin-guetzli');
 const pngquant = require('gulp-pngquant');
+const ghPages = require('gulp-gh-pages');
 
 
 
@@ -153,16 +154,41 @@ class Router {
 	}
 }
 
-gulp.task('init', function() {
+gulp.task('init', () => {
 	let bs = Bootstrapper.create();
 	console.log(bs.router);
 });
 
-gulp.task('default', ['develop'], function() {
-	// "__build" folder should be created manually
+
+gulp.task('watch', (cb) => {
+
+	let bs = Bootstrapper.create();
+	// console.log(bs.router);
+
+	watch(`${bs.router.srcMarkupPath}/**/*.py.pug`, (changedFile) => {
+		console.log(`Changed: ${changedFile.path}`);
+		compilePages(`${bs.router.srcMarkupPath}/*.py.pug`, bs.router.buildPath);
+	});
+
+	let globSrcStyles = `${bs.router.srcMarkupPath}/*.styl`;
+	watch(globSrcStyles, (changedFile) => {
+		console.log(`Changed: ${changedFile.path}`);
+		compileStyles(changedFile.path, bs.router.dstStylesPath)
+	});
+
+	cb();
+	
+	//	let base = bs.router.srcAssetsPath;
+	//	watch(`${bs.router.srcAssetsPath}/**/*`, (changedFile) => {
+	//		// let relativePath = io.getRelativePath(changedFile.path, bs.router.srcAssetsPath);
+	//		console.log(`Changed: ${changedFile.path}`);
+	//		io.copy(changedFile.path, bs.router.srcAssetsPath, bs.router.dstAssetsPath);
+	//	});
+	
 });
 
-gulp.task('develop', ['watch'], function() {
+
+gulp.task('develop', gulp.parallel('watch', () => {
 
 	let bs = Bootstrapper.create();
 	console.log(bs.router);
@@ -179,10 +205,12 @@ gulp.task('develop', ['watch'], function() {
 	            enable: true,
 	            path: bs.router.buildPath
 	        }
-		})
-	);
-});
+		}));
+}));
 
+gulp.task('default', gulp.series('develop', () => {
+	// "__build" folder should be created manually
+}));
 
 function compilePages(glob, dest) {
 	gulp.src(glob)
@@ -201,31 +229,7 @@ function compileStyles(glob, dest) {
 		.pipe(gulp.dest(dest));
 }
 
-gulp.task('watch', () => {
 
-	let bs = Bootstrapper.create();
-	// console.log(bs.router);
-
-	watch(`${bs.router.srcMarkupPath}/**/*.py.pug`, (changedFile) => {
-		console.log(`Changed: ${changedFile.path}`);
-		compilePages(`${bs.router.srcMarkupPath}/*.py.pug`, bs.router.buildPath);
-	});
-
-	let globSrcStyles = `${bs.router.srcMarkupPath}/*.styl`;
-	watch(globSrcStyles, (changedFile) => {
-		console.log(`Changed: ${changedFile.path}`);
-		compileStyles(changedFile.path, bs.router.dstStylesPath)
-	});
-
-	
-	//	let base = bs.router.srcAssetsPath;
-	//	watch(`${bs.router.srcAssetsPath}/**/*`, (changedFile) => {
-	//		// let relativePath = io.getRelativePath(changedFile.path, bs.router.srcAssetsPath);
-	//		console.log(`Changed: ${changedFile.path}`);
-	//		io.copy(changedFile.path, bs.router.srcAssetsPath, bs.router.dstAssetsPath);
-	//	});
-	
-});
 
 
 
@@ -291,3 +295,8 @@ gulp.task('bootstrap', () => {
 	    .pipe(sass().on('error', sass.logError))
 	    .pipe(gulp.dest(bs.router.dstStylesPath));
 });
+
+// gulp.task('deploy', () => {
+//   return gulp.src('./../htdocs/**/*')
+//     .pipe(ghPages());
+// });
