@@ -7,10 +7,46 @@
     <!-- Bootstrap CSS-->
     <!--link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')-->
     <link rel="stylesheet" href="assets/css/bootstrap-vpl.css">
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>VPL</title>
   </head>
-  <body>
-    <h1>Hello, world!</h1>
+  <body class="pt-4">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-md navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand d-block d-md-none" href="/"><img src="assets/images/logo-base.svg" alt="Logo" width="43" height="34"></a>
+        <div class="collapse navbar-collapse align-items-end flex-wrap" id="navbarCollapse">
+          <div class="navbar-nav flex-shrink-0"><a class="navbar-item nav-link active" href="#">Fenster</a>
+            <div class="navbar-item dropdown"><a class="nav-link dropdown-toggle" id="navbar-dropdown" href="#" role="button" data-toggle="dropdown">Türen</a>
+              <div class="dropdown-menu"><a class="dropdown-item" href="#">PCV-Tür</a><a class="dropdown-item" href="#">Aliminium-Tür</a><a class="dropdown-item" href="#">Holztür</a><a class="dropdown-item" href="#">Zubehör zur Tür</a></div>
+            </div><a class="navbar-item nav-link" href="#">Schiebefenster</a><a class="navbar-item nav-link" href="#">Rollläden</a><a class="navbar-item nav-link" href="#">Design</a>
+          </div><a class="navbar-brand pb-0 text-center d-none d-md-block" href="/"><img src="assets/images/logo.svg" alt="Logo" width="50" height="70"></a>
+          <div class="navbar-nav font-weight-bold flex-shrink-1 d-flex justify-content-lg-end"><a class="navbar-item nav-link" href="#">Partner</a><a class="navbar-item nav-link" href="#">Kontakt</a><a class="navbar-item nav-link py-0 d-flex align-items-center" href="#"><img src="assets/images/logo-fb.svg" width="24" height="24"></a></div>
+        </div>
+      </nav>
+    </div>
+    <div class="carousel slide mt-3" id="carouselMain" data-ride="carousel_disabled" data-interval="0">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img class="d-block w-100" src="assets/images/carousel-main/01.jpg" alt="First slide">
+          <div class="carousel-caption d-flex align-items-center">
+            <div class="row">
+              <div class="col-9 col-lg-8 mx-auto">
+                <p class="lead">VPL uses Schüco-brand top-quality thermally isolated aluminium profile systems for its windows and doors. The high-quality window and door elements impress with their elegant details in a slimline, beautiful look.</p>
+                <p class="phone my-5">+88 159 85 9253</p>
+                <button class="btn btn-lg btn-outline-dark px-5 py-4" type="button">Обратный звонок</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item"><img class="d-block w-100" src="assets/images/carousel-main/02.jpg" alt="Second slide">
+          <div class="carousel-caption d-flex align-items-center justify-content-center">
+            <div class="jumbotron w-75" style="background-color: rgba(255, 255, 255, .75);">
+              <h2 class="display-4">Some other lead</h2>
+              <p class="lead">List key advantages of your product here</p>
+            </div>
+          </div>
+        </div>
+      </div><a class="carousel-control-prev" href="#carouselMain" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselMain" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a>
+    </div>
     <!-- Optional JavaScript-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

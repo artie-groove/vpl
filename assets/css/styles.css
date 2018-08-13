@@ -1,0 +1,76 @@
+.container-fluid {
+  max-width: 1510px;
+}
+body {
+  min-width: 540px;
+}
+.navbar-nav {
+  line-height: 1.95rem;
+}
+.navbar-nav .navbar-item.nav-link:first-child {
+  padding-left: 0;
+}
+.navbar-nav .navbar-item.nav-link:last-child {
+  padding-right: 0;
+}
+.nav-link {
+  color: #000 !important;
+}
+.navbar-collapse > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.navbar-collapse .navbar-brand {
+  margin-right: 0;
+  min-width: 250px;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.dropdown.show a.nav-link {
+  color: #fff !important;
+  position: relative;
+  z-index: 1005;
+  font-weight: 600;
+}
+.dropdown-menu {
+  background-color: #000;
+}
+.dropdown-menu .dropdown-item {
+  color: #fff;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #000;
+  text-decoration: underline;
+}
+#carouselMain .carousel-caption {
+  top: 0;
+  bottom: 0;
+  color: #000;
+  font-size: 1.2rem;
+}
+#carouselMain .carousel-caption .lead {
+  font-weight: 400;
+}
+#carouselMain .carousel-caption button {
+  font-size: 1.9rem;
+  color: #000;
+}
+#carouselMain .carousel-caption button:hover {
+  color: #fff;
+}
+#carouselMain .carousel-caption .phone {
+  font-size: 2.25rem;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 97px;
+  height: 192px;
+}
+.carousel-control-prev-icon {
+  background-image: url("../images/carousel-arrow-prev.svg");
+}
+.carousel-control-next-icon {
+  background-image: url("../images/carousel-arrow-next.svg");
+}
