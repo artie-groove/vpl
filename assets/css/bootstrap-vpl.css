@@ -6315,15 +6315,18 @@ a.text-dark:hover, a.text-dark:focus {
 html {
   font-size: 12.8px; }
 
-@media (max-width: 767.98px) {
+@media (max-width: 575.98px) {
   html {
-    font-size: 9px; }
+    font-size: 11px; }
   .dropdown.show {
     background-color: #000;
     left: -1rem;
     padding-left: 1rem; }
   .dropdown-menu {
-    padding-top: 0; } }
+    padding-top: 0; }
+  .carousel-item .w-100 {
+    max-width: 200%;
+    width: auto !important; } }
 
 @media (min-width: 768px) {
   .dropdown-menu {
