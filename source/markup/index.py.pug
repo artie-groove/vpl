@@ -1,90 +1,63 @@
-doctype html
-html(lang='en')
-	head
-		// Required meta tags
-		meta(charset='utf-8')
-		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-		// Bootstrap CSS
-		//link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
-		link(rel='stylesheet', href='assets/css/bootstrap-vpl.css')
-		link(rel='stylesheet', href='assets/css/styles.css')
-		title VPL
-	body.pt-4
-		.container-fluid
-			nav.navbar.navbar-expand-md.navbar-light
-				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse')
-					span.navbar-toggler-icon
-				a.navbar-brand.d-block.d-md-none(href='/')
-					img(src='assets/images/logo-base.svg', alt='Logo', width='43', height='34')
-				div.collapse.navbar-collapse#navbarCollapse.align-items-end.flex-wrap
-					.navbar-nav.flex-shrink-0
-						a.navbar-item.nav-link.active(href='#')
-							| Fenster
-						.navbar-item.dropdown
-							a.nav-link.dropdown-toggle#navbar-dropdown(href='#', role='button', data-toggle='dropdown')
-								| Türen
-							.dropdown-menu
-								a.dropdown-item(href='#')
-									| PCV-Tür
-								a.dropdown-item(href='#')
-									| Aliminium-Tür
-								a.dropdown-item(href='#')
-									| Holztür
-								a.dropdown-item(href='#')
-									| Zubehör zur Tür
-						a.navbar-item.nav-link(href='#')
-							| Schiebefenster
-						a.navbar-item.nav-link(href='#')
-							| Rollläden
-						a.navbar-item.nav-link(href='#')
-							| Design
+extends ../templates/main.tpl.py.pug
+	
+block content
+	.py-3
+	include ../templates/includes/carousel-main.py.pug
+	.container.my-5
+		.row.my-5.align-items-stretch
+			.col-md-6.col-lg-4
+				.card.product-showcase(style='background-color: #f4f6b5')
+					img(src='assets/images/products/mb-45.png', width='134', height='232', alt='MB-45')
+					.card-body
+						h5.card-title MB-45
+						.card-text
+							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+			.col-md-6.col-lg-4
+				img.img-fluid(src='assets/images/main/mb-45-installed.jpg', alt='MB-45 installed')
+			.col-12.col-lg-4
+				.card.product-description.justify-content-center
+					.card-body
+						h5.card-title Minimalism
+						.card-text.columns-md-2
+							p The elegant, clean-cut flat roof is a perfect fit for the minimalist architecture of contemporary living concepts. On request, the flat roof can be combined with a glass dome or an inset glass flat roof to let in even more light.
+							p The VPL® thus achieves outstanding energy values at the passive house level. Along with low energy use, this also provides a pleasant living atmosphere at all times of the year.
 
+		.py-5.d-none.d-lg-block
+		.card.product-showcase.my-5(style='background-color: #e4d4ff')
+			img(src='assets/images/products/pcv-tur.png', width='164', height='265' alt='PCV-Tur')
+			.card-body
+				h5.card-title PCV-Tür
+				.card-text
+					.row
+						.col-md-6.mx-auto
+							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
 
-					a.navbar-brand.pb-0.text-center.d-none.d-md-block(href='/')
-						img(src='assets/images/logo.svg', alt='Logo', width='50', height='70')
-					
+		.py-5.d-none.d-lg-block
+		.row.my-5
+			.col-12.col-lg-4
+				.card.product-description
+					.card-body
+						h5.card-title Zusätze
+						.card-text.pb-2.columns-md-2
+							p Ein wesentlicher Bestandteil der Alufenster, der Funktionalität und Ästhetik beeinflusst, sind zweifellos Zusätze.
+							p Wir bieten ein breites Spektrum von Zusätzen, u. a. Fenstergriffe, Handgriffe, Oberlichtschließer an.
+			.col-md-6.col-lg-4
+				.card.product-description
+					img.card-img-top(src='assets/images/main/description-01.jpg', alt='Descrption 1')
+					h5.card-title lackierte Fenstergriffe
+					.card-text Um die Optik des Fensters noch vorteilhafter erscheinen zu lassen, bieten wir Ihnen lackierte Fenstergriffe an. 
+			.col-md-6.col-lg-4
+				.card.product-description
+					img.card-img-top(src='assets/images/main/description-02.jpg', alt='Descrption 2')
+					h5.card-title Verbund-Sicherheitsglas
+					.card-text Die sichere Benutzung wird durch Verbund-Sicherheitsglas (VSG) gewährleistet.
+		.py-5.d-none.d-lg-block
 
-					.navbar-nav.font-weight-bold.flex-shrink-1.d-flex.justify-content-lg-end
-						a.navbar-item.nav-link(href='#')
-							| Partner
-						a.navbar-item.nav-link(href='#')
-							| Kontakt
-						a.navbar-item.nav-link.py-0.d-flex.align-items-center(href='#')
-							img(src='assets/images/logo-fb.svg', width='24', height='24')
-
-		#carouselMain.carousel.slide.mt-3(data-ride='carousel_disabled', data-interval='0')
-			.carousel-inner
-				.carousel-item.active
-					img.d-block.w-100(src='assets/images/carousel-main/01.jpg', alt='First slide')
-					.carousel-caption.d-flex.align-items-center
-						.row
-							.col-9.col-lg-8.mx-auto
-								p.lead
-									| VPL uses Schüco-brand top-quality thermally isolated aluminium profile systems for its windows and doors. The high-quality window and door elements impress with their elegant details in a slimline, beautiful look.
-								p.phone.my-5
-									| +88 159 85 9253
-								button.btn.btn-lg.btn-outline-dark.px-5.py-4(type='button')
-									| Обратный звонок
-				.carousel-item
-					img.d-block.w-100(src='assets/images/carousel-main/02.jpg', alt='Second slide')
-					.carousel-caption.d-flex.align-items-center.justify-content-center
-						.jumbotron.w-75(style='background-color: rgba(255, 255, 255, .75)')
-							h2.display-4
-								| Some other lead
-							p.lead
-								| List key advantages of your product here
-			a.carousel-control-prev(href='#carouselMain', role='button', data-slide='prev')
-				span.carousel-control-prev-icon(aria-hidden='true')
-				span.sr-only Previous
-			a.carousel-control-next(href='#carouselMain', role='button', data-slide='next')
-				span.carousel-control-next-icon(aria-hidden='true')
-				span.sr-only Next
+		
 
 
 
 
-		// Optional JavaScript
-		// jQuery first, then Popper.js, then Bootstrap JS
-		script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
-		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
-		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+
+
+		

@@ -1,0 +1,27 @@
+#carouselMain.carousel.slide.my-5(data-ride='carousel_disabled', data-interval='0')
+	.carousel-inner
+		.carousel-item.active
+			img.d-block.w-100(src='assets/images/carousel-main/01.jpg', alt='First slide')
+			.carousel-caption.d-flex.align-items-center
+				.row
+					.col-sm-10.col-md-9.col-lg-8.mx-auto
+						p.lead.mb-0
+							| VPL uses Schüco-brand top-quality thermally isolated aluminium profile systems for its windows and doors. The high-quality window and door elements impress with their elegant details in a slimline, beautiful look.
+						p.phone.my-md-5.my-1
+							| +88 159 85 9253
+						button.btn.btn-lg.btn-outline-dark.px-md-5.py-md-4.px-3.py-2(type='button')
+							| Обратный звонок
+		.carousel-item
+			img.d-block.w-100(src='assets/images/carousel-main/02.jpg', alt='Second slide')
+			.carousel-caption.d-flex.align-items-center.justify-content-center
+				.jumbotron.w-75(style='background-color: rgba(255, 255, 255, .75)')
+					h2.display-4
+						| Some other lead
+					p.lead
+						| List key advantages of your product here
+	a.carousel-control-prev(href='#carouselMain', role='button', data-slide='prev')
+		span.carousel-control-prev-icon(aria-hidden='true')
+		span.sr-only Previous
+	a.carousel-control-next(href='#carouselMain', role='button', data-slide='next')
+		span.carousel-control-next-icon(aria-hidden='true')
+		span.sr-only Next

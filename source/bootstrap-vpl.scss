@@ -10,23 +10,24 @@ $grid-breakpoints: (
   // Large screen / desktop
   lg: 992px,
   // Extra large screen / wide desktop
-  xl: 1200px
+  xl: 1536px
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1445px
 );
 
 $font-size-base: 1rem;
 $navbar-nav-link-padding-x: 1.9rem;
 $dropdown-item-padding-x: $navbar-nav-link-padding-x;
+$dark: #000;
 
 $border-radius:      0;          
 $border-radius-lg:   0;         
-$border-radius-sm:   0;         
+$border-radius-sm:   0;     
 
 // Bootstrap and its default variables
 @import "../builder/node_modules/bootstrap/scss/bootstrap";
@@ -35,9 +36,9 @@ html {
 	font-size: 12.8px;
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(xs) {
   html {
-    font-size: 9px;
+    font-size: 11px;
   }
   .dropdown.show {
   	background-color: #000;
@@ -47,12 +48,26 @@ html {
   .dropdown-menu {
   	padding-top: 0;
   }
+  .carousel-item .w-100 {
+  	max-width: 200%;
+  	width: auto !important;
+  }
+}
+
+
+@include media-breakpoint-only(md) {
+	.nav-item::after {
+		display: none !important;
+	}
+	.columns-md-2 {
+		column-count: 2;
+	  }
 }
 
 @include media-breakpoint-up(md) {
   .dropdown-menu {
   	padding-top: 0;
-  	top: 0;
-	padding-top: 3rem;
+  	top: -1rem;
+	padding-top: 4rem;
   }
 }

@@ -165,7 +165,7 @@ gulp.task('watch', (cb) => {
 	let bs = Bootstrapper.create();
 	// console.log(bs.router);
 
-	watch(`${bs.router.srcMarkupPath}/**/*.py.pug`, (changedFile) => {
+	watch(`${bs.router.srcMarkupPath}/*.py.pug`, (changedFile) => {
 		console.log(`Changed: ${changedFile.path}`);
 		compilePages(`${bs.router.srcMarkupPath}/*.py.pug`, bs.router.buildPath);
 	});

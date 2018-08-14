@@ -1,0 +1,41 @@
+.container.pt-4
+	nav.navbar.navbar-expand-md.navbar-light
+		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse')
+			span.navbar-toggler-icon
+		a.navbar-brand.d-block.d-md-none(href='/')
+			img(src='assets/images/logo-base.svg', alt='Logo', width='43', height='34')
+		div.collapse.navbar-collapse#navbarCollapse.align-items-end.flex-wrap
+			.navbar-nav.flex-shrink-0
+				a.navbar-item.nav-link.active(href='#')
+					| Fenster
+				.navbar-item.dropdown
+					a.nav-link.dropdown-toggle#navbar-dropdown(href='#', role='button', data-toggle='dropdown')
+						| Türen
+					.dropdown-menu
+						a.dropdown-item(href='#')
+							| PCV-Tür
+						a.dropdown-item(href='#')
+							| Aliminium-Tür
+						a.dropdown-item(href='#')
+							| Holztür
+						a.dropdown-item(href='#')
+							| Zubehör zur Tür
+				a.navbar-item.nav-link(href='#')
+					| Schiebefenster
+				a.navbar-item.nav-link(href='#')
+					| Rollläden
+				a.navbar-item.nav-link(href='#')
+					| Design
+
+
+			a.navbar-brand.pb-0.text-center.d-none.d-md-block(href='/')
+				img(src='assets/images/logo.svg', alt='Logo', width='50', height='70')
+			
+
+			.navbar-nav.font-weight-bold.flex-shrink-1.d-flex.justify-content-lg-end
+				a.navbar-item.nav-link(href='#')
+					| Partner
+				a.navbar-item.nav-link(href='#')
+					| Kontakt
+				a.navbar-item.nav-link.py-0.d-flex.align-items-center(href='#')
+					img(src='assets/images/logo-fb.svg', width='24', height='24')
