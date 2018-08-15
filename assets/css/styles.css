@@ -32,6 +32,7 @@ body {
 }
 .dropdown-menu {
   background-color: #000;
+  padding-bottom: 3rem;
 }
 .dropdown-menu .dropdown-item {
   color: #fff;
@@ -64,8 +65,8 @@ body {
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  width: 97px;
-  height: 192px;
+  width: 43%;
+  height: 32%;
 }
 .carousel-control-prev-icon {
   background-image: url("../images/carousel-arrow-prev.svg");
@@ -151,4 +152,32 @@ footer nav .nav-item .nav .nav-link {
 }
 .product-description .card-body {
   flex-grow: 0;
+}
+#callbackForm {
+  display: none;
+  font-size: 1.5rem;
+}
+#callbackForm .form-control {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+#callbackForm .btn {
+  padding-top: 2rem;
+  font-size: inherit;
+  background: none;
+  border: 2px solid #9a9a9a;
+  color: #9a9a9a;
+}
+#callbackForm .custom-control-label::before {
+  border: 1px solid #000;
+  top: 0.45rem;
+}
+#callbackForm .custom-control-label::after {
+  top: 0.45rem;
+}
+#callbackForm .link-close {
+  cursor: pointer;
+  font-size: 5rem;
+  line-height: 1rem;
+  font-weight: 300;
 }
