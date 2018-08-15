@@ -1,9 +1,10 @@
 extends ../templates/main.tpl.py.pug
 	
 block content
-	.py-3
+	.py-1.py-md-2
 	include ../templates/includes/carousel-main.py.pug
-	.container.my-5
+	include ../templates/includes/callback-form.py.pug
+	.container.my-2.my-md-5
 		.row.my-5.align-items-stretch
 			.col-md-6.col-lg-4
 				.card.product-showcase(style='background-color: #f4f6b5')
@@ -22,7 +23,7 @@ block content
 							p The elegant, clean-cut flat roof is a perfect fit for the minimalist architecture of contemporary living concepts. On request, the flat roof can be combined with a glass dome or an inset glass flat roof to let in even more light.
 							p The VPL® thus achieves outstanding energy values at the passive house level. Along with low energy use, this also provides a pleasant living atmosphere at all times of the year.
 
-		.py-5.d-none.d-lg-block
+		.py-2.py-md-5.d-none.d-lg-block
 		.card.product-showcase.my-5(style='background-color: #e4d4ff')
 			img(src='assets/images/products/pcv-tur.png', width='164', height='265' alt='PCV-Tur')
 			.card-body
@@ -33,7 +34,7 @@ block content
 							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
 
 		.py-5.d-none.d-lg-block
-		.row.my-5
+		.row.my-2.my-md-5
 			.col-12.col-lg-4
 				.card.product-description
 					.card-body
@@ -51,7 +52,6 @@ block content
 					img.card-img-top(src='assets/images/main/description-02.jpg', alt='Descrption 2')
 					h5.card-title Verbund-Sicherheitsglas
 					.card-text Die sichere Benutzung wird durch Verbund-Sicherheitsglas (VSG) gewährleistet.
-		.py-5.d-none.d-lg-block
 
 		
 

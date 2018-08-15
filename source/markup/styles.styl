@@ -32,6 +32,7 @@ body
 
 .dropdown-menu
 	background-color #000
+	padding-bottom 3rem
 	.dropdown-item
 		color #fff
 		&:hover
@@ -59,8 +60,10 @@ body
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon
-	width: 97px
-	height: 192px
+	//width: 97px
+	//height: 192px
+	width 43%
+	height 32%
 
 .carousel-control-prev-icon
 	background-image: url('../images/carousel-arrow-prev.svg')
@@ -141,5 +144,30 @@ footer
 	.card-body
 		flex-grow 0
 
+
+#callbackForm
+	display none
+	font-size 1.5rem
+	.form-control
+		font-size 1.5rem
+		padding-top 2rem
+	.btn
+		padding-top 2rem
+		font-size inherit
+		background none
+		border 2px solid #9a9a9a
+		color #9a9a9a
+	.custom-control-label
+		$top = .45rem	
+		&::before
+			border 1px solid #000
+			top $top
+		&::after
+			top $top
+	.link-close
+		cursor pointer
+		font-size 5rem
+		line-height 1rem
+		font-weight 300
 
 

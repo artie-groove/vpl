@@ -20,10 +20,33 @@ $container-max-widths: (
   xl: 1445px
 );
 
+// sizes
 $font-size-base: 1rem;
 $navbar-nav-link-padding-x: 1.9rem;
 $dropdown-item-padding-x: $navbar-nav-link-padding-x;
+$form-group-margin-bottom: 1.7rem;
+$input-btn-border-width: 2px;
+$input-btn-padding-y: 1rem;
+$input-btn-padding-x: 2rem;
+$input-height: auto;
+$custom-control-indicator-size: 1.6rem;
+$custom-control-indicator-bg-size: 65% 65%;
+$custom-control-gutter: 2.5rem;
+$custom-control-indicator-bg: transparent;
+$custom-control-indicator-checked-bg: none;
+$custom-control-indicator-box-shadow: none;
+$custom-control-indicator-focus-box-shadow: none;
+
+
+// colors
+$grey-100: #efefef;
 $dark: #000;
+$input-color: $dark;
+$input-bg: transparent;
+$input-border-color: $input-color;
+$component-active-color: $dark;
+$custom-control-indicator-checked-color: $dark;
+$custom-control-indicator-checked-bg: transparent;
 
 $border-radius:      0;          
 $border-radius-lg:   0;         
@@ -40,6 +63,14 @@ html {
   html {
     font-size: 11px;
   }
+  .carousel-item .w-100 {
+  	max-width: 200%;
+  	width: auto !important;
+  }
+}
+
+
+@include media-breakpoint-down(sm) {
   .dropdown.show {
   	background-color: #000;
   	left: -1rem;
@@ -48,11 +79,8 @@ html {
   .dropdown-menu {
   	padding-top: 0;
   }
-  .carousel-item .w-100 {
-  	max-width: 200%;
-  	width: auto !important;
-  }
 }
+
 
 
 @include media-breakpoint-only(md) {
