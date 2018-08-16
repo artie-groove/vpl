@@ -4,5 +4,8 @@ html(lang='en')
 		include includes/head.py.pug
 	body
 		block body
-		block footer
+			block navbar
+			block content
+			.wrapper
+				block footer
 		include includes/scripts-delayed.py.pug

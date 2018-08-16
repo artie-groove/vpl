@@ -1,0 +1,61 @@
+extends ../templates/html.tpl.py.pug
+
+block navbar
+	include ../templates/includes/navbar-main.py.pug
+
+block footer
+	include ../templates/includes/footer-extended.py.pug
+
+block content
+	.py-1.py-md-2
+	include ../templates/includes/carousel-main.py.pug
+	.bg-light
+		include ../templates/includes/callback-form.py.pug
+	.d-none.d-md-block.py-5
+	.wrapper.my-2.my-md-5
+		.row.my-5.align-items-stretch
+			.col-md-6.col-xl-4
+				.card.product-showcase(style='background-color: #f4f6b5')
+					img(src='assets/images/products/mb-45.png', width='134', height='232', alt='MB-45')
+					.card-body
+						h5.card-title MB-45
+						.card-text
+							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+			.col-md-6.col-xl-4.text-center
+				img.img-fluid.my-3.my-md-0(src='assets/images/main/mb-45-installed.jpg', alt='MB-45 installed')
+			.col-12.col-xl-4
+				.card.product-description.justify-content-center.px-md-7.mt-md-2.mb-md-5.my-lg-0
+					h5.card-title Minimalism
+					.card-text.columns-md-2
+						p The elegant, clean-cut flat roof is a perfect fit for the minimalist architecture of contemporary living concepts. On request, the flat roof can be combined with a glass dome or an inset glass flat roof to let in even more light.
+						p The VPL® thus achieves outstanding energy values at the passive house level. Along with low energy use, this also provides a pleasant living atmosphere at all times of the year.
+
+		.py-2.py-md-5.d-none.d-lg-block
+		
+		.card.product-showcase.my-5(style='background-color: #e4d4ff')
+			img(src='assets/images/products/pcv-tur.png', width='164', height='265' alt='PCV-Tur')
+			.card-body
+				h5.card-title PCV-Tür
+				.card-text
+					.row
+						.col-md-6.mx-auto
+							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+
+		.py-5.d-none.d-lg-block
+		.row.my-2.my-md-5
+			.col-12.col-xl-4
+				.card.product-description.mb-3.mb-lg-0
+					h5.card-title Zusätze
+					.card-text.pb-2.columns-md-2
+						p Ein wesentlicher Bestandteil der Alufenster, der Funktionalität und Ästhetik beeinflusst, sind zweifellos Zusätze.
+						p Wir bieten ein breites Spektrum von Zusätzen, u. a. Fenstergriffe, Handgriffe, Oberlichtschließer an.
+			.col-md-6.col-xl-4
+				.card.product-description
+					img.card-img-top(src='assets/images/main/description-01.jpg', alt='Descrption 1')
+					h5.card-title lackierte Fenstergriffe
+					.card-text Um die Optik des Fensters noch vorteilhafter erscheinen zu lassen, bieten wir Ihnen lackierte Fenstergriffe an. 
+			.col-md-6.col-xl-4
+				.card.product-description.mt-5.mt-md-0
+					img.card-img-top(src='assets/images/main/description-02.jpg', alt='Descrption 2')
+					h5.card-title Verbund-Sicherheitsglas
+					.card-text Die sichere Benutzung wird durch Verbund-Sicherheitsglas (VSG) gewährleistet.
