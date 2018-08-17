@@ -7086,7 +7086,7 @@ body {
     padding-left: 1rem; }
   .dropdown-menu {
     padding-top: 0; }
-  .categories-list .row > div {
+  .showcase .row > div {
     margin-bottom: 4rem; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -7094,7 +7094,7 @@ body {
     display: none !important; }
   .columns-md-2 {
     column-count: 2; }
-  .categories-list .row > div {
+  .showcase .row > div {
     margin-bottom: 5rem; } }
 
 @media (min-width: 768px) {
@@ -7104,5 +7104,5 @@ body {
     padding-top: 4rem; } }
 
 @media (min-width: 992px) {
-  .categories-list .row > div {
+  .showcase .row > div {
     margin-bottom: 10rem; } }
