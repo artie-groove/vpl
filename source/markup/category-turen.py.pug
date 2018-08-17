@@ -1,0 +1,16 @@
+extends ../templates/catalog.tpl.py.pug
+
+block navbar-content
+	+navbar-catalog-items('turen', 'Türen')
+	
+block content
+	.wrapper.showcase.showcase-subcategories.my-2.my-md-5(data-color='#e4d4ff')
+		.row.my-5.align-items-stretch
+			.col-md-6.col-xl-4
+				+showcase-item('turen/pcv-tur.png', 'PCV-Tür')
+			.col-md-6.col-xl-4
+				+showcase-item('turen/aluminium-tur.png', 'Aluminium-Tür')
+			.col-md-6.col-xl-4
+				+showcase-item('turen/holztur.png', 'Holztür')
+			.col-md-6.col-xl-12
+				+showcase-item('turen/zubehor-zur-tur.png', 'Zubehör zur Tür')

@@ -1,0 +1,70 @@
+-
+	let catalog = {
+		'design': [],
+		'fenster': [
+			'PVC-Fenster',
+			'Aluminium-Fenster',
+			'Holzfenster',
+			'Fensterläden',
+			'Zubehör Fenster'
+		],
+		'turen': [
+			'PCV-Tür',
+			'Aluminium-Tür',
+			'Holztür',
+			'Zubehör zur Tür'
+		],
+		'schiebefenster': [
+			'PVC-Fenster',
+			'Aluminium-Fenster',
+			'Zubehör'
+		],
+		'rollladen': [
+			'Einstellbare Rollläden',
+			'Aufsatzrollläden',
+			'Unterputzrollläden',
+			'Screen',
+			'Die Fassadenjalousien',
+			'Rollläden Zubehör'
+		]
+	}
+
+mixin logo()
+	img(src='assets/images/logo.svg', alt='Logo', width='50', height='70')
+
+mixin list-submenu-items(category)
+	if catalog[category]
+		each item in catalog[category]
+			li.nav-item
+				a.nav-link(href='#') #{item}
+
+mixin showcase-item(rpath, title)
+	.card.showcase-item
+		a(href='#')
+			img(src=`assets/images/catalog/${rpath}`, alt=`${title}`)
+		.card-body
+			h5.card-title
+				a(href='#') #{title}
+			.card-text
+				if block
+					block
+				else
+					| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+
+mixin showcase-description(title)
+	.card.showcase-description.justify-content-center.px-md-7.mt-md-2.mb-md-5.my-lg-0
+		h5.card-title #{title}
+		.card-text
+			if block
+				block
+			else
+				p The elegant, clean-cut flat roof is a perfect fit for the minimalist architecture of contemporary living concepts. On request, the flat roof can be combined with a glass dome or an inset glass flat roof to let in even more light.
+
+mixin navbar-catalog-items(itemId, title)
+	.col
+		.h5
+			| Produkte:
+			|
+			b #{title}
+		ul.nav.nav-submenu.flex-row
+			+list-submenu-items(itemId)

@@ -1,0 +1,20 @@
+extends ../templates/catalog.tpl.py.pug
+
+block navbar-content
+	+navbar-catalog-items('fenster', 'Fenster')
+	
+block content
+	.wrapper.showcase.showcase-subcategories.my-2.my-md-5(data-color='#c9eeff')
+		.row.my-5.align-items-stretch
+			.col-md-6.col-xl-4
+				+showcase-item('fenster/pvc-fenster.png', 'PVC-Fenster')
+			.col-md-6.col-xl-4
+				+showcase-item('fenster/aluminium-fenster.png', 'Aluminium-Fenster')
+			.col-12.col-md-6.col-xl-4
+				+showcase-description('Fenster')
+			.col-md-6.col-xl-4
+				+showcase-item('fenster/holzfenster.png', 'Holzfenster')
+			.col-md-6.col-xl-4
+				+showcase-item('fenster/fensterladen.png', 'Fensterläden')
+			.col-md-6.col-xl-4
+				+showcase-item('fenster/zubehor-fenster.png', 'Zubehör Fenster')

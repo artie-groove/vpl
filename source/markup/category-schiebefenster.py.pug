@@ -1,0 +1,15 @@
+extends ../templates/catalog.tpl.py.pug
+
+block navbar-content
+	+navbar-catalog-items('schiebefenster', 'Schiebefenster')
+	
+block content
+	.wrapper.showcase.showcase-subcategories.my-2.my-md-5(data-color='#f4f6b5')
+		.row.my-5.align-items-stretch
+			.col-md-6.col-xl-4
+				+showcase-item('schiebefenster/pvc-fenster.png', 'PVC-Fenster')
+			.col-md-6.col-xl-4
+				+showcase-item('schiebefenster/aluminium-fenster.png', 'Aluminium-Fenster')
+			.col-md-6.col-xl-4
+				+showcase-item('schiebefenster/zubehor.png', 'Zubehör')
+			

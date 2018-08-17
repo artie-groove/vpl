@@ -102,7 +102,7 @@ body {
   .dropdown-menu {
   	padding-top: 0;
   }
-  .categories-list .row > div {
+  .showcase .row > div {
 	margin-bottom: 4rem;
   }
 }
@@ -116,7 +116,7 @@ body {
 	.columns-md-2 {
 		column-count: 2;
 	}
-	.categories-list .row > div {
+	.showcase .row > div {
 		margin-bottom: 5rem;
   	}
 }
@@ -130,7 +130,7 @@ body {
 }
 
 @include media-breakpoint-up(lg) {
-	.categories-list .row > div {
+	.showcase .row > div {
 		margin-bottom: 10rem;
   	}
 }

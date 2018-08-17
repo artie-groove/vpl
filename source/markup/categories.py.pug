@@ -1,67 +1,23 @@
-extends ../templates/html.tpl.py.pug
-
-block navbar 
-	.wrapper.py-5.py-md-8.py-lg-10
-		.d-none.d-md-block
-			include ../templates/includes/navbar-categories.py.pug
-		.d-block.d-md-none
-			include ../templates/includes/navbar.py.pug
+extends ../templates/catalog.tpl.py.pug
+	
+block navbar-content
+	.col
+		include ../templates/includes/menu-1.py.pug
+	.col
+		include ../templates/includes/menu-2.py.pug
 
 block content
-	.wrapper.categories-list.my-2.my-md-5
+	.wrapper.showcase.showcase-categories.my-2.my-md-5
 		.row.my-5.align-items-stretch
 			.col-md-6.col-xl-4
-				.card.product-showcase
-					a(href='#')
-						img(src='assets/images/categories/design.png', alt='Design')
-					.card-body
-						h5.card-title
-							a(href='#') Design
-						.card-text
-							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+				+showcase-item('design.png', 'Design')
 			.col-md-6.col-xl-4
-				.card.product-showcase
-					a(href='#')
-						img(src='assets/images/categories/fenster.png', alt='Fenster')
-					.card-body
-						h5.card-title
-							a(href='#') Fenster
-						.card-text
-							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+				+showcase-item('fenster.png', 'Fenster')
 			.col-12.col-md-6.col-xl-4
-				.card.product-description.justify-content-center.px-md-7.mt-md-2.mb-md-5.my-lg-0
-					h5.card-title Produkte
-					.card-text
-						p The elegant, clean-cut flat roof is a perfect fit for the minimalist architecture of contemporary living concepts. On request, the flat roof can be combined with a glass dome or an inset glass flat roof to let in even more light.
+				+showcase-description('Produkte')
 			.col-md-6.col-xl-4
-				.card.product-showcase
-					a(href='#')
-						img(src='assets/images/categories/turen.png', alt='Turen')
-					.card-body
-						h5.card-title
-							a(href='#') Turen
-						.card-text
-							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+				+showcase-item('turen.png', 'Turen')
 			.col-md-6.col-xl-4
-				.card.product-showcase
-					a(href='#')
-						img(src='assets/images/categories/shiebefenster.png', alt='Shiebefenster')
-					.card-body
-						h5.card-title
-							a(href='#') Shiebefenster
-						.card-text
-							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+				+showcase-item('shiebefenster.png', 'Shiebefenster')
 			.col-md-6.col-xl-4
-				.card.product-showcase
-					a(href='#')
-						img(src='assets/images/categories/rollladen.png', alt='Rollladen')
-					.card-body
-						h5.card-title
-							a(href='#') Rollladen
-						.card-text
-							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
-
-block footer
-	include ../templates/includes/footer-simple.py.pug
-
-
+				+showcase-item('rollladen.png', 'Rollladen')

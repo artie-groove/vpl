@@ -96,24 +96,26 @@ nav
 			font-weight bold
 			&:hover
 				text-decoration underline
+	.h5
+		b
+			margin-left 2rem
 
-	.nav-item
-		.nav
-			padding-left 1.5rem
-			padding-right 5rem
-			.nav-item:not(:last-child)
-				position relative
-				&:after
-					content '|'
-					display block
-					position absolute
-					top 0
-					right -1px
-					color #555
-			.nav-link
-				font-weight initial
-				padding-top 0
-				padding-left 1rem
+	.nav-submenu
+		padding-left 1.5rem
+		padding-right 5rem
+		.nav-item:not(:last-child)
+			position relative
+			&:after
+				content '|'
+				display block
+				position absolute
+				top 0
+				right -1px
+				color #555
+		.nav-link
+			font-weight initial
+			padding-top 0
+			padding-left 1rem
 				
 
 // Product cards customization
@@ -125,7 +127,7 @@ nav
 .card-text
 	line-height 2rem
 
-.product-showcase
+.showcase-item
 	text-align center
 	height 100%
 	border 0
@@ -153,7 +155,7 @@ nav
 		max-width 75%
 		max-height 35%
 
-.product-description
+.showcase-description
 	border 0
 	height 100%
 	.card-img-top
@@ -190,7 +192,7 @@ nav
 		font-weight 300
 
 
-.categories-list
+.showcase-categories
 	$colors = #d3d3d3 #c9eeff '' #e4d4ff #f4f6b5 #ffd7b0
 	for $color, $i in $colors
 		if $i != 2
