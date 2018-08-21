@@ -1,40 +1,39 @@
 #callbackForm.py-5
-	.container
-		.row
-			.col.col-md-10.col-lg-6.mx-auto
-				form
-					.row.mb-4
-						.col-10.col-md-8.col-lg-6
-							h3 Schreiben Sie uns und wir rufen Sie schnellstmöglich zurück:
-						.col-2.ml-auto.text-right
-							.link-close &times;
-					.row.mb-4
-						.col
-							span.mr-4 Andere:
-							.custom-control.custom-radio.custom-control-inline
-								input.custom-control-input#andere1(type='radio', name='andere', value='herr')
-								label.custom-control-label(for='andere1') Herr
-							span.px-2
-							.custom-control.custom-radio.custom-control-inline
-								input.custom-control-input#andere2(type='radio', name='andere', value='frau')
-								label.custom-control-label(for='andere2') Frau
-					.row
-						.col
-							.form-group
-								input.form-control(type='text', placeholder='Vorname', name='vorname')
-						.col
-							.form-group
-								input.form-control(type='text', placeholder='Nachname', name='nachname')
-					.row
-						.col
-							.form-group
-								input.form-control(type='text', placeholder='+88 (888) 88-88-88', name='phone')
-						.col
-							.form-group
-								input.form-control(type='text', placeholder='Gewünschte Rückrufzeit', name='gewunschte-ruckrufzeit')
+	.row
+		.col.col-md-10.col-lg-6.mx-auto
+			form
+				.row.mb-4
+					.col-10.col-md-8.col-lg-6
+						h3 Schreiben Sie uns und wir rufen Sie schnellstmöglich zurück:
+					.col-2.ml-auto.text-right
+						.link-close &times;
+				.row.mb-4
+					.col
+						span.mr-4 Andere:
+						.custom-control.custom-radio.custom-control-inline
+							input.custom-control-input#andere1(type='radio', name='andere', value='herr')
+							label.custom-control-label(for='andere1') Herr
+						span.px-2
+						.custom-control.custom-radio.custom-control-inline
+							input.custom-control-input#andere2(type='radio', name='andere', value='frau')
+							label.custom-control-label(for='andere2') Frau
+				.row
+					.col
+						.form-group
+							input.form-control(type='text', placeholder='Vorname', name='vorname')
+					.col
+						.form-group
+							input.form-control(type='text', placeholder='Nachname', name='nachname')
+				.row
+					.col
+						.form-group
+							input.form-control(type='text', placeholder='+88 (888) 88-88-88', name='phone')
+					.col
+						.form-group
+							input.form-control(type='text', placeholder='Gewünschte Rückrufzeit', name='gewunschte-ruckrufzeit')
 
-					.form-group
-						textarea.form-control(placeholder='Ihre frage', name='ihre-frage')
-					.row
-						.col-md-6
-							button.btn.w-100.text-left(type='submit') Absenden
+				.form-group
+					textarea.form-control(placeholder='Ihre frage', name='ihre-frage')
+				.row
+					.col-md-6
+						button.btn.w-100.text-left(type='submit') Absenden

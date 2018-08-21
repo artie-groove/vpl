@@ -176,6 +176,11 @@ gulp.task('watch', (cb) => {
 		compileStyles(changedFile.path, bs.router.dstStylesPath)
 	});
 
+	watch(`${bs.router.srcAssetsPath}/js/*.js`, (changedFile) => {
+		console.log(`Changed: ${changedFile.path}`);
+		io.copy(changedFile.path, `${bs.router.srcAssetsPath}/js/`, `${bs.router.dstAssetsPath}/js`);
+	});
+
 	cb();
 	
 	//	let base = bs.router.srcAssetsPath;
@@ -228,7 +233,6 @@ function compileStyles(glob, dest) {
 		// .pipe(sourcemaps.write())
 		.pipe(gulp.dest(dest));
 }
-
 
 
 

@@ -25,7 +25,9 @@ $(document).ready( () => {
 	items = $('.showcase.showcase-products .showcase-item');
 	n = items.length;
 	items.each( (i, item) => {
-		let itemColor = tinycolor(baseColor).lighten(i * 100 / n);
+		let level = Math.round(10 / n * i);
+		let itemColor = tinycolor(baseColor).lighten(level);
+		console.log(level, itemColor.toString());
 		$(item).css('background-color', itemColor.toString());
 	});
 

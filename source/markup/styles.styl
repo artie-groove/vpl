@@ -97,7 +97,7 @@ nav
 			&:hover
 				text-decoration underline
 	.h5
-		b
+		span
 			margin-left 2rem
 
 	.nav-submenu
@@ -116,6 +116,11 @@ nav
 			font-weight initial
 			padding-top 0
 			padding-left 1rem
+	.vendor-filter
+		a
+			margin 0 1.5em
+		img
+			max-height 30px
 				
 
 // Product cards customization
@@ -154,6 +159,8 @@ nav
 		flex-grow 0
 		max-width 75%
 		max-height 35%
+	ul
+		text-align left
 
 .showcase-description
 	border 0
@@ -167,7 +174,6 @@ nav
 
 
 #callbackForm
-	display none
 	font-size 1.5rem
 	.form-control
 		font-size 1.5rem
@@ -191,6 +197,14 @@ nav
 		line-height 1rem
 		font-weight 300
 
+#callbackFront
+	#callbackForm
+		display none
+#callbackContacts
+	#callbackForm
+		.link-close
+			display none
+
 
 .showcase-categories
 	$colors = #d3d3d3 #c9eeff '' #e4d4ff #f4f6b5 #ffd7b0
@@ -199,3 +213,8 @@ nav
 			.col-md-6:nth-of-type({$i+1})
 				.card
 					background-color $color
+
+#contacts
+	p
+		line-height 2em
+		margin-bottom 2em

@@ -1,0 +1,64 @@
+extends ../templates/infopage.tpl.py.pug
+
+block title
+	| Partner
+
+block info
+	.col-6
+		img.mb-4(src='assets/images/partners/logo1.png', alt='Logo 1', width='70', height='70')
+		p
+			| Volvo GmbH
+			br
+			| Alexander-Bell-Straße,12
+			br
+			| 53332, Bornheim
+		p
+			| Tel. +49(0) 162-000000
+			br
+			| Fax +49(0) 162-000000
+		p
+			| E-mail:
+			|
+			a(href='mailto:vpl.bau@gmail.com')
+				| vpl.bau@gmail.com
+	.col-6
+		img.mb-4(src='assets/images/partners/logo2.png', alt='Logo 1', width='70', height='70')
+		p
+			| BMW GmbH
+			br
+			| Alexander-Bell-Straße,12
+			br
+			| 53332, Bornheim
+		p
+			| Tel. +49(0) 162-000000
+			br
+			| Fax +49(0) 162-000000
+		p
+			| E-mail:
+			|
+			a(href='mailto:vpl.bau@gmail.com')
+				| vpl.bau@gmail.com
+
+block content-extra
+	.row.my-4.my-md-8.align-items-stretch
+		.col-md-6.col-xl-4
+			.card.showcase-item(style='background-color: #67bdd3')
+				img(src='assets/images/partners/main-partner.png', alt='Main partner')
+				.card-body
+					h5.card-title
+						| Главный партнёр
+					.card-text
+						| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+		.col-md-6.col-xl-4.text-center
+			img.img-fluid.my-3.my-md-0(src='assets/images/partners/scenery.jpg', alt='Scenery')
+		.col-12.col-xl-4
+			.card.showcase-description.justify-content-center.px-md-7.mt-md-2.mb-md-5.my-lg-0
+				h5.card-title
+					| О партнёре
+				.card-text.columns-md-2
+					p The elegant, clean-cut flat roof is a perfect fit for the minimalist architecture of contemporary living concepts. On request, the flat roof can be combined with a glass dome or an inset glass flat roof to let in even more light.
+					p The VPL® thus achieves outstanding energy values at the passive house level. Along with low energy use, this also provides a pleasant living atmosphere at all times of the year.
+
+
+block footer
+	include ../templates/includes/footer-simple.py.pug

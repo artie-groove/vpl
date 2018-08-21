@@ -1,0 +1,42 @@
+extends ../templates/catalog.tpl.py.pug
+
+block navbar-content
+	.col
+		.h5
+			| Produkte:
+			|
+			span Fenster:
+			|
+			span.font-weight-bold PVC Fenster
+		.vendor-filter.my-4
+			| Wählen:
+			a(href='#')
+				img(src='assets/images/logos/aluplast.png')
+			a(href='#')
+				img(src='assets/images/logos/eko-sun.png')
+			a(href='#')
+				img(src='assets/images/logos/salamander.png')
+			a(href='#') All
+		ul.nav.nav-submenu.flex-row
+			each item in pvcTuren
+				li.nav-item
+					a.nav-link(href='#') #{item}
+	
+block content
+	.wrapper.showcase.showcase-products.my-2.my-md-5(data-color='#c9eeff')
+		.row.my-5.align-items-stretch
+			- let items = pvcTuren
+			each item, i in items
+				-
+					let attrs = {}
+					let n = items.length
+					attrs['class'] = 'col-xl-4'
+					if ( n % 3 > 0 && n - i <= 2 ) attrs['class'] = 'col' 
+				.col-md-6()&attributes(attrs)
+					- let itemCode = item.toLowerCase().replace(/ /g, "-");
+					+showcase-item(`fenster/pvc-fenster/${itemCode}.png`, item)
+						ul
+							li System mit 3 Dichtungen
+							li System 6 Kammern
+							li Bautiefe 85 mm
+							li maximale Verglasung 51 mm

@@ -1,0 +1,21 @@
+extends ../templates/catalog.tpl.py.pug
+
+block navbar-content
+	+navbar-catalog-items('rollladen', 'Rollläden')
+	
+block content
+	.wrapper.showcase.showcase-subcategories.my-2.my-md-5(data-color='#ffd7b0')
+		.row.my-5.align-items-stretch
+			.col-md-6.col-xl-4
+				+showcase-item('rollladen/einstellbare-rollladen.png', 'Einstellbare Rollläden')
+			.col-md-6.col-xl-4
+				+showcase-item('rollladen/aufsatzrollladen.png', 'Aufsatzrollläden')
+			.col-md-6.col-xl-4
+				+showcase-item('rollladen/unterputzrollladen.png', 'Unterputzrollläden')
+			.col-md-6.col-xl-4
+				+showcase-item('rollladen/screen.png', 'Screen')
+			.col-md-6.col-xl-4
+				+showcase-item('rollladen/die-fassadenjalousien.png', 'Die Fassadenjalousien')
+			.col-md-6.col-xl-4
+				+showcase-item('rollladen/rollladen-zubehor.png', 'Rollläden Zubehör')
+			
