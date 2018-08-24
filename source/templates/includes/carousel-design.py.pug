@@ -1,0 +1,60 @@
+-
+	let items = [
+		'Firenze',
+		'Foggia',
+		'Livorno',
+		'Messina',
+		'Modena',
+		'Torino',
+		'Trieste',
+		'Verona'
+	]
+
+mixin palette-switch(typeid, count)
+	- 
+		let items = function() {
+			let items = [];
+			for ( let i = 0; i < count; i++ ) {
+				let idn = i + 1;
+				if ( idn < 10 ) idn = `0${idn}`;
+				items.push(`${idn}p`);
+			}
+			return items;
+		}();
+	ol.palette-buttons
+		each item, i in items
+			-
+				let attrs = {}
+				if ( i === 0 ) attrs['class'] = 'active'
+			li&attributes(attrs)
+				img(src=`assets/images/carousel-design/${typeid}/${item}.jpg`, width="50", height="50", alt='pbtn')
+
+#carouselDesign.carousel.slide.px-0.my-4(data-ride='carousel_disabled', data-interval='0')
+	ol.carousel-indicators
+		each item, i in items
+			-
+				let attrs = {}
+				if ( i === 0 ) attrs['class'] = 'active'
+			li(data-target='#carouselDesign', data-slide-to=`${i}`)&attributes(attrs)
+				| #{item}
+
+	.wrapper
+		.position-relative
+			.carousel-inner
+				.carousel-item.active
+					img.d-block.w-100(src='assets/images/carousel-design/firenze/01.jpg', alt='Livorno')
+					img.d-none.w-100(src='assets/images/carousel-design/firenze/02.jpg', alt='Livorno')
+					+palette-switch('firenze', 2)
+				.carousel-item(data-variations="2")
+					img.d-block.w-100(src='assets/images/carousel-design/foggia/01.jpg', alt='Foggia')
+					img.d-none.w-100(src='assets/images/carousel-design/foggia/02.jpg', alt='Foggia')
+					img.d-none.w-100(src='assets/images/carousel-design/foggia/03.jpg', alt='Foggia')
+					+palette-switch('foggia', 3)
+			a.carousel-control-prev(href='#carouselDesign', role='button', data-slide='prev')
+				span.carousel-control-prev-icon(aria-hidden='true')
+				span.sr-only Previous
+			a.carousel-control-next(href='#carouselDesign', role='button', data-slide='next')
+				span.carousel-control-next-icon(aria-hidden='true')
+				span.sr-only Next
+
+	

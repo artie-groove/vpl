@@ -1,0 +1,19 @@
+#navbarProduct
+	.wrapper.pt-3.pb-5.pb-md-8
+		nav.navbar.navbar-expand.navbar-light.px-0
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse')
+				span.navbar-toggler-icon
+			a.navbar-brand.d-block.d-md-none(href='/')
+				img(src='assets/images/logo-base.svg', alt='Logo', width='43', height='34')
+			div.collapse.navbar-collapse.align-items-end#navbarCollapse
+				a.navbar-brand.d-none.d-md-block.flex-grow-0(href='/')
+					+logo()
+				.d-flex.align-items-center.mb-1.justify-content-between.pl-5.pl-md-8
+					.navbar-nav
+						h5
+							| Produkte:
+							span
+								| Design
+					.d-none.d-md-block
+						.navbar-nav.pl-md-10.font-weight-bold.flex-shrink-1.d-flex.justify-content-lg-end
+							include menu-extras.py.pug

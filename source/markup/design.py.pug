@@ -1,0 +1,36 @@
+extends ../templates/product.tpl.py.pug
+
+block content
+	include ../templates/includes/carousel-design.py.pug
+
+	.wrapper.my-5.my-md-10
+		ul#myTab.nav.nav-tabs(role='tablist')
+			li.nav-item
+				a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true')
+					| Spezifikation
+			li.nav-item
+				a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false')
+					| Farbgebung
+			li.nav-item
+				a#contact-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false')
+					| Technologie
+		#myTabContent.tab-content
+			#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+				p
+					b Erhältlich sind folgende PVC-Eingangstürsysteme:
+				ul
+					li Aluplast: Ideal 4000, Ideal 5000, Ideal 8000
+					li Salamander: Streamline 76, BluEvolution 92
+					li Eko Sun 70
+				p
+					b Erhältliche Ausführungen:
+				ol
+					li System mit Aluminiumschwelle und thermischem Trennelement
+					li Schwellenfreies System mit absenkender Dichtung
+					li Zusätzliche Abdichtungsbürste im unteren Flügelteil
+				p
+					| Alle Ausführungen sind standardmäßig mit einer (mit Schlüssel verschließbar) Dreipunktverriegelung ausgerüstet. Optional ist eine Montage zusätzlicher Aushebelungsschutzbolzen möglich.
+			#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') ...
+			#contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') ...
+
+

@@ -42,9 +42,10 @@
 			text-decoration underline
 
 
+.carousel
+	max-width 1536px
 
 #carouselMain
-	max-width 1536px
 	.carousel-caption
 		top 0
 		bottom 0
@@ -60,15 +61,69 @@
 		.phone
 			font-size 2.25rem
 
+#carouselDesign
+	.carousel-indicators
+		position static
+		flex-wrap wrap
+		margin-bottom 2.5rem
+		li
+			height unset
+			width unset
+			text-indent unset
+			font-size 1.25rem
+			padding .75rem 1.5rem
+			margin 0 .5rem
+			font-weight bold
+			&.active
+				border 1px solid #000
+	.carousel-inner
+		width 75%
+		margin 0 auto
+	.palette-buttons
+		list-style none
+		padding 0
+		margin-top 2%
+		display flex
+		justify-content center
+		align-items center
+		li
+			padding .9%
+			border .09vw solid transparent
+			&.active
+				border-color #000
+			img
+				width 3.5vw
+				max-width 54px
+				min-width 22px
+				height auto
+				&:hover
+					cursor pointer
+	.carousel-control-prev,
+	.carousel-control-next
+		margin-top 5%
+		align-items flex-start
+		&-icon
+			height 45%
+			background-size contain
+
+	.carousel-control-prev
+		justify-content flex-start
+		&-icon
+			background-position-x left
+
+	.carousel-control-next
+		justify-content flex-end
+		&-icon
+			background-position-x right
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon
-	//width: 97px
-	//height: 192px
 	width 43%
 	height 32%
 
 .carousel-control-prev-icon
 	background-image: url('../images/carousel-arrow-prev.svg')
+	justify-content
 
 .carousel-control-next-icon 
 	background-image: url('../images/carousel-arrow-next.svg')
@@ -117,8 +172,10 @@ nav
 			padding-top 0
 			padding-left 1rem
 	.vendor-filter
+		font-size 1.1rem
 		a
-			margin 0 1.5em
+			margin 0 1.5rem
+			text-decoration underline
 		img
 			max-height 30px
 				
@@ -218,3 +275,30 @@ nav
 	p
 		line-height 2em
 		margin-bottom 2em
+
+#navbarProduct
+	.navbar-brand
+		min-width unset
+	h5
+		margin-bottom 0
+		span
+			margin-left 2rem
+			&:last-of-type
+				font-weight bold
+
+
+$light-grey = #efefef
+.nav-tabs
+	border-bottom 0
+	.nav-link
+		padding 2rem 4rem 1rem 2.5rem
+		font-size 1.6rem
+		border 0
+		&.active
+			background-color $light-grey
+	li
+		&:not(:first-child)
+			border-left 2px solid $light-grey
+.tab-content
+	background-color $light-grey
+	padding 2rem 4rem 5rem

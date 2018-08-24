@@ -31,4 +31,14 @@ $(document).ready( () => {
 		$(item).css('background-color', itemColor.toString());
 	});
 
+	$('.palette-buttons li img').on('click', function() {
+		let item = $(this).parent();
+		if ( item.hasClass('active') ) return false;
+		item.siblings('.active').removeClass('active');
+		item.addClass('active');
+		item.parent().siblings('.d-block').removeClass('d-block').addClass('d-none');
+		let idx = item.index();
+		item.parent().siblings('img').eq(idx).removeClass('d-none').addClass('d-block');
+	});
+
 });
