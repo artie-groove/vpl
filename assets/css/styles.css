@@ -42,7 +42,7 @@
   background-color: #000;
   text-decoration: underline;
 }
-#carouselMain {
+.carousel {
   max-width: 1536px;
 }
 #carouselMain .carousel-caption {
@@ -64,6 +64,73 @@
 #carouselMain .carousel-caption .phone {
   font-size: 2.25rem;
 }
+#carouselDesign .carousel-indicators {
+  position: static;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+#carouselDesign .carousel-indicators li {
+  height: unset;
+  width: unset;
+  text-indent: unset;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  font-weight: bold;
+}
+#carouselDesign .carousel-indicators li.active {
+  border: 1px solid #000;
+}
+#carouselDesign .carousel-inner {
+  width: 75%;
+  margin: 0 auto;
+}
+#carouselDesign .palette-buttons {
+  list-style: none;
+  padding: 0;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#carouselDesign .palette-buttons li {
+  padding: 0.9%;
+  border: 0.09vw solid transparent;
+}
+#carouselDesign .palette-buttons li.active {
+  border-color: #000;
+}
+#carouselDesign .palette-buttons li img {
+  width: 3.5vw;
+  max-width: 54px;
+  min-width: 22px;
+  height: auto;
+}
+#carouselDesign .palette-buttons li img:hover {
+  cursor: pointer;
+}
+#carouselDesign .carousel-control-prev,
+#carouselDesign .carousel-control-next {
+  margin-top: 5%;
+  align-items: flex-start;
+}
+#carouselDesign .carousel-control-prev-icon,
+#carouselDesign .carousel-control-next-icon {
+  height: 45%;
+  background-size: contain;
+}
+#carouselDesign .carousel-control-prev {
+  justify-content: flex-start;
+}
+#carouselDesign .carousel-control-prev-icon {
+  background-position-x: left;
+}
+#carouselDesign .carousel-control-next {
+  justify-content: flex-end;
+}
+#carouselDesign .carousel-control-next-icon {
+  background-position-x: right;
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   width: 43%;
@@ -71,6 +138,7 @@
 }
 .carousel-control-prev-icon {
   background-image: url("../images/carousel-arrow-prev.svg");
+justify-content
 }
 .carousel-control-next-icon {
   background-image: url("../images/carousel-arrow-next.svg");
@@ -124,8 +192,12 @@ nav .nav-submenu .nav-link {
   padding-top: 0;
   padding-left: 1rem;
 }
+nav .vendor-filter {
+  font-size: 1.1rem;
+}
 nav .vendor-filter a {
-  margin: 0 1.5em;
+  margin: 0 1.5rem;
+  text-decoration: underline;
 }
 nav .vendor-filter img {
   max-height: 30px;
@@ -236,4 +308,34 @@ nav .vendor-filter img {
 #contacts p {
   line-height: 2em;
   margin-bottom: 2em;
+}
+#navbarProduct .navbar-brand {
+  min-width: unset;
+}
+#navbarProduct h5 {
+  margin-bottom: 0;
+}
+#navbarProduct h5 span {
+  margin-left: 2rem;
+}
+#navbarProduct h5 span:last-of-type {
+  font-weight: bold;
+}
+.nav-tabs {
+  border-bottom: 0;
+}
+.nav-tabs .nav-link {
+  padding: 2rem 4rem 1rem 2.5rem;
+  font-size: 1.6rem;
+  border: 0;
+}
+.nav-tabs .nav-link.active {
+  background-color: #efefef;
+}
+.nav-tabs li:not(:first-child) {
+  border-left: 2px solid #efefef;
+}
+.tab-content {
+  background-color: #efefef;
+  padding: 2rem 4rem 5rem;
 }

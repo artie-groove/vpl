@@ -7077,7 +7077,10 @@ body {
     font-size: 11px; }
   .carousel-item .w-100 {
     max-width: 200%;
-    width: auto !important; } }
+    width: auto !important; }
+  #carouselDesign .carousel-control-prev,
+  #carouselDesign .carousel-control-next {
+    margin-top: 9% !important; } }
 
 @media (max-width: 767.98px) {
   .dropdown.show {
