@@ -1,0 +1,91 @@
+extends ../templates/product.tpl.py.pug
+
+block breadcrumbs
+	span
+		a(href="#")
+			| Fenster:
+	span
+		a(href="#")
+			| PVC-Fenster:
+	span
+		| Ideal 8000
+
+block slider-product
+	include ../templates/includes/carousel-fenster.py.pug
+
+block content-product
+
+	.my-4.my-md-8
+		include ../templates/includes/carousel-galerie.py.pug
+	.wrapper.overview
+		.row
+			.col-12.col-md-6
+				.h2 Spezifikation
+				ul
+					li Profilqualität Klasse B
+					li 6-Kammer-System
+					li Einbautiefe: 85 mm
+					li In Standardausführung: Stahlarmierung im Rahmen geschlossen
+					li In Standardausführung: Fehlschaltsicherung (RU-Fenster)
+					li Standardmäßiger Beschlag mit zwei einbruchhemmenden Punkten pro Fensterflügel ausgestattet
+					li Auf weißem und braunem Kern
+					li System mit 3 Dichtungen ausgestattet
+					li Beschläge funktionieren in sog. trockener Kammer, dadurch wird ihre Lebensdauer erhöht
+					li Verglasung mit bis zu 51 mm breiten Glaspaketen
+					li In einer Variante mit geradem oder gerundetem Fensterflügel erhältlich
+					li Einsatz von Aluskin-Aluschalen möglich
+					li Anwendung eines verdeckt liegenden Beschlags möglich
+					li Beim Bauen von Passivhäusern empfohlen
+			.col-12.col-md-6
+				.h2 Galerie
+				img.img-fluid.link-galerie(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg', alt='Galerie')
+		.row
+			.col-12.col-md-6
+				.h2 Aluschale
+				.text-center.mt-md-8
+					img.img-fluid.img-limited(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale.png', alt='Aluschale')
+			.col-12.col-md-6
+				.h2 Sicherheit
+				p Die Sicherheit unserer Fenster wird durch das gewährleistet, was mit bloßem Auge nicht zu sehen ist, also durch ihre Beschläge.
+				p Die im System Ideal 8000 erzeugten Fenster werden mit dem Beschlag Maco Multi-Matic ausgestattet. Die Anpassung einer Beschlaggarnitur hängt jedoch von individuellen Bedürfnissen und Wünschen des jeweiligen Kunden ab. Standardmäßig hat das Fenster zwei SH-Schließstücke je Fensterflügel sowie einbruchhemmende Zapfen mit Andruckregelung. Ein wichtiger Bestandteil des Beschlages ist ein Flügelandruck in der Mitte. Der Flügelandruck passt sich automatisch an die Falzluft an. Dadurch wird nicht nur die Sicherheit, sondern auch Dichtheit und leichter Betrieb der Fensterflügel gewährleistet. Wir sind einer der wenigen Hersteller, der alle Beschläge von Dreh- und Kippfenstern standardmäßig um eine Fehlschaltsicherung ergänzt. Sie ist mit einem Flügelheber integriert.
+				p Wie man sehen kann, bietet der Maco-Multi-Matic-Beschlag enorme Möglichkeiten. Ohne Probleme kann er auch um zusätzliche einbruchshemmende Sicherheitskippschließbleche sowie sonstige Konstruktionselemente ergänzt werden. Um ein Fenster mit höchsten Sicherheitsparametern zu haben, ist es empfehlenswert, es auch mit einbruchsicheren oder Hartglasscheiben sowie mit Fenstergriffen 
+
+
+
+
+
+
+	.wrapper.my-5.my-md-10
+		ul#myTab.nav.nav-tabs(role='tablist')
+			li.nav-item
+				a#energieeffizienz-tab.nav-link.active(data-toggle='tab', href='#energieeffizienz', role='tab', aria-controls='energieeffizienz', aria-selected='true')
+					| Energieeffizienz
+			li.nav-item
+				a#asthetische-optik-tab.nav-link(data-toggle='tab', href='#asthetische-optik', role='tab', aria-controls='asthetische-optik', aria-selected='false')
+					| Ästhetische optik
+			li.nav-item
+				a#technologie-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false')
+					| Technologie
+			li.nav-item
+				a#zusatzliche-ausstattung-tab.nav-link(data-toggle='tab', href='#zusatzliche-ausstattung', role='tab', aria-controls='zusatzliche-ausstattung', aria-selected='false')
+					| Zusätzliche Ausstattung
+		#myTabContent.tab-content
+			#energieeffizienz.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='energieeffizienz-tab')
+				.container-fluid
+					.row
+						.col-12.col-md-6
+							p Von Jahr zu Jahr gibt es immer mehr Kunden, die beim Kauf der Fenster für ihr Haus hauptsächlich wärmedämmende Merkmale des Produktes berücksichtigen. Konsumenten entscheiden sich immer häufiger für energiesparende Produkte, wodurch sie ihre Rechnungen für den Energieverbrauch reduzieren können.
+							p Das Fenstersystem Ideal 8000 gilt als das wärmste Fenstersystem in der Aluplast-Fensterprofilfamilie. Das Fenstersystem bietet enorme Möglichkeiten. Seine Einbautiefe ermöglicht, Glasscheibenpakete mit einer Breite sogar von 51 mm einzubauen. Kunden, die hohe Produktqualität zu schätzen wissen, empfehlen wir, ihre Fenster mit einem breiteren 4-Scheiben-Paket und mit einer warmen Kante nachzurüsten. Ein so hergestelltes Fenster wird ohne Probleme einen Wasserdurchlässigkeitsbeiwert erreichen, den beim Bauen von Passivhäusern eingesetzte Fenster erfordern.
+							p Wir schlagen auch vor, sich eine der jüngsten Positionen in unserem Angebot anzuschauen. Die Glasscheiben Climaplus 4S mit wellenlängenselektiver 
+						.col-12.col-md-6
+							p Beschichtung sind eine absolute Innovation, die es ermöglicht, nicht nur die Heizkostenrechnungen, sondern auch die Kosten für die Raumklimatisierung in warmen Tagen zu senken. Eine speziell konzipierte Scheibenbeschichtung bewirkt, dass die Glasscheibe viel weniger Sonnenenergie durchlässt. Dadurch lässt sich im Sommer in Räumen eine angenehme Temperatur halten. Im Winter dagegen gilt die Glasscheibe Climaplus 4S als Barriere, die verhindert, dass die Wärme aus den Räumen durch die Glasscheibe nach außen entweicht. Diese Glasscheiben werden insbesondere für Gebäude mit großen, verglasten Flächen an ihrer Süd-, Süd-West- und Süd-Ostseite empfohlen.
+			#asthetische-optik.tab-pane.fade(role='tabpanel', aria-labelledby='asthetische-optik-tab') ...
+			#technologie.tab-pane.fade(role='tabpanel', aria-labelledby='technologie-tab') ...
+			#zusatzliche-ausstattung.tab-pane.fade(role='tabpanel', aria-labelledby='zusatzliche-ausstattung-tab') ...
+
+
+
+
+
+
+

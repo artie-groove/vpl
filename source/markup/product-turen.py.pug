@@ -2,10 +2,17 @@ extends ../templates/product.tpl.py.pug
 
 block breadcrumbs
 	span
-		| Design
+		a(href="#")
+			| Türen:
+	span
+		a(href="#")
+			| PVC-Tür:
+	span
+		| PVC-Eingangstüren
 
 block slider-product
-	include ../templates/includes/carousel-design.py.pug
+	include ../templates/includes/carousel-turen.py.pug
+
 
 block content-product
 	.wrapper.my-5.my-md-10
@@ -37,4 +44,11 @@ block content-product
 					| Alle Ausführungen sind standardmäßig mit einer (mit Schlüssel verschließbar) Dreipunktverriegelung ausgerüstet. Optional ist eine Montage zusätzlicher Aushebelungsschutzbolzen möglich.
 			#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') ...
 			#contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') ...
+
+
+
+
+
+
+
 

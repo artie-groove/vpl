@@ -1,5 +1,5 @@
 $(document).ready( () => {
-	let carousel = $('#carouselMain');
+	let carousel = $('.carousel');
 	let callbackForm = $('#callbackForm');
 	$('.link-callback').on('click', () => {
 		carousel.hide();
@@ -39,6 +39,16 @@ $(document).ready( () => {
 		item.parent().siblings('.d-block').removeClass('d-block').addClass('d-none');
 		let idx = item.index();
 		item.parent().siblings('img').eq(idx).removeClass('d-none').addClass('d-block');
+	});
+
+	$('.thumbs img').on('click', function() {
+		let src = $(this).attr('src');
+		$(this).closest('.thumbs').parent().siblings('.viewport').find('img').attr('src', src);
+	});
+
+	$('.link-galerie').on('click', function() {
+		$(this).closest('.row').hide();
+		$('#carouselGalerie').toggleClass('d-none');
 	});
 
 });

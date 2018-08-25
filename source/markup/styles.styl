@@ -104,30 +104,132 @@
 		align-items flex-start
 		&-icon
 			height 45%
-			background-size contain
+			
 
-	.carousel-control-prev
-		justify-content flex-start
-		&-icon
-			background-position-x left
 
+.carousel-control-prev,
+.carousel-control-next
+	&-icon
+		background-size contain
+		width 43%
+		height 32%
+
+.carousel-control-prev
+	justify-content flex-start
+	&-icon
+		background-image: url('../images/carousel-arrow-prev.svg')
+		background-position-x left
+
+.carousel-control-next
+	justify-content flex-end
+	&-icon
+		background-image: url('../images/carousel-arrow-next.svg')
+		background-position-x right
+
+
+#carouselTuren
+	.thumbs
+		li
+			width 20%
+			&:not(:nth-last-of-type(-n+5))
+				margin-bottom 3%
+
+#carouselFenster
+	.thumbs
+		li
+			width 25%
+			margin 0 3% 3% 0
+			&:nth-of-type(3n+3)
+				margin-right 0
+			&:nth-last-of-type(-n+3)
+				margin-bottom 0
+
+
+.carousel-product
+	.wrapper
+		height 75vw
+		max-height 600px
+	.carousel-inner
+		width 85%
+		margin 0 1% 0 4%
+	.carousel-item
+		height 100%
+		overflow hidden
+		.h1
+			position absolute
+			width 100%
+			top -25%
+			right 0
+			font-size 3rem
+	.thumbs	
+		list-style none
+		padding-left 0
+		margin-bottom 0
+		padding-right 2%
+		li
+			img
+				width 100%
+				height auto
+				&:hover
+					cursor pointer
+	.viewport
+		padding-left 4%
+		img
+			width auto
+			max-height 100%
+		
+		.img-placeholder
+			height 0
+			padding-bottom 100%
+			position relative
+			overflow hidden
+			img
+				display: inline-block;
+				max-width: 100%; 
+				max-height: 100%;
+				width: auto;
+				height: auto;
+				position: absolute;
+				left: 50%; 
+				top: 50%; 
+				-webkit-transform: translate(-50%,-50%);
+				-ms-transform: translate(-50%,-50%);
+				-o-transform: translate(-50%,-50%);
+				transform: translate(-50%,-50%);
+		
+
+	
+	.description
+		text-align right
+		p:not(:last-of-type)
+			margin-bottom 2rem
+	.carousel-indicators
+		flex-wrap wrap
+		margin 0 auto
+		li
+			height unset
+			width unset
+			text-indent unset
+			font-size 1.25rem
+			padding .75rem 1.5rem
+			margin 0 .5rem
+			font-weight bold
+			background-color transparent
+			&.active
+				border 1px solid #000
+	.carousel-control-prev,
 	.carousel-control-next
-		justify-content flex-end
+		position static
+		width 5%
 		&-icon
-			background-position-x right
+			width 100%
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon
-	width 43%
-	height 32%
-
-.carousel-control-prev-icon
-	background-image: url('../images/carousel-arrow-prev.svg')
-	justify-content
-
-.carousel-control-next-icon 
-	background-image: url('../images/carousel-arrow-next.svg')
-
+.scrollable
+	overflow-y auto
+	&::-webkit-scrollbar
+		width .5rem
+	&::-webkit-scrollbar-thumb
+		background-color rgba(0, 0, 0, .25)
 
 a
 	&[href^="mailto:"],
@@ -283,6 +385,7 @@ nav
 		margin-bottom 0
 		span
 			margin-left 2rem
+			white-space nowrap
 			&:last-of-type
 				font-weight bold
 
@@ -301,4 +404,57 @@ $light-grey = #efefef
 			border-left 2px solid $light-grey
 .tab-content
 	background-color $light-grey
-	padding 2rem 4rem 5rem
+	padding 4rem 4rem 6rem
+	.col-12:not(:first-of-type)
+		padding 0 4rem
+
+.overview
+	.h2
+		margin-top 5rem
+		margin-left 2rem
+		margin-bottom 2rem
+	p
+		margin-left 4rem
+		margin-bottom 2rem
+	ul
+		margin-left 2rem
+
+.img-limited
+	max-height 450px
+
+ul.checklist
+	list-style none
+	padding-left 3rem
+	li
+		position relative
+		margin 1rem 0
+		b
+			font-size 1.5rem
+		&::before
+			content ' '
+			display block
+			position absolute
+			top .2rem
+			left -@padding-left
+			width 2rem
+			height @width
+			background url('../images/checkbox.svg') 0 0 / contain no-repeat
+		&.checked::after
+			content ' '
+			display block
+			position absolute
+			top -.3rem
+			left -@padding-left + .3rem
+			width 2.8rem
+			height @width
+			background url('../images/checkmark.svg') 0 0 / contain no-repeat
+
+.checklist-summary
+	span
+		padding-left 3rem
+	b
+		font-size 1.5rem
+
+.link-galerie
+	&:hover
+		cursor pointer

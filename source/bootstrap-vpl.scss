@@ -107,7 +107,40 @@ body {
   	padding-top: 0;
   }
   .showcase .row > div {
-	margin-bottom: 4rem;
+	 margin-bottom: 4rem;
+  }
+  .carousel-product .wrapper {
+    height: auto !important;
+    max-height: unset !important;
+  }
+  .carousel-product .viewport img {
+    height: 50vw !important;
+  }
+  .carousel-product .description,
+  .carousel-product .viewport,
+  .carousel-product .carousel-item > .d-flex {
+    height: auto !important;
+  }
+  .carousel-product .thumbs,
+  .carousel-product .description {
+    height: 50vw !important;
+  }
+  .carousel-product .viewport {
+    padding-left: 0 !important;
+  }
+  .carousel-product .carousel-inner {
+    padding-bottom: 7rem !important;
+  }
+  .carousel-product .thumbs {
+    width: 55vw !important;
+    margin-left: 5vw;
+  }
+  .carousel-product .thumbs li {
+    width: 29% !important;
+  }
+  .carousel-product .carousel-item .h1 {
+    position: static !important;
+    margin-bottom: 2rem;
   }
 }
 
