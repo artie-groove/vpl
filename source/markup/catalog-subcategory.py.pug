@@ -2,12 +2,13 @@ extends ../templates/catalog.tpl.py.pug
 
 block navbar-content
 	.col
-		.h5
-			| Produkte:
-			|
-			span Fenster:
-			|
-			span.font-weight-bold PVC Fenster
+		ul.catalog-breadcrumbs
+			li
+				a(href="#") Produkte:
+			li
+				a(href="#") Fenster:
+			li
+				| PVC Fenster
 		.vendor-filter.my-4
 			| Wählen:
 			a(href='#')

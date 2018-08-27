@@ -1,0 +1,32 @@
+extends ../templates/html.tpl.py.pug
+
+block content
+	-
+		let items = {
+			primary: [
+				'generic-front',
+				'generic-partners',
+				'generic-contacts',
+			],
+			warning: [
+				'catalog-categories',
+				'catalog-category-fenster',
+				'catalog-category-turen',
+				'catalog-category-schiebefenster',
+				'catalog-category-rollladen',
+				'catalog-subcategory',
+			],
+			success: [
+				'product-design',
+				'product-fenster',
+				'product-turen',
+			]
+		}
+	.wrapper.position-absolute.h-100.w-100
+		.row.h-100.align-items-center.justify-content-center
+			each category in Object.keys(items)
+				.col-sm-12.col-md-4
+					each link in items[category]
+						a.btn.btn-lg.btn-block.my-3(href=`${link}.html`, target='_blank')&attributes({ 'class': `btn-${category}` })
+							| #{link}
+

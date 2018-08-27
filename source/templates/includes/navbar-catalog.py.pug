@@ -1,11 +1,11 @@
-.d-none.d-md-block
-	nav
-		.row.align-items-center
-			.col-4
-				a.navbar-brand.pb-0(href='/')
-					+logo()
-			.col
-				.row
-					block navbar-content
-.d-block.d-md-none
-	include navbar.py.pug
+nav
+	.row.align-items-center
+		.col.col-md-4.flex-grow-0.flex-md-grow-1
+			a.navbar-brand.pb-0(href='/')
+				+logo()
+		.col
+			.row
+				block navbar-content
+//-
+	.d-block.d-md-none
+		include navbar.py.pug

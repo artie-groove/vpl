@@ -132,16 +132,31 @@ body {
     padding-bottom: 7rem !important;
   }
   .carousel-product .thumbs {
-    width: 55vw !important;
-    margin-left: 5vw;
+    padding-right: .5rem !important;
+    padding-left: calc(1.5% + .5rem) !important;
   }
-  .carousel-product .thumbs li {
-    width: 29% !important;
+  #carouselTuren .thumbs {
+    width: 95% !important;
+  }
+  #carouselTuren .thumbs li {
+    width: 17% !important;
+  }
+  #carouselFenster .thumbs {
+    width: 55vw !important;
+  }
+  #carouselFenster .thumbs li {
+    width: 30.5% !important;
   }
   .carousel-product .carousel-item .h1 {
     position: static !important;
     margin-bottom: 2rem;
+    padding-right: 0 !important;
   }
+  .carousel-product .carousel-indicators {
+    margin: 0 auto !important;
+    width: 100% !important;
+  }
+
 }
 
 
@@ -155,7 +170,11 @@ body {
 	}
 	.showcase .row > div {
 		margin-bottom: 5rem;
-  	}
+  }
+  .carousel-product .carousel-item .h1 {
+    font-size: 2.4rem !important;
+  }
+
 }
 
 @include media-breakpoint-up(md) {

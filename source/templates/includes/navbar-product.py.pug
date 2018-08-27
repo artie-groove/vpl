@@ -8,11 +8,12 @@
 			div.collapse.navbar-collapse.align-items-end#navbarCollapse
 				a.navbar-brand.d-none.d-md-block.flex-grow-0(href='/')
 					+logo()
-				.d-flex.align-items-center.mb-1.justify-content-between.pl-5.pl-md-8
+				.d-flex.align-items-center.mb-1.justify-content-between.pl-5.pl-md-8.pb-md-2.pb-lg-0
 					.navbar-nav
-						h5
-							a(href="#") Produkte:
+						ul.catalog-breadcrumbs
+							li
+								a(href="#") Produkte:
 							block breadcrumbs
-					.d-none.d-md-block
+					.d-none.d-lg-block
 						.navbar-nav.pl-md-10.font-weight-bold.flex-shrink-1.d-flex.justify-content-lg-end
 							include menu-extras.py.pug

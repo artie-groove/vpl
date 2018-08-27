@@ -79,9 +79,14 @@ mixin showcase-description(title)
 
 mixin navbar-catalog-items(itemId, title)
 	.col
-		.h5
-			| Produkte:
-			|
-			b #{title}
+		.navbar-nav.mb-2
+			ul.catalog-breadcrumbs
+				li
+					a(href="#") Produkte:
+				li #{title}
+			//-
+				a(href='#') Produkte:
+				|
+				b #{title}
 		ul.nav.nav-submenu.flex-row
 			+list-submenu-items(itemId)
