@@ -64,6 +64,12 @@
 #carouselMain .carousel-caption .phone {
   font-size: 2.25rem;
 }
+#carouselMain .carousel-control-prev {
+  margin-left: calc(2.5% + 12px);
+}
+#carouselMain .carousel-control-next {
+  margin-right: calc(2.5% + 12px);
+}
 #carouselDesign .carousel-indicators {
   position: static;
   flex-wrap: wrap;
