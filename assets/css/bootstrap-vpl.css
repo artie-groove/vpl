@@ -7090,7 +7090,41 @@ body {
   .dropdown-menu {
     padding-top: 0; }
   .showcase .row > div {
-    margin-bottom: 4rem; } }
+    margin-bottom: 4rem; }
+  .carousel-product .wrapper {
+    height: auto !important;
+    max-height: unset !important; }
+  .carousel-product .viewport img {
+    height: 50vw !important; }
+  .carousel-product .description,
+  .carousel-product .viewport,
+  .carousel-product .carousel-item > .d-flex {
+    height: auto !important; }
+  .carousel-product .thumbs,
+  .carousel-product .description {
+    height: 50vw !important; }
+  .carousel-product .viewport {
+    padding-left: 0 !important; }
+  .carousel-product .carousel-inner {
+    padding-bottom: 7rem !important; }
+  .carousel-product .thumbs {
+    padding-right: .5rem !important;
+    padding-left: calc(1.5% + .5rem) !important; }
+  #carouselTuren .thumbs {
+    width: 95% !important; }
+  #carouselTuren .thumbs li {
+    width: 17% !important; }
+  #carouselFenster .thumbs {
+    width: 55vw !important; }
+  #carouselFenster .thumbs li {
+    width: 30.5% !important; }
+  .carousel-product .carousel-item .h1 {
+    position: static !important;
+    margin-bottom: 2rem;
+    padding-right: 0 !important; }
+  .carousel-product .carousel-indicators {
+    margin: 0 auto !important;
+    width: 100% !important; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .nav-item::after {
@@ -7098,7 +7132,9 @@ body {
   .columns-md-2 {
     column-count: 2; }
   .showcase .row > div {
-    margin-bottom: 5rem; } }
+    margin-bottom: 5rem; }
+  .carousel-product .carousel-item .h1 {
+    font-size: 2.4rem !important; } }
 
 @media (min-width: 768px) {
   .dropdown-menu {
