@@ -205,27 +205,40 @@
 				-o-transform: translate(-50%,-50%);
 				transform: translate(-50%,-50%);
 		
-
+	.product-tabs
+		height 100%
+		.product-tab
+			height inherit
+			&:not(.active)
+				display none
 	
 	.description
 		text-align right
 		p:not(:last-of-type)
 			margin-bottom 2rem
-	.carousel-indicators
+	.product-tab-switcher
+		position absolute
+		z-index: 15
 		flex-wrap wrap
+		list-style: none
+		right 0
+		left 0
+		bottom 2rem
 		margin 0
 		width 50%
+		padding-left 0
+		display flex
 		li
-			height unset
-			width unset
-			text-indent unset
-			font-size 1.25rem
+			position: relative
+			flex: 0 1 auto
+			font-size 1.1rem
 			padding .75rem 1.5rem
-			margin 0 .5rem
+			margin 0
 			font-weight bold
-			background-color transparent
 			&.active
 				border 1px solid #000
+			&:hover
+				cursor pointer
 	.carousel-control-prev,
 	.carousel-control-next
 		position static
@@ -269,7 +282,7 @@ nav
 
 	.nav-submenu
 		padding-left 1.5rem
-		padding-right 5rem
+		//padding-right 5rem
 		.nav-item:not(:last-child)
 			position relative
 			&:after
@@ -288,14 +301,21 @@ nav
 		a
 			margin 0 1.5rem
 			text-decoration underline
+			&.active
+				img
+					filter grayscale(0%)
 		img
 			max-height 30px
+			filter grayscale(100%)
+			&:hover
+				filter grayscale(0%)
+
 				
 
 // Product cards customization
 
 .card-title
-	font-size 2.25rem
+	font-size 2rem
 	margin-bottom 1.5rem
 
 .card-text
@@ -307,7 +327,6 @@ nav
 	border 0
 	justify-content center
 	align-items center
-	padding 10% 1rem
 	& > a
 		display block
 		max-height 35%
@@ -321,13 +340,18 @@ nav
 			margin 0 auto
 
 	.card-title
-		margin-top 2.5rem
+		margin-top .8rem
 	.card-body
 		flex-grow 0
+		padding-left 2rem
+		padding-right 2rem
 	img
 		flex-grow 0
 		max-width 75%
-		max-height 35%
+		max-height 50%
+		width auto
+		height auto
+		margin-top 5%
 	ul
 		text-align left
 
@@ -360,11 +384,12 @@ nav
 			top $top
 		&::after
 			top $top
-	.link-close
-		cursor pointer
-		font-size 5rem
-		line-height 1rem
-		font-weight 300
+
+.link-close
+	cursor pointer
+	font-size 5rem
+	line-height 1rem
+	font-weight 300
 
 #callbackFront
 	#callbackForm
@@ -465,10 +490,31 @@ ul.checklist
 			background url('../images/checkmark.svg') 0 0 / contain no-repeat
 
 .checklist-summary
-	span
-		padding-left 3rem
+	padding-left 3rem
+	span:not(:first-of-type)
+		padding-left: @padding-left
 	b
 		font-size 1.5rem
+
+#carouselGalerieModal
+	padding-right 0 !important
+	.modal-dialog
+		max-width unset
+	.modal-content
+		border none
+	.modal-body
+		padding 0
+	.carousel-control-prev,
+	.carousel-control-next
+		height 80%
+		margin auto
+	.link-close
+		margin -1rem
+		padding 1rem
+		line-height 0
+		position absolute
+		top 0
+		right 0
 
 .link-galerie
 	&:hover

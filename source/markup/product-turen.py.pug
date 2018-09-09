@@ -13,22 +13,20 @@ block breadcrumbs
 block slider-product
 	include ../templates/includes/carousel-turen.py.pug
 
-
-
 block content-product
 	.wrapper.my-5.my-md-10
-		ul#myTab.nav.nav-tabs(role='tablist')
+		ul#productDetailsTab.nav.nav-tabs(role='tablist')
 			li.nav-item
-				a#home-tab.nav-link.active(data-toggle='tab', href='#home', role='tab', aria-controls='home', aria-selected='true')
+				a#tab-specification.nav-link.active(data-toggle='tab', href='#specification', role='tab', aria-controls='specification', aria-selected='true')
 					| Spezifikation
 			li.nav-item
-				a#profile-tab.nav-link(data-toggle='tab', href='#profile', role='tab', aria-controls='profile', aria-selected='false')
+				a#tab-coloring.nav-link(data-toggle='tab', href='#coloring', role='tab', aria-controls='coloring', aria-selected='false')
 					| Farbgebung
 			li.nav-item
-				a#contact-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false')
+				a#tab-technology.nav-link(data-toggle='tab', href='#technology', role='tab', aria-controls='technology', aria-selected='false')
 					| Technologie
-		#myTabContent.tab-content
-			#home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='home-tab')
+		#productDetailsTabContent.tab-content
+			#specification.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='specification-tab')
 				p
 					b Erhältlich sind folgende PVC-Eingangstürsysteme:
 				ul
@@ -43,11 +41,8 @@ block content-product
 					li Zusätzliche Abdichtungsbürste im unteren Flügelteil
 				p
 					| Alle Ausführungen sind standardmäßig mit einer (mit Schlüssel verschließbar) Dreipunktverriegelung ausgerüstet. Optional ist eine Montage zusätzlicher Aushebelungsschutzbolzen möglich.
-			#profile.tab-pane.fade(role='tabpanel', aria-labelledby='profile-tab') ...
-			#contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') ...
-
-
-
-
-
+			#coloring.tab-pane.fade(role='tabpanel', aria-labelledby='coloring-tab')
+				p Coloring details go here
+			#technology.tab-pane.fade(role='tabpanel', aria-labelledby='technology-tab')
+				p Technology description here
 

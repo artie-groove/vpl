@@ -3,8 +3,8 @@ extends footer.py.pug
 block footer-extras
 	nav
 		.row
-			.col-12.col-md
-				p.mb-4
+			.col-12.col-md-5.col-lg-4
+				p.mt-2.mb-4
 					b © 2018. VPL GmbH
 				p.mb-1
 					a.underlined(href='mailto:vpl-corporation@vpl-bau.de') vpl-corporation@vpl-bau.de
@@ -19,7 +19,7 @@ block footer-extras
 					|
 					b
 						a(href='#') Facebook
-			.col-12.col-md
+			.col-12.col-md-7.col-lg-4
 				include menu-1.py.pug
-			.col-12.col-md
+			.col-12.col-md-7.offset-md-5.col-lg-4.offset-lg-0
 				include menu-2.py.pug

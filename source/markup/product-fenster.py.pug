@@ -13,10 +13,7 @@ block breadcrumbs
 block slider-product
 	include ../templates/includes/carousel-fenster.py.pug
 
-block content-product
-
-	.my-4.my-md-8
-		include ../templates/includes/carousel-galerie.py.pug
+block content-product	
 	.wrapper.overview
 		.row
 			.col-12.col-md-6
@@ -38,7 +35,7 @@ block content-product
 					li Beim Bauen von Passivhäusern empfohlen
 			.col-12.col-md-6
 				.h2 Galerie
-				img.img-fluid.link-galerie(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg', alt='Galerie')
+				img.img-fluid.link-galerie(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg', alt='Galerie', data-toggle='modal', data-target='#carouselGalerieModal')
 		.row
 			.col-12.col-md-6
 				.h2 Aluschale
@@ -49,7 +46,6 @@ block content-product
 				p Die Sicherheit unserer Fenster wird durch das gewährleistet, was mit bloßem Auge nicht zu sehen ist, also durch ihre Beschläge.
 				p Die im System Ideal 8000 erzeugten Fenster werden mit dem Beschlag Maco Multi-Matic ausgestattet. Die Anpassung einer Beschlaggarnitur hängt jedoch von individuellen Bedürfnissen und Wünschen des jeweiligen Kunden ab. Standardmäßig hat das Fenster zwei SH-Schließstücke je Fensterflügel sowie einbruchhemmende Zapfen mit Andruckregelung. Ein wichtiger Bestandteil des Beschlages ist ein Flügelandruck in der Mitte. Der Flügelandruck passt sich automatisch an die Falzluft an. Dadurch wird nicht nur die Sicherheit, sondern auch Dichtheit und leichter Betrieb der Fensterflügel gewährleistet. Wir sind einer der wenigen Hersteller, der alle Beschläge von Dreh- und Kippfenstern standardmäßig um eine Fehlschaltsicherung ergänzt. Sie ist mit einem Flügelheber integriert.
 				p Wie man sehen kann, bietet der Maco-Multi-Matic-Beschlag enorme Möglichkeiten. Ohne Probleme kann er auch um zusätzliche einbruchshemmende Sicherheitskippschließbleche sowie sonstige Konstruktionselemente ergänzt werden. Um ein Fenster mit höchsten Sicherheitsparametern zu haben, ist es empfehlenswert, es auch mit einbruchsicheren oder Hartglasscheiben sowie mit Fenstergriffen 
-
 
 
 
@@ -84,7 +80,7 @@ block content-product
 			#zusatzliche-ausstattung.tab-pane.fade(role='tabpanel', aria-labelledby='zusatzliche-ausstattung-tab') ...
 
 
-
+	include ../templates/includes/carousel-galerie.py.pug
 
 
 

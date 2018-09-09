@@ -32,7 +32,7 @@ block content
 					let attrs = {}
 					let n = items.length
 					attrs['class'] = 'col-xl-4'
-					if ( n % 3 > 0 && n - i <= 2 ) attrs['class'] = 'col' 
+					if ( n % 3 > 0 && n - i <= 2 ) attrs['class'] = '' 
 				.col-md-6()&attributes(attrs)
 					- let itemCode = item.toLowerCase().replace(/ /g, "-");
 					+showcase-item(`fenster/pvc-fenster/${itemCode}.png`, item)
