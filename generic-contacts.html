@@ -21,15 +21,15 @@
   </head>
   <body>
     <div class="wrapper pt-4">
-      <nav class="navbar navbar-expand-md navbar-light px-0">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand d-block d-md-none" href="/"><img src="assets/images/logo-base.svg" alt="Logo" width="43" height="34"></a>
+      <nav class="navbar navbar-expand-xl navbar-light px-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand d-block d-xl-none mx-auto" href="/"><img src="assets/images/logo-base.svg" alt="Logo" width="43" height="34"></a>
         <div class="collapse navbar-collapse align-items-end flex-wrap" id="navbarCollapse">
           <div class="navbar-nav flex-shrink-0"><a class="navbar-item nav-link active" href="#">Fenster</a>
             <div class="navbar-item dropdown"><a class="nav-link dropdown-toggle" id="navbar-dropdown" href="#" role="button" data-toggle="dropdown">Türen</a>
               <div class="dropdown-menu"><a class="dropdown-item" href="#">PCV-Tür</a><a class="dropdown-item" href="#">Aliminium-Tür</a><a class="dropdown-item" href="#">Holztür</a><a class="dropdown-item" href="#">Zubehör zur Tür</a></div>
             </div><a class="navbar-item nav-link" href="#">Schiebefenster</a><a class="navbar-item nav-link" href="#">Rollläden</a><a class="navbar-item nav-link" href="#">Design</a>
-          </div><a class="navbar-brand pb-0 text-center d-none d-md-block" href="/"><img src="assets/images/logo.svg" alt="Logo" width="50" height="70"/></a>
-          <div class="navbar-nav font-weight-bold flex-shrink-1 d-md-none d-lg-flex justify-content-lg-end"><a class="navbar-item nav-link" href="#">Partner</a><a class="navbar-item nav-link" href="#">Kontakt</a><a class="navbar-item nav-link py-0 d-flex align-items-center" href="#"><img src="assets/images/logo-fb.svg" width="24" height="24"></a></div>
+          </div><a class="navbar-brand pb-0 text-center d-none d-xl-block" href="/"><img src="assets/images/logo.svg" alt="Logo" width="50" height="70"/></a>
+          <div class="navbar-nav font-weight-bold flex-shrink-1 d-xl-flex justify-content-xl-end"><a class="navbar-item nav-link" href="#">Partner</a><a class="navbar-item nav-link" href="#">Kontakt</a><a class="navbar-item nav-link py-0 d-flex align-items-center" href="#"><img src="assets/images/logo-fb.svg" width="24" height="24"></a></div>
         </div>
       </nav>
     </div>
@@ -69,62 +69,64 @@
     <div class="wrapper">
       <div class="py-3 py-md-6" id="callbackContacts">
         <div class="py-5" id="callbackForm">
-          <div class="row">
-            <div class="col col-md-10 col-lg-6 mx-auto">
-              <form>
-                <div class="row mb-4">
-                  <div class="col-10 col-md-8 col-lg-6">
-                    <h3>Schreiben Sie uns und wir rufen Sie schnellstmöglich zurück:</h3>
-                  </div>
-                  <div class="col-2 ml-auto text-right">
-                    <div class="link-close">&times;</div>
-                  </div>
-                </div>
-                <div class="row mb-4">
-                  <div class="col"><span class="mr-4">Andere:</span>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input class="custom-control-input" id="andere1" type="radio" name="andere" value="herr">
-                      <label class="custom-control-label" for="andere1">Herr</label>
-                    </div><span class="px-2"></span>
-                    <div class="custom-control custom-radio custom-control-inline">
-                      <input class="custom-control-input" id="andere2" type="radio" name="andere" value="frau">
-                      <label class="custom-control-label" for="andere2">Frau</label>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col col-md-10 col-lg-6 mx-auto">
+                <form>
+                  <div class="row mb-4">
+                    <div class="col-10 col-md-8 col-lg-6">
+                      <h3>Schreiben Sie uns und wir rufen Sie schnellstmöglich zurück:</h3>
+                    </div>
+                    <div class="col-2 ml-auto text-right">
+                      <div class="link-close">&times;</div>
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Vorname" name="vorname">
+                  <div class="row mb-4">
+                    <div class="col"><span class="mr-4">Andere:</span>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" id="andere1" type="radio" name="andere" value="herr">
+                        <label class="custom-control-label" for="andere1">Herr</label>
+                      </div><span class="px-2"></span>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" id="andere2" type="radio" name="andere" value="frau">
+                        <label class="custom-control-label" for="andere2">Frau</label>
+                      </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Nachname" name="nachname">
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Vorname" name="vorname">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Nachname" name="nachname">
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="+88 (888) 88-88-88" name="phone">
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="+88 (888) 88-88-88" name="phone">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Gewünschte Rückrufzeit" name="gewunschte-ruckrufzeit">
+                      </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <div class="form-group">
-                      <input class="form-control" type="text" placeholder="Gewünschte Rückrufzeit" name="gewunschte-ruckrufzeit">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Ihre frage" name="ihre-frage"></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button class="btn w-100 text-left" type="submit">Absenden</button>
                     </div>
                   </div>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" placeholder="Ihre frage" name="ihre-frage"></textarea>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <button class="btn w-100 text-left" type="submit">Absenden</button>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -156,7 +158,7 @@
     </div>
     <!-- Optional JavaScript-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="assets/js/tinycolor-min.js"></script>
