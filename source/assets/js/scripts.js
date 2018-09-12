@@ -49,6 +49,7 @@ $(document).ready( () => {
 		$(item).css('background-color', itemColor.toString());
 	});
 
+	// Plaette buttons in the Design page slider
 	$('.palette-buttons li img').on('click', function() {
 		let item = $(this).parent();
 		if ( item.hasClass('active') ) return false;
@@ -61,7 +62,7 @@ $(document).ready( () => {
 
 	$('.thumbs img').on('click', function() {
 		let src = $(this).attr('src');
-		$(this).closest('.thumbs').parent().siblings('.viewport').find('img').attr('src', src);
+		$(this).closest('.carousel-item').find('.viewport-placeholder img').attr('src', src);
 	});
 
 	let vendorFilter = $('.vendor-filter');
@@ -95,16 +96,58 @@ $(document).ready( () => {
 		}
 	});
 
+
+	// When the product slider changes slides or the tabSwitcher switches the tab we need to update the viewport
+	// Conditions:
+	// 1.	Carousel switches product
+	// 2.	Tab switcher buttons are clicked
+	// What to be updated:
+	// 1.	Separate divs for description (.covers) and other tabs (.viewport-placeholder)
+	// 2.	Half-height param ('halved') for some images to make them same height as the description
+	// 3.	Bugfix for maintaining cover image height (when the carousel switches between smaller images,
+	// 		the height is altered due to the nature of flex, I think)
+	function refreshViewport(slide, tab) {
+		let viewport = $(slide).find('.viewport');
+		let tabIdx = $(tab).index();
+		let viewportItem;
+		if ( tabIdx === 0 ) {
+			viewportItem = viewport.children('.covers');
+			let activeParamIdx = $(tab).find('.param-switcher li.active').index();
+			let img = viewportItem.find('img').eq(activeParamIdx);
+			img.attr('src', img.attr('src'));
+		}
+		else {
+			let thumbs = $(slide).find('.product-tabs').children().eq(tabIdx).find('.thumbs');
+			let src = thumbs.children('li').eq(0).children('img').attr('src');
+			let placeholder = viewport.find('.viewport-placeholder');
+			placeholder.find('img').attr('src', src);
+			let halved = thumbs.data('halved');
+			if ( halved ) {
+				placeholder.addClass('h-50');
+			}
+			else placeholder.removeClass('h-50');
+			viewportItem = placeholder;
+		}
+		viewport.children().hide();
+		viewportItem.show();
+	}
+
 	let carouselProduct = $('.carousel-product');
-	carouselProduct.find('.product-tab-switcher li').on('click', function() {
+	let productTabSwitcher = carouselProduct.find('.product-tab-switcher');
+	productTabSwitcher.children().on('click', function() {
 		if ( $(this).is('.active') ) return;
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
 		let idx = $(this).index();
-		let tabsContainer = carouselProduct.find('.carousel-item.active .product-tabs');
-		tabsContainer.children('.active').fadeOut(100, () => {
-			tabsContainer.children().eq(idx).fadeIn(100).addClass('active');
-		}).removeClass('active');
+		let slide = carouselProduct.find('.carousel-item.active');
+		refreshViewport(slide, this);
+		let tabsContainer = slide.find('.product-tabs');
+		tabsContainer.children('.active').fadeOut(100, function() {
+			tabsContainer.children().eq(idx).fadeIn(100, function() {
+				$(this).addClass('active');
+			});
+			$(this).removeClass('active');
+		});
 	});
 
 	function stripLeadingTabs(text) {
@@ -112,16 +155,69 @@ $(document).ready( () => {
 		return cleanText;
 	}
 
+	
+	// When the product slider switches slides
 	carouselProduct.on('slide.bs.carousel', function(e) {
-		let target = $(e.relatedTarget);
+		let target = $(e.relatedTarget); // the new slide (.carousel-item)
+		// Switching product tabs content (description, colors, etc.)
+		productTabSwitcher.children('.active').removeClass('active');
+		productTabSwitcher.children().eq(0).addClass('active');
+		let tabsContainer = target.find('.product-tabs');
+		tabsContainer.children('.active').removeClass('active').hide();
+		let activeTab = tabsContainer.children().eq(0);
+		activeTab.addClass('active').show();
+		refreshViewport(target, activeTab); // to switch the viewport items (see function description)
 		let productName = target.find('.h1').text();
 		$('.catalog-breadcrumbs li:last-of-type').text(productName);
-		$('#productDetailsTabContent div').each( (idx, item) => {
-			$(item).html( () => {
-				let mdData = stripLeadingTabs(tabData[target.index()][idx]);
+		let productData = products[target.index()];
+
+		Object.keys(productData.textBlocks).forEach( (key) => {
+			let value = productData.textBlocks[key];
+			$(`#${key}`).html( () => {
+				let mdData = stripLeadingTabs(value);
 				return marked(mdData);
 			});
 		});
+
+		if ( productData.images ) {
+			Object.keys(productData.images).forEach( (key) => {
+				let value = productData.images[key];
+				$(`#${key}`).attr('src', value);
+			});
+		}
+		
+		if ( productData.gallery ) {
+			let galleryItems = $('#carouselGalerie .carousel-inner');
+			galleryItems.children().remove();
+			productData.gallery.forEach( (src, idx) => {
+				let item = $('<div></div>')
+					.addClass('carousel-item');
+				if ( idx === 0 ) item.addClass('active');
+				let img = $('<img />')
+					.attr('src', src);
+				item.append(img);
+				galleryItems.append(item);
+			});
+		}
+		else {
+			// TODO: hide gallery block
+		}
+	});
+
+	let paramSwitcher = $('.param-switcher');
+	paramSwitcher.find('li').on('click', function() {
+		if ( $(this).is('.active') ) return;
+		$(this).siblings('.active').removeClass('active');
+		$(this).addClass('active');
+		let paramSummary = paramSwitcher.children('.param-summary');
+		let seals = $(this).data('seals');
+		let chambers = $(this).data('chambers');
+		paramSummary.find('.seals b').html(seals);
+		paramSummary.find('.chambers b').html(chambers);
+		let viewport = carouselProduct.find('.carousel-item.active .viewport');
+		let idx = $(this).index();
+		viewport.children('.covers').children().hide();
+		viewport.children('.covers').children().eq(idx).show().css('display', 'block');
 	});
 
 });

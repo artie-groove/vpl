@@ -11,17 +11,9 @@
 								span.sr-only Previous
 							.carousel-inner.w-75.mx-auto
 								.carousel-item.active
-									img.w-100(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg', alt='01')
+									img(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg', alt='01')
 								.carousel-item
-									img.w-100(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg', alt='01')
-								//-
-									ol.carousel-indicators.mt-auto
-										each item, i in items
-											-
-												let attrs = {}
-												if ( i === 0 ) attrs['class'] = 'active'
-											li(data-target='#carouselGalerie', data-slide-to=`${i}`)&attributes(attrs)
-												| #{item}
+									img(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg', alt='02')
 							a.carousel-control-next(href='#carouselGalerie', role='button', data-slide='next')
 								span.carousel-control-next-icon(aria-hidden='true')
 								span.sr-only Next

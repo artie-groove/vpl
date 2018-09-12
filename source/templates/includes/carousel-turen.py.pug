@@ -21,13 +21,13 @@
 						.h1 PVC-Eingangstüren
 						.product-tabs
 							.product-tab.active
-								.description.scrollable.w-100.h-100.d-flex.flex-column.justify-content-start
+								.description
 									p
 										| Bei der Herstellung von Eingangstüren setzten wir PVC-Profile anerkannter Hersteller ein. Auf diese Art und Weise sind wir in der Lage, unseren Kunden die besten thermischen Eigenschaften und energieeffiziente Fenster sowie alle Vorteile eines verglasten Eingangs anbieten zu können.
 									p
 										| Die PVC-Eingangstüren fertigen wir in Anlehnung an die populärsten Fenster- und Türsysteme aus unserem Angebot an. Darunter finden Sie sowohl günstige Basismodelle als auch effiziente Modelle der Premium-Klasse. Die Werkstoffe, aus denen die PVC-Türen hergestellt werden, werden mit modernsten Produktionstechnologien verarbeitet und ihre Komponenten stammen von anerkannten Herstellern.
 							.product-tab
-								ul.thumbs.scrollable.h-100.mx-auto.d-flex.justify-content-start.justify-content-md-end.flex-wrap
+								ul.thumbs
 									- 
 										let series = function() {
 											let count = 20;
@@ -42,21 +42,24 @@
 									each item in series
 										li
 											img(src=`assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/${item}.png`, alt=`${item}`)
-					.viewport.w-100.h-100.order-md-1.order-0.d-flex.align-items-center
-						img.d-block.mw-100.mx-auto(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='viewport')
+					.viewport
+						.covers
+							img(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='cover1')
+						.viewport-placeholder
+							img(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='viewport-placeholder')
 			.carousel-item
 				.d-flex.flex-column.flex-md-row.h-100.align-items-center
 					.w-100.h-50.position-relative.order-md-0.order-1.my-5.my-md-0.text-center.text-md-right
 						.h1 Another product
 						.product-tabs
 							.product-tab.active
-								.description.scrollable.w-100.h-100.d-flex.flex-column.justify-content-start
+								.description
 									p
 										| Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий требуют определения и уточнения форм развития. Идейные соображения высшего порядка, а также консультация с широким активом требуют от нас анализа модели развития. Равным образом начало повседневной работы по формированию позиции способствует подготовки и реализации существенных финансовых и административных условий. Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
 									p
 										| Идейные соображения высшего порядка, а также постоянный количественный рост и сфера нашей активности способствует подготовки и реализации форм развития. Не следует, однако забывать, что консультация с широким активом позволяет выполнять важные задания по разработке модели развития. Идейные соображения высшего порядка, а также консультация с широким активом играет важную роль в формировании новых предложений. Не следует, однако забывать, что новая модель организационной деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям. Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
 							.product-tab
-								ul.thumbs.scrollable.h-100.mx-auto.d-flex.justify-content-start.justify-content-md-end.flex-wrap
+								ul.thumbs
 									- 
 										let series1 = function() {
 											let count = 20;
@@ -71,9 +74,11 @@
 									each item in series1
 										li
 											img(src=`assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/${item}.png`, alt=`${item}`)
-						
-					.viewport.w-100.h-100.d-flex.align-items-center.order-md-1.order-0
-						img.d-block.mw-100.mx-auto(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='viewport')
+					.viewport
+						.covers
+							img(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='cover1')
+						.viewport-placeholder
+							img(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='viewport-placeholder')
 			ol.product-tab-switcher.justify-content-center.justify-content-md-start
 				each item, i in items
 					-
@@ -86,97 +91,3 @@
 			span.carousel-control-next-icon(aria-hidden='true')
 			span.sr-only Next
 
-//-
-	#carouselTuren.carousel.carousel-product.slide.py-5(data-ride='carousel_disabled', data-interval='0', style='background-color: #c9eeff')
-		.wrapper.d-flex.justify-content-between
-			a.carousel-control-prev(href='#carouselTuren', role='button', data-slide='prev')
-				span.carousel-control-prev-icon(aria-hidden='true')
-				span.sr-only Previous
-		
-			.carousel-inner
-				.carousel-item.active
-					.d-flex.flex-column.flex-md-row.align-items-center.h-100
-						.description.scrollable.w-100.h-100.d-flex.flex-column.justify-content-start.justify-content-md-center.order-md-0.order-1.my-5.my-md-0.text-center.text-md-right
-							.h1 PVC-Eingangstüren 
-							p
-								| Bei der Herstellung von Eingangstüren setzten wir PVC-Profile anerkannter Hersteller ein. Auf diese Art und Weise sind wir in der Lage, unseren Kunden die besten thermischen Eigenschaften und energieeffiziente Fenster sowie alle Vorteile eines verglasten Eingangs anbieten zu können.
-							p
-								| Die PVC-Eingangstüren fertigen wir in Anlehnung an die populärsten Fenster- und Türsysteme aus unserem Angebot an. Darunter finden Sie sowohl günstige Basismodelle als auch effiziente Modelle der Premium-Klasse. Die Werkstoffe, aus denen die PVC-Türen hergestellt werden, werden mit modernsten Produktionstechnologien verarbeitet und ihre Komponenten stammen von anerkannten Herstellern.
-						.viewport.w-100.h-100.order-md-1.order-0.d-flex.align-items-center
-							img.d-block.mw-100.mx-auto(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='viewport')
-				.carousel-item
-					.d-flex.flex-column.flex-md-row.h-100.align-items-center
-						ul.thumbs.scrollable.w-100.h-50.d-flex.justify-content-start.justify-content-md-end.flex-wrap.order-md-0.order-1.my-5.my-md-auto
-							- 
-								let series = function() {
-									let count = 20;
-									let items = [];
-									for ( let i = 0; i < count; i++ ) {
-										let idn = i + 1;
-										if ( idn < 10 ) idn = `0${idn}`;
-										items.push(idn);
-									}
-									return items;
-								}();
-							each item in series
-								li
-									img(src=`assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/${item}.png`, alt=`${item}`)
-						.viewport.w-100.h-50.order-md-1.order-0
-							img.d-block.mx-auto(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='viewport')
-				ol.carousel-indicators.justify-content-center.justify-content-md-start
-					each item, i in items
-						-
-							let attrs = {}
-							if ( i === 0 ) attrs['class'] = 'active'
-						li(data-target='#carouselTuren', data-slide-to=`${i}`)&attributes(attrs)
-							| #{item}
-			
-			a.carousel-control-next(href='#carouselTuren', role='button', data-slide='next')
-				span.carousel-control-next-icon(aria-hidden='true')
-				span.sr-only Next
-
-//-
-	#carouselTuren.carousel.carousel-product.slide.py-5(data-ride='carousel_disabled', data-interval='0', style='background-color: #e4d4ff')
-		.wrapper.d-flex.justify-content-between
-			a.carousel-control-prev(href='#carouselTuren', role='button', data-slide='prev')
-				span.carousel-control-prev-icon(aria-hidden='true')
-				span.sr-only Previous
-			.d-flex.flex-column.justify-content-center.gallery
-				.carousel-inner
-					.carousel-item.active
-						.description.h-100.d-flex.flex-column.justify-content-center
-							.h1 PVC-Eingangstüren 
-							p
-								| Bei der Herstellung von Eingangstüren setzten wir PVC-Profile anerkannter Hersteller ein. Auf diese Art und Weise sind wir in der Lage, unseren Kunden die besten thermischen Eigenschaften und energieeffiziente Fenster sowie alle Vorteile eines verglasten Eingangs anbieten zu können.
-							p
-								| Die PVC-Eingangstüren fertigen wir in Anlehnung an die populärsten Fenster- und Türsysteme aus unserem Angebot an. Darunter finden Sie sowohl günstige Basismodelle als auch effiziente Modelle der Premium-Klasse. Die Werkstoffe, aus denen die PVC-Türen hergestellt werden, werden mit modernsten Produktionstechnologien verarbeitet und ihre Komponenten stammen von anerkannten Herstellern.
-					.carousel-item
-						ul.thumbs.d-flex.flex-wrap
-							- 
-								let series = function() {
-									let count = 20;
-									let items = [];
-									for ( let i = 0; i < count; i++ ) {
-										let idn = i + 1;
-										if ( idn < 10 ) idn = `0${idn}`;
-										items.push(idn);
-									}
-									return items;
-								}();
-							each item in series
-								li
-									img(src=`assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/${item}.png`, alt=`${item}`)
-				ol.carousel-indicators.mt-auto
-					each item, i in items
-						-
-							let attrs = {}
-							if ( i === 0 ) attrs['class'] = 'active'
-						li(data-target='#carouselTuren', data-slide-to=`${i}`)&attributes(attrs)
-							| #{item}
-			#viewport
-				img.img-fluid(src='assets/images/catalog/turen/pvc-tur/pvc-eingangsturen/model/01.png', alt='viewport')
-			a.carousel-control-next(href='#carouselTuren', role='button', data-slide='next')
-				span.carousel-control-next-icon(aria-hidden='true')
-				span.sr-only Next
-
-	

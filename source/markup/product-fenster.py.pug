@@ -18,70 +18,187 @@ block content-product
 		.row
 			.col-12.col-md-6
 				.h2 Spezifikation
-				ul
-					li Profilqualität Klasse B
-					li 6-Kammer-System
-					li Einbautiefe: 85 mm
-					li In Standardausführung: Stahlarmierung im Rahmen geschlossen
-					li In Standardausführung: Fehlschaltsicherung (RU-Fenster)
-					li Standardmäßiger Beschlag mit zwei einbruchhemmenden Punkten pro Fensterflügel ausgestattet
-					li Auf weißem und braunem Kern
-					li System mit 3 Dichtungen ausgestattet
-					li Beschläge funktionieren in sog. trockener Kammer, dadurch wird ihre Lebensdauer erhöht
-					li Verglasung mit bis zu 51 mm breiten Glaspaketen
-					li In einer Variante mit geradem oder gerundetem Fensterflügel erhältlich
-					li Einsatz von Aluskin-Aluschalen möglich
-					li Anwendung eines verdeckt liegenden Beschlags möglich
-					li Beim Bauen von Passivhäusern empfohlen
+				#specification
+					ul
+						li Profilqualität Klasse B
+						li 6-Kammer-System
+						li Einbautiefe: 85 mm
+						li In Standardausführung: Stahlarmierung im Rahmen geschlossen
+						li In Standardausführung: Fehlschaltsicherung (RU-Fenster)
+						li Standardmäßiger Beschlag mit zwei einbruchhemmenden Punkten pro Fensterflügel ausgestattet
+						li Auf weißem und braunem Kern
+						li System mit 3 Dichtungen ausgestattet
+						li Beschläge funktionieren in sog. trockener Kammer, dadurch wird ihre Lebensdauer erhöht
+						li Verglasung mit bis zu 51 mm breiten Glaspaketen
+						li In einer Variante mit geradem oder gerundetem Fensterflügel erhältlich
+						li Einsatz von Aluskin-Aluschalen möglich
+						li Anwendung eines verdeckt liegenden Beschlags möglich
+						li Beim Bauen von Passivhäusern empfohlen
 			.col-12.col-md-6
 				.h2 Galerie
-				img.img-fluid.link-galerie(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg', alt='Galerie', data-toggle='modal', data-target='#carouselGalerieModal')
+				img.img-fluid.link-galerie#galleryCover(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg', alt='Galerie', data-toggle='modal', data-target='#carouselGalerieModal')
 		.row
 			.col-12.col-md-6
 				.h2 Aluschale
 				.text-center.mt-md-8
-					img.img-fluid.img-limited(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale.png', alt='Aluschale')
+					img.img-fluid.img-limited#aluminiumDish(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale.png', alt='Aluschale')
 			.col-12.col-md-6
 				.h2 Sicherheit
-				p Die Sicherheit unserer Fenster wird durch das gewährleistet, was mit bloßem Auge nicht zu sehen ist, also durch ihre Beschläge.
-				p Die im System Ideal 8000 erzeugten Fenster werden mit dem Beschlag Maco Multi-Matic ausgestattet. Die Anpassung einer Beschlaggarnitur hängt jedoch von individuellen Bedürfnissen und Wünschen des jeweiligen Kunden ab. Standardmäßig hat das Fenster zwei SH-Schließstücke je Fensterflügel sowie einbruchhemmende Zapfen mit Andruckregelung. Ein wichtiger Bestandteil des Beschlages ist ein Flügelandruck in der Mitte. Der Flügelandruck passt sich automatisch an die Falzluft an. Dadurch wird nicht nur die Sicherheit, sondern auch Dichtheit und leichter Betrieb der Fensterflügel gewährleistet. Wir sind einer der wenigen Hersteller, der alle Beschläge von Dreh- und Kippfenstern standardmäßig um eine Fehlschaltsicherung ergänzt. Sie ist mit einem Flügelheber integriert.
-				p Wie man sehen kann, bietet der Maco-Multi-Matic-Beschlag enorme Möglichkeiten. Ohne Probleme kann er auch um zusätzliche einbruchshemmende Sicherheitskippschließbleche sowie sonstige Konstruktionselemente ergänzt werden. Um ein Fenster mit höchsten Sicherheitsparametern zu haben, ist es empfehlenswert, es auch mit einbruchsicheren oder Hartglasscheiben sowie mit Fenstergriffen 
-
-
-
+				#safety
+					p Die Sicherheit unserer Fenster wird durch das gewährleistet, was mit bloßem Auge nicht zu sehen ist, also durch ihre Beschläge.
+					p Die im System Ideal 8000 erzeugten Fenster werden mit dem Beschlag Maco Multi-Matic ausgestattet. Die Anpassung einer Beschlaggarnitur hängt jedoch von individuellen Bedürfnissen und Wünschen des jeweiligen Kunden ab. Standardmäßig hat das Fenster zwei SH-Schließstücke je Fensterflügel sowie einbruchhemmende Zapfen mit Andruckregelung. Ein wichtiger Bestandteil des Beschlages ist ein Flügelandruck in der Mitte. Der Flügelandruck passt sich automatisch an die Falzluft an. Dadurch wird nicht nur die Sicherheit, sondern auch Dichtheit und leichter Betrieb der Fensterflügel gewährleistet. Wir sind einer der wenigen Hersteller, der alle Beschläge von Dreh- und Kippfenstern standardmäßig um eine Fehlschaltsicherung ergänzt. Sie ist mit einem Flügelheber integriert.
+					p Wie man sehen kann, bietet der Maco-Multi-Matic-Beschlag enorme Möglichkeiten. Ohne Probleme kann er auch um zusätzliche einbruchshemmende Sicherheitskippschließbleche sowie sonstige Konstruktionselemente ergänzt werden. Um ein Fenster mit höchsten Sicherheitsparametern zu haben, ist es empfehlenswert, es auch mit einbruchsicheren oder Hartglasscheiben sowie mit Fenstergriffen 
 
 
 	.wrapper.my-5.my-md-10
 		ul#myTab.nav.nav-tabs(role='tablist')
 			li.nav-item
-				a#energieeffizienz-tab.nav-link.active(data-toggle='tab', href='#energieeffizienz', role='tab', aria-controls='energieeffizienz', aria-selected='true')
+				a#energyEfficiency-tab.nav-link.active(data-toggle='tab', href='#energyEfficiency', role='tab', aria-controls='energyEfficiency', aria-selected='true')
 					| Energieeffizienz
 			li.nav-item
-				a#asthetische-optik-tab.nav-link(data-toggle='tab', href='#asthetische-optik', role='tab', aria-controls='asthetische-optik', aria-selected='false')
+				a#aestheticOptics-tab.nav-link(data-toggle='tab', href='#aestheticOptics', role='tab', aria-controls='aestheticOptics', aria-selected='false')
 					| Ästhetische optik
 			li.nav-item
-				a#technologie-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false')
+				a#technology-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false')
 					| Technologie
 			li.nav-item
-				a#zusatzliche-ausstattung-tab.nav-link(data-toggle='tab', href='#zusatzliche-ausstattung', role='tab', aria-controls='zusatzliche-ausstattung', aria-selected='false')
+				a#additionalEquipment-tab.nav-link(data-toggle='tab', href='#additionalEquipment', role='tab', aria-controls='additionalEquipment', aria-selected='false')
 					| Zusätzliche Ausstattung
 		#myTabContent.tab-content
-			#energieeffizienz.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='energieeffizienz-tab')
-				.container-fluid
-					.row
-						.col-12.col-md-6
-							p Von Jahr zu Jahr gibt es immer mehr Kunden, die beim Kauf der Fenster für ihr Haus hauptsächlich wärmedämmende Merkmale des Produktes berücksichtigen. Konsumenten entscheiden sich immer häufiger für energiesparende Produkte, wodurch sie ihre Rechnungen für den Energieverbrauch reduzieren können.
-							p Das Fenstersystem Ideal 8000 gilt als das wärmste Fenstersystem in der Aluplast-Fensterprofilfamilie. Das Fenstersystem bietet enorme Möglichkeiten. Seine Einbautiefe ermöglicht, Glasscheibenpakete mit einer Breite sogar von 51 mm einzubauen. Kunden, die hohe Produktqualität zu schätzen wissen, empfehlen wir, ihre Fenster mit einem breiteren 4-Scheiben-Paket und mit einer warmen Kante nachzurüsten. Ein so hergestelltes Fenster wird ohne Probleme einen Wasserdurchlässigkeitsbeiwert erreichen, den beim Bauen von Passivhäusern eingesetzte Fenster erfordern.
-							p Wir schlagen auch vor, sich eine der jüngsten Positionen in unserem Angebot anzuschauen. Die Glasscheiben Climaplus 4S mit wellenlängenselektiver 
-						.col-12.col-md-6
-							p Beschichtung sind eine absolute Innovation, die es ermöglicht, nicht nur die Heizkostenrechnungen, sondern auch die Kosten für die Raumklimatisierung in warmen Tagen zu senken. Eine speziell konzipierte Scheibenbeschichtung bewirkt, dass die Glasscheibe viel weniger Sonnenenergie durchlässt. Dadurch lässt sich im Sommer in Räumen eine angenehme Temperatur halten. Im Winter dagegen gilt die Glasscheibe Climaplus 4S als Barriere, die verhindert, dass die Wärme aus den Räumen durch die Glasscheibe nach außen entweicht. Diese Glasscheiben werden insbesondere für Gebäude mit großen, verglasten Flächen an ihrer Süd-, Süd-West- und Süd-Ostseite empfohlen.
-			#asthetische-optik.tab-pane.fade(role='tabpanel', aria-labelledby='asthetische-optik-tab') ...
-			#technologie.tab-pane.fade(role='tabpanel', aria-labelledby='technologie-tab') ...
-			#zusatzliche-ausstattung.tab-pane.fade(role='tabpanel', aria-labelledby='zusatzliche-ausstattung-tab') ...
+			#energyEfficiency.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='energyEfficiency-tab')
+				p Von Jahr zu Jahr gibt es immer mehr Kunden, die beim Kauf der Fenster für ihr Haus hauptsächlich wärmedämmende Merkmale des Produktes berücksichtigen. Konsumenten entscheiden sich immer häufiger für energiesparende Produkte, wodurch sie ihre Rechnungen für den Energieverbrauch reduzieren können.
+				p Das Fenstersystem Ideal 8000 gilt als das wärmste Fenstersystem in der Aluplast-Fensterprofilfamilie. Das Fenstersystem bietet enorme Möglichkeiten. Seine Einbautiefe ermöglicht, Glasscheibenpakete mit einer Breite sogar von 51 mm einzubauen. Kunden, die hohe Produktqualität zu schätzen wissen, empfehlen wir, ihre Fenster mit einem breiteren 4-Scheiben-Paket und mit einer warmen Kante nachzurüsten. Ein so hergestelltes Fenster wird ohne Probleme einen Wasserdurchlässigkeitsbeiwert erreichen, den beim Bauen von Passivhäusern eingesetzte Fenster erfordern.
+				p Wir schlagen auch vor, sich eine der jüngsten Positionen in unserem Angebot anzuschauen. Die Glasscheiben Climaplus 4S mit wellenlängenselektiver			
+				p Beschichtung sind eine absolute Innovation, die es ermöglicht, nicht nur die Heizkostenrechnungen, sondern auch die Kosten für die Raumklimatisierung in warmen Tagen zu senken. Eine speziell konzipierte Scheibenbeschichtung bewirkt, dass die Glasscheibe viel weniger Sonnenenergie durchlässt. Dadurch lässt sich im Sommer in Räumen eine angenehme Temperatur halten. Im Winter dagegen gilt die Glasscheibe Climaplus 4S als Barriere, die verhindert, dass die Wärme aus den Räumen durch die Glasscheibe nach außen entweicht. Diese Glasscheiben werden insbesondere für Gebäude mit großen, verglasten Flächen an ihrer Süd-, Süd-West- und Süd-Ostseite empfohlen.
+			#aestheticOptics.tab-pane.fade(role='tabpanel', aria-labelledby='aestheticOptics-tab') ...
+			#technology.tab-pane.fade(role='tabpanel', aria-labelledby='technology-tab') ...
+			#additionalEquipment.tab-pane.fade(role='tabpanel', aria-labelledby='additionalEquipment-tab') ...
 
 
 	include ../templates/includes/carousel-galerie.py.pug
 
 
+append scripts-delayed
+	script
+		.
+			let products = [
+				{
+					textBlocks: {
+						energyEfficiency: `
+							Von Jahr zu Jahr gibt es immer mehr Kunden, die beim Kauf der Fenster für ihr Haus hauptsächlich wärmedämmende Merkmale des Produktes berücksichtigen. Konsumenten entscheiden sich immer häufiger für energiesparende Produkte, wodurch sie ihre Rechnungen für den Energieverbrauch reduzieren können.
 
+							Das Fenstersystem Ideal 8000 gilt als das wärmste Fenstersystem in der Aluplast-Fensterprofilfamilie. Das Fenstersystem bietet enorme Möglichkeiten. Seine Einbautiefe ermöglicht, Glasscheibenpakete mit einer Breite sogar von 51 mm einzubauen. Kunden, die hohe Produktqualität zu schätzen wissen, empfehlen wir, ihre Fenster mit einem breiteren 4-Scheiben-Paket und mit einer warmen Kante nachzurüsten. Ein so hergestelltes Fenster wird ohne Probleme einen Wasserdurchlässigkeitsbeiwert erreichen, den beim Bauen von Passivhäusern eingesetzte Fenster erfordern.
 
+							Wir schlagen auch vor, sich eine der jüngsten Positionen in unserem Angebot anzuschauen. Die Glasscheiben Climaplus 4S mit wellenlängenselektiver
+
+							Beschichtung sind eine absolute Innovation, die es ermöglicht, nicht nur die Heizkostenrechnungen, sondern auch die Kosten für die Raumklimatisierung in warmen Tagen zu senken. Eine speziell konzipierte Scheibenbeschichtung bewirkt, dass die Glasscheibe viel weniger Sonnenenergie durchlässt. Dadurch lässt sich im Sommer in Räumen eine angenehme Temperatur halten. Im Winter dagegen gilt die Glasscheibe Climaplus 4S als Barriere, die verhindert, dass die Wärme aus den Räumen durch die Glasscheibe nach außen entweicht. Diese Glasscheiben werden insbesondere für Gebäude mit großen, verglasten Flächen an ihrer Süd-, Süd-West- und Süd-Ostseite empfohlen.
+						`,
+						aestheticOptics: `
+							Разнообразный и **богатый опыт** укрепление и развитие структуры позволяет выполнять важные задания по разработке новых предложений. Таким образом консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
+
+							Повседневная практика показывает, что сложившаяся структура организации в значительной степени обуславливает создание соответствующий условий активизации. Товарищи! консультация с широким активом позволяет оценить значение существенных финансовых и административных условий.
+						`,
+						technology: `
+							С другой стороны сложившаяся структура организации позволяет выполнять важные задания по разработке направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации существенных финансовых и административных условий.
+
+							Таким образом консультация с широким активом в значительной степени обуславливает создание существенных финансовых и административных условий. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности способствует подготовки и реализации позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что новая модель организационной деятельности способствует подготовки и реализации модели развития. Не следует, однако забывать, что новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности способствует подготовки и реализации направлений прогрессивного развития.
+
+							С другой стороны постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же консультация с широким активом играет важную роль в формировании существенных финансовых и административных условий. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке направлений прогрессивного развития.
+						`,
+						additionalEquipment: `
+							Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности требуют определения и уточнения систем массового участия. Не следует, однако забывать, что консультация с широким активом требуют определения и уточнения систем массового участия.
+						`,
+						specification: `
+							*	Profilqualität Klasse B
+							*	6-Kammer-System
+							*	Einbautiefe: 85 mm
+							*	In Standardausführung: Stahlarmierung im Rahmen geschlossen
+							*	In Standardausführung: Fehlschaltsicherung (RU-Fenster)
+							*	Standardmäßiger Beschlag mit zwei einbruchhemmenden Punkten pro Fensterflügel ausgestattet
+							*	Auf weißem und braunem Kern
+							*	System mit 3 Dichtungen ausgestattet
+							*	Beschläge funktionieren in sog. trockener Kammer, dadurch wird ihre Lebensdauer erhöht
+							*	Verglasung mit bis zu 51 mm breiten Glaspaketen
+							*	In einer Variante mit geradem oder gerundetem Fensterflügel erhältlich
+							*	Einsatz von Aluskin-Aluschalen möglich
+							*	Anwendung eines verdeckt liegenden Beschlags möglich
+							*	Beim Bauen von Passivhäusern empfohlen
+						`,
+						safety: `
+							Die Sicherheit unserer Fenster wird durch das gewährleistet, was mit bloßem Auge nicht zu sehen ist, also durch ihre Beschläge.
+
+							Die im System Ideal 8000 erzeugten Fenster werden mit dem Beschlag Maco Multi-Matic ausgestattet. Die Anpassung einer Beschlaggarnitur hängt jedoch von individuellen Bedürfnissen und Wünschen des jeweiligen Kunden ab. Standardmäßig hat das Fenster zwei SH-Schließstücke je Fensterflügel sowie einbruchhemmende Zapfen mit Andruckregelung. Ein wichtiger Bestandteil des Beschlages ist ein Flügelandruck in der Mitte. Der Flügelandruck passt sich automatisch an die Falzluft an. Dadurch wird nicht nur die Sicherheit, sondern auch Dichtheit und leichter Betrieb der Fensterflügel gewährleistet. Wir sind einer der wenigen Hersteller, der alle Beschläge von Dreh- und Kippfenstern standardmäßig um eine Fehlschaltsicherung ergänzt. Sie ist mit einem Flügelheber integriert.
+
+							Wie man sehen kann, bietet der Maco-Multi-Matic-Beschlag enorme Möglichkeiten. Ohne Probleme kann er auch um zusätzliche einbruchshemmende Sicherheitskippschließbleche sowie sonstige Konstruktionselemente ergänzt werden. Um ein Fenster mit höchsten Sicherheitsparametern zu haben, ist es empfehlenswert, es auch mit einbruchsicheren oder Hartglasscheiben sowie mit Fenstergriffen
+						`
+					},
+					images: {
+						aluminiumDish: 'assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale.png',
+						galleryCover: 'assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg'
+					},
+					gallery: [
+						'assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg',
+						'assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg'
+					]
+				},		
+				{
+					textBlocks: {
+						energyEfficiency: `
+							Задача организации, в особенности же сложившаяся структура организации позволяет оценить значение форм развития. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности позволяет оценить значение существенных финансовых и административных условий.
+
+							Равным образом консультация с широким активом представляет собой интересный эксперимент проверки направлений прогрессивного развития. Таким образом консультация с широким активом играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. С другой стороны новая модель организационной деятельности влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Значимость этих проблем настолько очевидна, что постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение направлений прогрессивного развития.
+
+							С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности требуют от нас анализа дальнейших направлений развития. Не следует, однако забывать, что новая модель организационной деятельности позволяет выполнять важные задания по разработке существенных финансовых и административных условий.
+
+							Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности способствует подготовки и реализации новых предложений. Идейные соображения высшего порядка, а также новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании модели развития. С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение существенных финансовых и административных условий.
+
+						`,
+						aestheticOptics: `
+							Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+
+							Идейные соображения высшего порядка, а также укрепление и развитие структуры влечет за собой процесс внедрения и модернизации форм развития. Разнообразный и богатый опыт консультация с широким активом позволяет выполнять важные задания по разработке систем массового участия. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании существенных финансовых и административных условий. Повседневная практика показывает, что укрепление и развитие структуры требуют определения и уточнения форм развития. Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа системы обучения кадров, соответствует насущным потребностям.
+						`,
+						technology: `
+							Таким образом сложившаяся структура организации требуют определения и уточнения модели развития. Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений. Повседневная практика показывает, что консультация с широким активом в значительной степени обуславливает создание существенных финансовых и административных условий. Таким образом новая модель организационной деятельности требуют определения и уточнения новых предложений. Таким образом новая модель организационной деятельности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+
+							Равным образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия. Равным образом рамки и место обучения кадров позволяет выполнять важные задания по разработке позиций, занимаемых участниками в отношении поставленных задач. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации существенных финансовых и административных условий. Разнообразный и богатый опыт дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач.
+
+							Повседневная практика показывает, что дальнейшее развитие различных форм деятельности играет важную роль в формировании существенных финансовых и административных условий. Идейные соображения высшего порядка, а также новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. С другой стороны рамки и место обучения кадров требуют определения и уточнения направлений прогрессивного развития. Значимость этих проблем настолько очевидна, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Таким образом консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании форм развития.
+						`,
+						additionalEquipment: `
+							Значимость этих проблем настолько очевидна, что укрепление и развитие структуры влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции требуют от нас анализа новых предложений. Равным образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития. Идейные соображения высшего порядка, а также новая модель организационной деятельности требуют от нас анализа систем массового участия.
+						`,
+						specification: `
+							*	Profile quality class B
+							*	6-chamber system
+							*	Installation depth: 85 mm
+							*	Standard version: steel reinforcement closed in frame
+							*	In standard version: Fault protection (RU window)
+							*	Standard fitting with two anti-burglary points per sash
+							*	On white and brown core
+							*	System equipped with 3 seals
+							*	Fittings work in a so-called dry chamber, which increases their service life
+							*	Glazing with up to 51 mm wide glass packages
+							*	Available in a variant with straight or rounded sash
+							*	Use of Aluskin aluminum dishes possible
+							*	Application of concealed hardware possible
+							*	Recommended when building passive houses
+						`,
+						safety: `
+							The security of our windows is ensured by what is not visible to the naked eye, that is, by their fittings.
+
+							The windows produced in the Ideal 8000 system are equipped with the Maco Multi-Matic fitting. However, the fitting of a fitting depends on the individual needs and wishes of each customer. As standard, the window has two SH-strikers per sash and anti-burglary pins with pressure control. An important part of the fitting is a wing pressure in the middle. The wing pressure automatically adapts to the rebate air. This ensures not only safety, but also tightness and easy operation of the sash. We are one of the few manufacturers that supplements all fittings of turn and tilt windows as standard with a fault-free fuse. It is integrated with a wing lifter.
+
+							As you can see, the Maco Multi-Matic hardware offers tremendous opportunities. Without any problems, it can also be supplemented with additional anti-burglary safety tilting strike plates and other construction elements. In order to have a window with highest safety parameters, it is recommended, also with burglar-proof or hard glass panes as well as with window handles
+						`,
+					},
+					images: {
+						aluminiumDish: 'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/aluschale.png',
+						galleryCover: 'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie.jpg'
+					},
+					gallery: [
+						'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie/01.png',
+						'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie/02.jpg'
+					]
+				},
+			]

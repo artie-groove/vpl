@@ -15,57 +15,115 @@
 				.d-flex.flex-column.flex-md-row.align-items-center.h-100
 					.w-100.h-50.position-relative.order-md-0.order-1.my-5.my-md-0.text-center.text-md-right
 						.h1 Ideal 8000
-						.description.scrollable.w-100.h-100x.d-flex.flex-column.justify-content-start
-							p Fenster jüngster Generation. Falls Sie diese Fenster wählen, dann wählen sie gleichzeitig Wärme, Ruhe und ästhetische Optik. Die im System Ideal 8000 erzeugten Fenster gewährleisten Wärmedämmung und Schallisolierung auf höchstem Niveau. Sie sind beim Bauen von Passivhäusern zu empfehlen.				
-							.text-left.pl-2
-								ul.checklist
-									li.checked
-										b 0.76
-										|
-										| Uw fur Ug=0.5 (wärmen Rahmen)
-									li
-										b 1.10
-										|
-										| Uw fur Ug=1.0 (wärmen Rahmen)
-								p.checklist-summary
-									span
-										b 3
-										|
-										| Dichtungen
-									|
-									span
-										b 6
-										|
-										| Kammern (Rahmen)
-					.viewport.w-100.h-100.order-md-1.order-0.d-flex.align-items-center
-						img.d-block.mw-100.mx-auto(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/cover.png', alt='viewport')
+						.product-tabs
+							.product-tab.active
+								.description
+									p Fenster jüngster Generation. Falls Sie diese Fenster wählen, dann wählen sie gleichzeitig Wärme, Ruhe und ästhetische Optik. Die im System Ideal 8000 erzeugten Fenster gewährleisten Wärmedämmung und Schallisolierung auf höchstem Niveau. Sie sind beim Bauen von Passivhäusern zu empfehlen.				
+									.text-left.pl-2
+										.param-switcher
+											ul
+												li(data-seals='3', data-chambers='6').active
+													b 0.76
+													|
+													| Uw fur Ug=0.5 (wärmen Rahmen)
+												li(data-seals='5', data-chambers='9')
+													b 1.10
+													|
+													| Uw fur Ug=1.0 (wärmen Rahmen)
+											.param-summary.d-flex
+												.seals
+													b 3
+													|
+													| Dichtungen
+												|
+												.chambers
+													b 6
+													|
+													| Kammern (Rahmen)
+							.product-tab
+								ul.thumbs(data-halved='true')
+									- 
+										let series = function() {
+											let count = 12;
+											let items = [];
+											for ( let i = 0; i < count; i++ ) {
+												let idn = i + 1;
+												if ( idn < 10 ) idn = `0${idn}`;
+												items.push(idn);
+											}
+											return items;
+										}();
+									each item in series
+										li
+											img(src=`assets/images/catalog/fenster/pvc-fenster/ideal-8000/patterns/${item}.jpg`, alt=`${item}`)
+					.viewport
+						.covers
+							img(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/description/01.png', alt='cover1')
+							img(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/description/02.png', alt='cover2')
+						.viewport-placeholder
+							img(src='', alt='viewport-placeholder')
+					//-
+						.viewport.w-100.h-50.order-md-1.order-0
+							img.d-block.mx-auto(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/patterns/01.jpg', alt='viewport')
 			.carousel-item
 				.d-flex.flex-column.flex-md-row.h-100.align-items-center
 					.w-100.h-50.position-relative.order-md-0.order-1.my-5.my-md-0.text-center.text-md-right
-						.h1 Ideal 8000
-						ul.thumbs.scrollable.h-100.mx-auto.d-flex.justify-content-center.justify-content-md-end.flex-wrap
-							- 
-								let series = function() {
-									let count = 12;
-									let items = [];
-									for ( let i = 0; i < count; i++ ) {
-										let idn = i + 1;
-										if ( idn < 10 ) idn = `0${idn}`;
-										items.push(idn);
-									}
-									return items;
-								}();
-							each item in series
-								li
-									img(src=`assets/images/catalog/fenster/pvc-fenster/ideal-8000/patterns/${item}.jpg`, alt=`${item}`)
-					.viewport.w-100.h-50.order-md-1.order-0
-						img.d-block.mx-auto(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/patterns/01.jpg', alt='viewport')
-			ol.carousel-indicators.justify-content-center.justify-content-md-start
+						.h1 Ideal 7000 NEW
+						.product-tabs
+							.product-tab.active
+								.description
+									p Задача организации, в особенности же реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития. Повседневная практика показывает, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации.			
+									.text-left.pl-2
+										.param-switcher
+											ul
+												li(data-seals='4', data-chambers='7').active
+													b 0.82
+													|
+													| Uw fur Ug=0.7 (wärmen Rahmen)
+												li(data-seals='7', data-chambers='11')
+													b 2.10
+													|
+													| Uw fur Ug=1.4 (wärmen Rahmen)
+											.param-summary.d-flex
+												.seals
+													b 4
+													|
+													| Dichtungen
+												|
+												.chambers
+													b 7
+													|
+													| Kammern (Rahmen)
+							.product-tab
+								ul.thumbs(data-halved='true')
+									- 
+										let series1 = function() {
+											let count = 12;
+											let items = [];
+											for ( let i = 0; i < count; i++ ) {
+												let idn = i + 1;
+												if ( idn < 10 ) idn = `0${idn}`;
+												items.push(idn);
+											}
+											return items;
+										}();
+									each item in series1
+										li
+											img(src=`assets/images/catalog/fenster/pvc-fenster/ideal-8000/patterns/${item}.jpg`, alt=`${item}`)
+					.viewport
+						.covers
+							img(src='assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/description/01.png', alt='cover1')
+							img(src='assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/description/02.png', alt='cover2')
+						.viewport-placeholder
+							img(src='', alt='viewport-placeholder')
+									
+						
+			ol.product-tab-switcher.justify-content-center.justify-content-md-start
 				each item, i in items
 					-
 						let attrs = {}
 						if ( i === 0 ) attrs['class'] = 'active'
-					li(data-target='#carouselFenster', data-slide-to=`${i}`)&attributes(attrs)
+					li&attributes(attrs)
 						| #{item}
 		
 		a.carousel-control-next(href='#carouselFenster', role='button', data-slide='next')
