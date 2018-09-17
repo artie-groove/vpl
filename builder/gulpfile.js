@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var watch = require('gulp-watch');
 var rename = require("gulp-rename");
 var pug = require('gulp-pug');
-var stylus = require('gulp-stylus');
 let sass = require('gulp-sass');
 // var sourcemaps = require('gulp-sourcemaps');
 var server = require('gulp-server-livereload');
@@ -11,7 +10,6 @@ var fs = require('fs');
 const imagemin = require('gulp-imagemin');
 const imageminGuetzli = require('imagemin-guetzli');
 const pngquant = require('gulp-pngquant');
-const ghPages = require('gulp-gh-pages');
 
 
 
@@ -170,7 +168,7 @@ gulp.task('watch', (cb) => {
 		compilePages(`${bs.router.srcMarkupPath}/*.py.pug`, bs.router.buildPath);
 	});
 
-	let globSrcStyles = `${bs.router.srcMarkupPath}/*.styl`;
+	let globSrcStyles = `${bs.router.srcMarkupPath}/*.sass`;
 	watch(globSrcStyles, (changedFile) => {
 		console.log(`Changed: ${changedFile.path}`);
 		compileStyles(changedFile.path, bs.router.dstStylesPath)
@@ -199,7 +197,7 @@ gulp.task('develop', gulp.parallel('watch', () => {
 	console.log(bs.router);
 
 	compilePages(`${bs.router.srcMarkupPath}/*.py.pug`, `${bs.router.buildPath}`);
-	compileStyles(`${bs.router.srcMarkupPath}/*.styl`, `${bs.router.dstStylesPath}`);
+	compileStyles(`${bs.router.srcMarkupPath}/*.sass`, `${bs.router.dstStylesPath}`);
 	// io.copy(`${bs.router.srcAssetsPath}/**/*`, bs.router.srcAssetsPath, bs.router.dstAssetsPath);
 
 	gulp.src(bs.router.buildPath)
@@ -227,11 +225,9 @@ function compilePages(glob, dest) {
 }
 
 function compileStyles(glob, dest) {
-	gulp.src(glob)
-		// .pipe(sourcemaps.init())
-		.pipe(stylus())
-		// .pipe(sourcemaps.write())
-		.pipe(gulp.dest(dest));
+	return gulp.src(glob)
+	    .pipe(sass().on('error', sass.logError))
+	    .pipe(gulp.dest(dest));
 }
 
 
@@ -295,7 +291,7 @@ gulp.task('switch', function() {
 
 gulp.task('bootstrap', () => {
 	let bs = Bootstrapper.create();
-	return gulp.src(`${bs.router.srcPath}/bootstrap-vpl.scss`)
+	return gulp.src(`${bs.router.srcPath}/markup/styles.sass`)
 	    .pipe(sass().on('error', sass.logError))
 	    .pipe(gulp.dest(bs.router.dstStylesPath));
 });

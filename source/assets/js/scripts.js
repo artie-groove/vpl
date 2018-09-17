@@ -114,7 +114,7 @@ $(document).ready( () => {
 			viewportItem = viewport.children('.covers');
 			let activeParamIdx = $(tab).find('.param-switcher li.active').index();
 			let img = viewportItem.find('img').eq(activeParamIdx);
-			img.attr('src', img.attr('src'));
+			// img.attr('src', img.attr('src'));
 		}
 		else {
 			let thumbs = $(slide).find('.product-tabs').children().eq(tabIdx).find('.thumbs');

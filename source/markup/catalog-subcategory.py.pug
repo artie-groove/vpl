@@ -24,8 +24,8 @@ block navbar-content
 					a.nav-link(href='#') #{item}
 					
 block content
-	.wrapper.showcase.showcase-products.my-2.my-md-5(data-color='#c9eeff')
-		.row.my-5.align-items-stretch
+	.wrapper.showcase.showcase-products(data-color='#c9eeff')
+		.row.align-items-stretch
 			- let items = pvcTuren
 			each item, i in items
 				-

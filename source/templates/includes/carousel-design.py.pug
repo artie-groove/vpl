@@ -29,7 +29,7 @@ mixin palette-switch(typeid, count)
 			li&attributes(attrs)
 				img(src=`assets/images/carousel-design/${typeid}/${item}.jpg`, width="50", height="50", alt='pbtn')
 
-#carouselDesign.carousel.slide(data-ride='carousel_disabled', data-interval='0')
+#carouselDesign.carousel.slide.mt-3(data-ride='carousel_disabled', data-interval='0')
 	ol.carousel-indicators
 		each item, i in items
 			-
