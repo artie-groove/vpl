@@ -45,7 +45,6 @@ $(document).ready( () => {
 	items.each( (i, item) => {
 		let level = Math.round(10 / n * i);
 		let itemColor = tinycolor(baseColor).lighten(level);
-		console.log(level, itemColor.toString());
 		$(item).css('background-color', itemColor.toString());
 	});
 

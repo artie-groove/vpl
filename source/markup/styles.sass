@@ -106,6 +106,10 @@ body
 		position: relative
 		z-index: 1005
 		font-weight: 600
+	+media-breakpoint-down(lg)
+		background-color: #000
+		left: -1rem
+		padding-left: 1rem
 
 .dropdown-menu
 	background-color: #000
@@ -115,6 +119,12 @@ body
 		&:hover
 			background-color: #000
 			text-decoration: underline
+	+media-breakpoint-only(xl)
+		padding-top: 0
+		top: -1rem
+		padding-top: 4rem
+	+media-breakpoint-down(lg)
+		padding-top: 0
 
 
 .carousel
@@ -189,6 +199,8 @@ body
 		align-items: flex-start
 		&-icon
 			height: 45%
+		+media-breakpoint-only(xs)
+			margin-top: 9%
 			
 
 
@@ -219,6 +231,10 @@ body
 			margin-right: 3%
 			&:not(:nth-last-of-type(-n+5))
 				margin-bottom: 3%
+		+media-breakpoint-down(sm)
+			width: 95%
+			li
+				width: 17%
 
 #carouselFenster
 	.thumbs
@@ -229,25 +245,64 @@ body
 				margin-right: 0
 			&:nth-last-of-type(-n+3)
 				margin-bottom: 0
+		+media-breakpoint-down(sm)
+			width: 55vw
+			li
+				width: 30.5%
+
 
 
 .carousel-product
 	.wrapper
 		height: 75vw
 		max-height: 600px
+		+media-breakpoint-down(sm)
+			height: auto
+			max-height: unset
 	.carousel-inner
 		width: 85%
-		margin: 0 1% 0 4%
+		margin: 0 1%
+
 	.carousel-item
-		height: 100%
-		overflow: hidden
 		.h1
-			position: absolute
 			width: 100%
-			top: -25%
-			right: 0
-			font-size: 3rem
-			padding-right: 3%
+			margin-bottom: 1rem
+			padding-right: 0
+			font-size: 2.2rem
+			height: 3rem
+			overflow: hidden			
+			+media-breakpoint-up(md)
+				position: absolute
+				top: -25%
+				right: 0
+				margin-bottom 0
+				padding-right: 3%
+			+media-breakpoint-up(lg)
+				font-size: 3rem
+				height: 4rem
+
+		+media-breakpoint-up(md)
+			height: 100%
+			overflow: hidden
+				
+		+media-breakpoint-down(sm)
+			& > .d-flex
+				height: auto
+
+
+	.switch
+		position: relative
+		width: 100%
+		height: 50vw
+		text-align: center
+		order: 1
+		margin: 2rem auto 0
+		+media-breakpoint-up(md)
+			order: 0
+			height: 50%
+			margin: 0
+			text-align: right
+
 
 	.thumbs
 		@extend %scrollable
@@ -258,45 +313,61 @@ body
 		justify-content: start
 		flex-wrap: wrap
 		list-style: none
-		padding-left: 0
 		margin-bottom: 0
-		padding-right: 2%
+		padding-right: .4rem
+		padding-left: calc(1.5% + .83rem)
 		li
 			img
 				width: 100%
 				height: auto
 				&:hover
 					cursor: pointer
-	// .w-100.h-100.d-flex.align-items-center.justify-content-center.order-md-1.order-0
+		+media-breakpoint-up(md) 
+			justify-content: flex-end
+			padding-left: 0
+			padding-right: 2%
+	
 	.viewport
 		width: 100%
-		height: 100%
+		height: 49vw
 		display: flex
 		align-items: center
 		justify-content: center
 		order: 0
-		padding-left: 4%
+		padding-left: 0
 		img
 			display: block
 			width: auto
+			height: auto
 			max-width: 100%
 			max-height: 100%
 			position: relative
 			top: 50%
 			left: 50%
 			transform: translate(-50%, -50%)
+			//+media-breakpoint-up(md)
+								
 
 		& > div
 			height: 100%
+			width: 100%
+
+		+media-breakpoint-up(md)
+			order: 1
+			padding-left: 4%
+			height: 100%
+
+
+
 
 		.covers
 			img:not(:first-of-type)
 				display: none
 		.viewport-placeholder
 			display: none
+			+media-breakpoint-down(sm)
+				height: 100% !important
 
-		
-			
 
 		.img-placeholder
 			height: 0
@@ -319,11 +390,13 @@ body
 
 		
 	.product-tabs
-		height: 100%
+		height: 74%
 		.product-tab
-			height: inherit
+			height: 100%
 			&:not(.active)
 				display: none
+		+media-breakpoint-up(md)
+			height: 100%
 
 	.description
 		@extend %scrollable
@@ -336,16 +409,12 @@ body
 		p:not(:last-of-type)
 			margin-bottom: 2rem
 
+
 	.product-tab-switcher
-		position: absolute
-		z-index: 15
 		flex-wrap: wrap
 		list-style: none
-		right: 0
-		left: 0
-		bottom: 2rem
-		margin: 0
-		width: 50%
+		margin: 2rem auto 0
+		width: 100%
 		padding-left: 0
 		display: flex
 		li
@@ -359,14 +428,21 @@ body
 				border: 1px solid #000
 			&:hover
 				cursor: pointer
+		+media-breakpoint-up(md)
+			position: absolute
+			z-index: 15
+			right: 0
+			left: 0
+			bottom: 2rem
+			margin: 0
+			width: 50%
+			
 	.carousel-control-prev,
 	.carousel-control-next
 		position: static
 		width: 5%
 		&-icon
 			width: 100%
-
-
 
 a
 	&[href^="mailto:"],
@@ -575,6 +651,8 @@ $light-grey: #efefef
 	padding: 4rem 4rem 6rem
 	.col-12:not(:first-of-type) p
 		padding: 0 0 0 4rem
+		+media-breakpoint-down(sm)
+			padding: 0
 
 .overview
 	.h2
@@ -685,71 +763,10 @@ $light-grey: #efefef
 		max-width: 200%
 		width: auto
 
-	#carouselDesign
-		.carousel-control-prev, .carousel-control-next
-			margin-top: 9%
+	
 
 
-+media-breakpoint-down(lg)
-	.dropdown.show
-		background-color: #000
-		left: -1rem
-		padding-left: 1rem
-	.dropdown-menu
-		padding-top: 0
 
-+media-breakpoint-down(sm)
-	.carousel-product .wrapper
-		height: auto
-		max-height: unset
-
-	.carousel-product .viewport img
-		height: 50vw
-		position: static
-		transform: none
-
-	.carousel-product .description,
-	.carousel-product .viewport,
-	.carousel-product .carousel-item > .d-flex
-		height: auto
-
-	.carousel-product .thumbs,
-	.carousel-product .description
-		height: 50vw
-
-	.carousel-product .viewport
-		padding-left: 0
-
-	.carousel-product .carousel-inner
-		padding-bottom: 7rem
-
-	.carousel-product .thumbs
-		padding-right: .5rem
-		padding-left: calc(1.5% + .5rem)
-
-	#carouselTuren .thumbs
-		width: 95%
-
-	#carouselTuren .thumbs li
-		width: 17%
-
-	#carouselFenster .thumbs
-		width: 55vw
-
-	#carouselFenster .thumbs li
-		width: 30.5%
-
-	.carousel-product .carousel-item .h1
-		position: static
-		margin-bottom: 2rem
-		padding-right: 0
-
-	.carousel-product .product-tab-switcher
-		margin: 0 auto
-		width: 100%
-
-	.tab-content .col-12:not(:first-of-type) p
-		padding: 0
 
 
 
@@ -757,20 +774,10 @@ $light-grey: #efefef
 +media-breakpoint-only(md)
 	.columns-md-2
 		column-count: 2
-	.carousel-product .carousel-item .h1
-		font-size: 2.2rem
 
 
-+media-breakpoint-up(md) 
-	.carousel-product .thumbs
-		justify-content: end
-	.carousel-product .viewport
-		order: 1
 
 
-+media-breakpoint-only(xl)
-	.dropdown-menu
-		padding-top: 0
-		top: -1rem
-		padding-top: 4rem
+
+
 
