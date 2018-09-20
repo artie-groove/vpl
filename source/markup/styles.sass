@@ -335,6 +335,7 @@ body
 		justify-content: center
 		order: 0
 		padding-left: 0
+		margin-top: 10%
 		img
 			display: block
 			width: auto
@@ -356,6 +357,7 @@ body
 			order: 1
 			padding-left: 4%
 			height: 100%
+			margin-top: 0
 
 
 
@@ -363,10 +365,16 @@ body
 		.covers
 			img:not(:first-of-type)
 				display: none
+			+media-breakpoint-up(xl)
+				padding: 15% 0
 		.viewport-placeholder
 			display: none
 			+media-breakpoint-down(sm)
 				height: 100% !important
+			+media-breakpoint-up(xl)
+				padding: 15% 0
+				&.h-50
+					padding: 0
 
 
 		.img-placeholder
@@ -413,7 +421,7 @@ body
 	.product-tab-switcher
 		flex-wrap: wrap
 		list-style: none
-		margin: 2rem auto 0
+		margin: 2rem auto
 		width: 100%
 		padding-left: 0
 		display: flex
@@ -752,9 +760,17 @@ $light-grey: #efefef
 		right: 0
 
 
+.modal
+	max-width: 1524px
+	margin-right: auto
+	margin-left: auto
+
+
 .link-galerie
 	&:hover
 		cursor: pointer
+
+
 
 
 
@@ -762,14 +778,6 @@ $light-grey: #efefef
 	.carousel-item .w-100
 		max-width: 200%
 		width: auto
-
-	
-
-
-
-
-
-
 
 +media-breakpoint-only(md)
 	.columns-md-2
