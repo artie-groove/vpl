@@ -7714,17 +7714,17 @@ ul.catalog-breadcrumbs {
   .param-summary b {
     font-size: 1.5rem; }
 
-#carouselGalerie {
+.modal-carousel .carousel {
   height: 80vh; }
-  #carouselGalerie .wrapper {
+  .modal-carousel .carousel .wrapper {
     height: 100%; }
-  #carouselGalerie .position-relative {
+  .modal-carousel .carousel .position-relative {
     height: 100%; }
-  #carouselGalerie .carousel-inner {
+  .modal-carousel .carousel .carousel-inner {
     height: 100%; }
-  #carouselGalerie .carousel-item {
+  .modal-carousel .carousel .carousel-item {
     height: 100%; }
-    #carouselGalerie .carousel-item img {
+    .modal-carousel .carousel .carousel-item img {
       display: block;
       max-height: 100%;
       max-width: 100%;
@@ -7733,21 +7733,21 @@ ul.catalog-breadcrumbs {
       left: 50%;
       transform: translate(-50%, -50%); }
 
-#carouselGalerieModal {
+.modal-carousel {
   padding-right: 0 !important; }
-  #carouselGalerieModal .modal-dialog {
+  .modal-carousel .modal-dialog {
     margin-left: 0;
     margin-right: 0;
     max-width: unset; }
-  #carouselGalerieModal .modal-content {
+  .modal-carousel .modal-content {
     border: none; }
-  #carouselGalerieModal .modal-body {
+  .modal-carousel .modal-body {
     padding: 0; }
-  #carouselGalerieModal .carousel-control-prev,
-  #carouselGalerieModal .carousel-control-next {
+  .modal-carousel .carousel-control-prev,
+  .modal-carousel .carousel-control-next {
     height: 80%;
     margin: auto; }
-  #carouselGalerieModal .link-close {
+  .modal-carousel .link-close {
     margin: -1rem;
     padding: 1rem;
     line-height: 0;
@@ -7760,7 +7760,7 @@ ul.catalog-breadcrumbs {
   margin-right: auto;
   margin-left: auto; }
 
-.link-galerie:hover {
+.link:hover {
   cursor: pointer; }
 
 @media (max-width: 575.98px) {
