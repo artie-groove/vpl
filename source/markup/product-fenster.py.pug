@@ -36,12 +36,12 @@ block content-product
 						li Beim Bauen von Passivhäusern empfohlen
 			.col-12.col-md-6
 				.h2 Galerie
-				img.img-fluid.link-galerie#galleryCover(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg', alt='Galerie', data-toggle='modal', data-target='#carouselGalerieModal')
+				img.img-fluid#galleryCover.link(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg', alt='Galerie', data-toggle='modal', data-target='#carouselGalerieModal')
 		.row
 			.col-12.col-md-6
 				.h2 Aluschale
 				.text-center.mt-md-8
-					img.img-fluid.img-limited#aluminiumDish(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale.png', alt='Aluschale')
+					img.img-fluid.img-limited#aluminiumDish.link(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale.png', alt='Aluschale', data-toggle='modal', data-target='#carouselAluschaleModal')
 			.col-12.col-md-6
 				.h2 Sicherheit
 				#safety
@@ -76,6 +76,7 @@ block content-product
 
 
 	include ../templates/includes/carousel-galerie.py.pug
+	include ../templates/includes/carousel-aluschale.py.pug
 
 append scripts-delayed
 	script
@@ -135,9 +136,14 @@ append scripts-delayed
 						aluminiumDish: 'assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale.png',
 						galleryCover: 'assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie.jpg'
 					},
-					gallery: [
+					galerie: [
 						'assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg',
 						'assets/images/catalog/fenster/pvc-fenster/ideal-8000/galerie/01.jpg'
+					],
+					aluschale: [
+						'assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale/01.jpg',
+						'assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale/02.jpg',
+						'assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale/03.jpg'
 					]
 				},		
 				{
@@ -195,7 +201,11 @@ append scripts-delayed
 						aluminiumDish: 'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/aluschale.png',
 						galleryCover: 'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie.jpg'
 					},
-					gallery: [
+					galerie: [
+						'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie/01.png',
+						'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie/02.jpg'
+					],
+					aluschale: [
 						'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie/01.png',
 						'assets/images/catalog/fenster/pvc-fenster/ideal-7000-new/galerie/02.jpg'
 					]

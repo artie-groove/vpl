@@ -3,13 +3,7 @@ $(document).ready( () => {
 	let callbackForm = $('#callbackForm');
 	let callbackFormTriggerBtn = $('.link-callback');
 	let carouselGalerie = $('#carouselGalerie');
-	let galerieCarouselTriggerBtn = $('.link-galerie');
-	let infoblockOverGalerie = galerieCarouselTriggerBtn.closest('.row');
-	// $('.link-galerie').on('click', function() {
-	// 	$(this).closest('.row').hide();
-	// 	$('#carouselGalerie').toggleClass('d-none');
-	// });
-
+	let carouselAluschale = $('#carouselAluschale');
 
 	function addBlockToggler(btnTrigger, objTop, objBottom) {
 		btnTrigger.on('click', () => {
@@ -24,9 +18,7 @@ $(document).ready( () => {
 
 	
 	addBlockToggler(callbackFormTriggerBtn, carouselMain, callbackForm);
-	// addBlockToggler(galerieCarouselTriggerBtn, infoblockOverGalerie, carouselGalerie);
-
-
+	
 
 	let baseColor = $('.showcase').data('color');
 	let items, n;
@@ -185,10 +177,10 @@ $(document).ready( () => {
 			});
 		}
 		
-		if ( productData.gallery ) {
-			let galleryItems = $('#carouselGalerie .carousel-inner');
+		function swapGalleryImages(elementId, imagesList) {
+			let galleryItems = $(elementId).find('.carousel-inner');
 			galleryItems.children().remove();
-			productData.gallery.forEach( (src, idx) => {
+			imagesList.forEach( (src, idx) => {
 				let item = $('<div></div>')
 					.addClass('carousel-item');
 				if ( idx === 0 ) item.addClass('active');
@@ -197,6 +189,17 @@ $(document).ready( () => {
 				item.append(img);
 				galleryItems.append(item);
 			});
+		}
+
+		if ( productData.galerie ) {
+			swapGalleryImages('#carouselGalerie', productData.galerie);
+		}
+		else {
+			// TODO: hide gallery block
+		}
+
+		if ( productData.aluschale ) {
+			swapGalleryImages('#carouselAluschale', productData.aluschale);
 		}
 		else {
 			// TODO: hide gallery block

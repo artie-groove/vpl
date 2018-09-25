@@ -1,0 +1,21 @@
+#carouselAluschaleModal.modal.modal-carousel(tabindex="-1", role="dialog")
+	.modal-dialog.modal-dialog-centered(role="document")
+		.modal-content
+			.modal-body
+				#carouselAluschale.carousel.slide.py-5.bg-light(data-ride='carousel_disabled', data-interval='0')
+					.wrapper
+						.position-relative.d-flex.justify-content-between
+							.link-close(data-dismiss="modal") &times;
+							a.carousel-control-prev(href='#carouselAluschale', role='button', data-slide='prev')
+								span.carousel-control-prev-icon(aria-hidden='true')
+								span.sr-only Previous
+							.carousel-inner.w-75.mx-auto
+								.carousel-item.active
+									img(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale/01.jpg', alt='01')
+								.carousel-item
+									img(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale/02.jpg', alt='02')
+								.carousel-item
+									img(src='assets/images/catalog/fenster/pvc-fenster/ideal-8000/aluschale/03.jpg', alt='03')
+							a.carousel-control-next(href='#carouselAluschale', role='button', data-slide='next')
+								span.carousel-control-next-icon(aria-hidden='true')
+								span.sr-only Next
