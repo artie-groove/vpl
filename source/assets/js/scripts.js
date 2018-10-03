@@ -222,4 +222,51 @@ $(document).ready( () => {
 		viewport.children('.covers').children().eq(idx).show().css('display', 'block');
 	});
 
+	function is_touch_device() {
+	  var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+	  var mq = function(query) {
+	    return window.matchMedia(query).matches;
+	  }
+
+	  if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+	    return true;
+	  }
+
+	  // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+	  // https://git.io/vznFH
+	  var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+	  return mq(query);
+	}
+
+	const minWidth = 1140;
+
+	$('.dropdown-toggle').on('mouseover', function() {
+		if ( window.innerWidth >= minWidth && !is_touch_device() ) {
+			$(this).dropdown('toggle');			
+		}
+	});
+
+	$('.dropdown-toggle').on('click', function(e) {
+		// if dropdown has been shown
+		if ( window.innerWidth >= minWidth && !is_touch_device() ) {
+			$(this).dropdown('dispose');
+			window.location.href = $(this).attr('href');
+		}
+		else {
+			if ( $(this).parent().hasClass('show') ) {
+				window.location.href = $(this).attr('href');
+			}
+		}
+	});
+
+	$('.dropdown-menu').on('mouseleave', function() {
+		if ( window.innerWidth >= minWidth ) {
+			$(this).siblings().dropdown('toggle');
+		}
+	});
+
+	$('.dropdown-toggle').on('shown.bs.dropdown', function() {
+		//this.
+	});
+
 });

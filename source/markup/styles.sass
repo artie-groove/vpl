@@ -97,8 +97,11 @@ body
 		margin-right: 0
 		min-width: 200px
 
-.dropdown-toggle::after
-	display: none
+.dropdown-toggle
+	&:hover
+		text-decoration: underline
+	&::after
+		display: none
 
 .dropdown.show
 	a.nav-link
