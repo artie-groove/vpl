@@ -7108,6 +7108,9 @@ body {
   margin-right: 0;
   min-width: 200px; }
 
+.dropdown-toggle:hover {
+  text-decoration: underline; }
+
 .dropdown-toggle::after {
   display: none; }
 
