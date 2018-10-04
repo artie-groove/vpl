@@ -242,7 +242,7 @@ $(document).ready( () => {
 
 	$('.dropdown-toggle').on('mouseover', function() {
 		if ( window.innerWidth >= minWidth && !is_touch_device() ) {
-			$(this).dropdown('toggle');			
+			$(this).dropdown('toggle');
 		}
 	});
 
@@ -265,8 +265,10 @@ $(document).ready( () => {
 		}
 	});
 
-	$('.dropdown-toggle').on('shown.bs.dropdown', function() {
-		//this.
+	$('.dropdown-toggle').on('mouseout', function(e) {
+		if ( window.innerWidth >= minWidth && e.pageX <= $(this).offset().left ) {
+			$(this).dropdown('toggle');
+		}
 	});
 
 });
