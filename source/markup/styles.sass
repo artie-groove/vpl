@@ -76,6 +76,12 @@ body
 	&-light
 		.navbar-toggler
 			border: none
+			padding-left: 0
+			&:focus
+				outline: none
+
+.navbar-toggler-icon
+	margin-left: -2px
 
 .navbar-nav
 	line-height: 1.95rem
@@ -87,6 +93,8 @@ body
 
 .nav-link
 	color: #000 !important
+	&:focus
+		outline: none
 
 .navbar-collapse
 	& > *
@@ -101,7 +109,17 @@ body
 	&:hover
 		text-decoration: underline
 	&::after
-		display: none
+	    display: block
+	    content: attr(title)
+	    font-weight: bold
+	    height: 0
+	    overflow: hidden
+	    visibility: hidden
+	    margin-left: 0
+	    width: unset
+	    border: unset
+	    vertical-align: unset
+
 
 .dropdown.show
 	a.nav-link
@@ -123,7 +141,6 @@ body
 			background-color: #000
 			text-decoration: underline
 	+media-breakpoint-only(xl)
-		padding-top: 0
 		top: -1rem
 		padding-top: 4rem
 	+media-breakpoint-down(lg)
