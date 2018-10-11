@@ -56,7 +56,7 @@ mixin list-submenu-items(category)
 				a.nav-link(href='#') #{item}
 
 mixin showcase-item(rpath, title)
-	.card.showcase-item.proportional
+	.card.showcase-item
 		a(href='#')
 			img(src=`assets/images/catalog/${rpath}`, alt=`${title}`)
 		.card-body
@@ -84,9 +84,5 @@ mixin navbar-catalog-items(itemId, title)
 				li
 					a(href="#") Produkte:
 				li #{title}
-			//-
-				a(href='#') Produkte:
-				|
-				b #{title}
 		ul.nav.nav-submenu.flex-row
 			+list-submenu-items(itemId)
