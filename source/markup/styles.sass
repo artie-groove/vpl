@@ -151,6 +151,12 @@ body
 	max-width: 1536px
 
 #carouselMain
+	.carousel-item
+		+media-breakpoint-down(sm)
+			overflow: hidden
+			.w-100
+				height: 300px
+				width: auto !important
 	.carousel-caption
 		top: 0
 		bottom: 0
@@ -848,13 +854,6 @@ $light-grey: #efefef
 		cursor: pointer
 
 
-
-
-
-+media-breakpoint-down(xs)
-	.carousel-item .w-100
-		max-width: 200%
-		width: auto
 
 +media-breakpoint-only(md)
 	.columns-md-2
