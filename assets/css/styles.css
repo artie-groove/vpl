@@ -7162,6 +7162,13 @@ body {
 .carousel {
   max-width: 1536px; }
 
+@media (max-width: 767.98px) {
+  #carouselMain .carousel-item {
+    overflow: hidden; }
+    #carouselMain .carousel-item .w-100 {
+      height: 300px;
+      width: auto !important; } }
+
 #carouselMain .carousel-caption {
   top: 0;
   bottom: 0;
@@ -7837,11 +7844,6 @@ ul.catalog-breadcrumbs {
 
 .link:hover {
   cursor: pointer; }
-
-@media (max-width: 575.98px) {
-  .carousel-item .w-100 {
-    max-width: 200%;
-    width: auto; } }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .columns-md-2 {
