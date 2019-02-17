@@ -7264,8 +7264,8 @@ body {
     background-position-x: right; }
 
 #carouselTuren .thumbs li {
-  width: 20%;
-  margin-right: 3%; }
+  width: 18%;
+  margin-right: 2%; }
   #carouselTuren .thumbs li:not(:nth-last-of-type(-n+5)) {
     margin-bottom: 3%; }
 
@@ -7347,7 +7347,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  justify-content: start;
+  align-content: flex-start;
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 0;
@@ -7360,7 +7360,6 @@ body {
       cursor: pointer; }
   @media (min-width: 768px) {
     .carousel-product .thumbs {
-      justify-content: flex-end;
       padding-left: 0;
       padding-right: 2%; } }
 
@@ -7398,7 +7397,8 @@ body {
     .carousel-product .viewport .covers {
       padding: 15% 0; } }
   .carousel-product .viewport .viewport-placeholder {
-    display: none; }
+    display: none;
+    position: relative; }
     @media (max-width: 767.98px) {
       .carousel-product .viewport .viewport-placeholder {
         height: 100% !important; } }
@@ -7407,6 +7407,8 @@ body {
         padding: 15% 0; }
         .carousel-product .viewport .viewport-placeholder.h-50 {
           padding: 0; } }
+    .carousel-product .viewport .viewport-placeholder img {
+      position: absolute; }
   .carousel-product .viewport .img-placeholder {
     height: 0;
     padding-bottom: 100%;
