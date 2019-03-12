@@ -54,6 +54,10 @@ $(document).ready( () => {
 	$('.thumbs img').on('click', function() {
 		let src = $(this).attr('src');
 		$(this).closest('.carousel-item').find('.viewport-placeholder img').attr('src', src);
+		let caption = $(this).siblings('.caption');
+		if ( caption.length ) {
+			$(this).closest('.carousel-item').find('.viewport > .caption').text(caption.text());
+		}
 	});
 
 	let vendorFilter = $('.vendor-filter');
@@ -105,22 +109,18 @@ $(document).ready( () => {
 			viewportItem = viewport.children('.covers');
 			let activeParamIdx = $(tab).find('.param-switcher li.active').index();
 			let img = viewportItem.find('img').eq(activeParamIdx);
-			// img.attr('src', img.attr('src'));
+			viewport.children().hide();
+			viewportItem.show();
 		}
 		else {
 			let thumbs = $(slide).find('.product-tabs').children().eq(tabIdx).find('.thumbs');
 			let src = thumbs.children('li').eq(0).children('img').attr('src');
 			let placeholder = viewport.find('.viewport-placeholder');
 			placeholder.find('img').attr('src', src);
-			let halved = thumbs.data('halved');
-			if ( halved ) {
-				placeholder.addClass('h-50');
-			}
-			else placeholder.removeClass('h-50');
 			viewportItem = placeholder;
+			viewport.children().hide();
+			viewport.children().not('.covers').show();
 		}
-		viewport.children().hide();
-		viewportItem.show();
 	}
 
 	let carouselProduct = $('.carousel-product');
