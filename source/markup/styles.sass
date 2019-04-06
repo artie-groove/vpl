@@ -52,6 +52,7 @@ $border-radius-sm: 0
 		content: ""
 		width: 100%
 		padding-top: ($height / $width) * 100%
+
 =aspect-ratio-container
 	position: absolute
 	top: 0
@@ -684,33 +685,6 @@ nav
 		+media-breakpoint-only(xl)
 			+make-col(4)
 
-		.showcase-item
-			height: 0
-			padding-top: 148.15%
-			position: relative
-			overflow: hidden
-			& > a
-				position: absolute
-				display: flex
-				align-items: flex-end
-				bottom: 50%
-				height: 50%
-				width: 100%
-				padding: 25% 25% 0
-				img
-					display: block
-					margin: 0 auto
-					max-width: 100%
-					max-height: 100%
-			.card-title
-				margin-top: 2rem
-			.card-body
-				position: absolute
-				height: 50%
-				bottom: 0
-				right: 10%
-				left: 10%
-
 		+media-breakpoint-between(md, lg)
 			&:nth-of-type(odd):last-of-type
 				+make-col(12)
@@ -865,7 +839,6 @@ $light-grey: #efefef
 			left: 50%
 			transform: translate(-50%, -50%)
 
-
 .modal-carousel
 	padding-right: 0 !important
 	.modal-dialog
@@ -888,7 +861,6 @@ $light-grey: #efefef
 		top: 0
 		right: 0
 
-
 .modal
 	max-width: 1524px
 	margin-right: auto
@@ -899,15 +871,74 @@ $light-grey: #efefef
 	&:hover
 		cursor: pointer
 
-
-
 +media-breakpoint-only(md)
 	.columns-md-2
 		column-count: 2
 
+.fixed-height-md
+	+media-breakpoint-down(sm)
+		& > img
+			width: 100%
+	+media-breakpoint-up(md)
+		height: 150%
+		overflow: hidden
+		& > img
+			height: 100%
+			position: relative
+			left: 50%
+			transform: translateX(-50%)
+
+.showcase-item
+	height: 0
+	padding-top: 148.15%
+	position: relative
+	overflow: hidden
+	& > :first-child
+		position: absolute
+		display: flex
+		align-items: flex-end
+		bottom: 50%
+		height: 50%
+		width: 100%
+		padding: 25% 25% 0
+		img
+			display: block
+			margin: 0 auto
+			max-width: 100%
+			max-height: 100%
+	.card-body
+		position: absolute
+		height: 50%
+		bottom: 0
+		right: 10%
+		left: 10%
+		.card-title
+			margin-top: 2rem
+
+.showcase-item-standalone
+	+media-breakpoint-between(md, lg)
+		padding-top: 72.3%
+		& > :first-child
+			padding: 10% 10% 0
+
+	+media-breakpoint-only(xl)
+		padding-top: 47.7%
+		& > :first-child
+			padding: 7% 7% 0
 
 
+.block-proportional
+	+aspect-ratio-wrapper(1, 1.4)
+	&-inner
+		+aspect-ratio-container()
+	.showcase-item
+		height: 100%
+		padding-top: 0
+	
 
-
-
-
+.block-image
+	img
+		position: relative
+		height: 100%
+		left: 50%
+		transform: translateX(-50%)
