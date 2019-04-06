@@ -2,28 +2,34 @@ extends ../templates/main.tpl.py.pug
 
 block content
 	.py-1.py-md-2
+
 	include ../templates/includes/carousel-main.py.pug
+
 	.bg-light#callbackFront
 		include ../templates/includes/callback-form.py.pug
+
 	.d-none.d-md-block.py-5
+
 	.wrapper.my-2.my-md-5
 		.row.my-5.align-items-stretch
 			.col-md-6.col-xl-4
 				.block-proportional
 					.block-proportional-inner
-						.card.showcase-item.showcase-item-standalone.py-0(style='background-color: #f4f6b5')
+						.card.showcase-item.showcase-item-standalone(style='background-color: #f4f6b5')
 							//-img(src='assets/images/products/mb-45.png', width='134', height='232', alt='MB-45')
 							.image-wrapper
-								img.img-fluid.w-100.my-3.my-md-0(src='assets/images/main/mb-45-installed.jpg')
+								img(src='assets/images/main/mb-45-installed.jpg')
 							.card-body
 								h5.card-title MB-45
 								.card-text
 									| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
+
 			.col-md-6.col-xl-4.text-center
 				//-img.img-fluid.w-100.my-3.my-md-0(src='assets/images/main/mb-45-installed.jpg', alt='MB-45 installed')
 				.block-proportional.block-image
 					.block-proportional-inner
 						img.my-3.my-md-0(src='assets/images/carousel-main/04.jpg', alt='MB-45 installed')
+
 			.col-12.col-xl-4
 				.card.showcase-description.justify-content-center.my-3.my-sm-4.my-md-5.my-xl-0.w-75.mx-auto
 					h5.card-title Minimalism
@@ -45,6 +51,7 @@ block content
 							| MB-45 kann zum Bau von Außenelementen dienen, aber nur dort, wo keine Thermoisolierung erforderlich ist.
 
 		.py-5.d-none.d-lg-block
+
 		.row.mt-2.mt-md-5
 			.col-12.col-xl-4
 				.card.showcase-description.mb-3.mb-lg-0.w-75.mx-auto
@@ -52,12 +59,14 @@ block content
 					.card-text.pb-2.columns-md-2
 						p Ein wesentlicher Bestandteil der Alufenster, der Funktionalität und Ästhetik beeinflusst, sind zweifellos Zusätze.
 						p Wir bieten ein breites Spektrum von Zusätzen, u. a. Fenstergriffe, Handgriffe, Oberlichtschließer an.
+
 			.col-md-6.col-xl-4
 				.card.showcase-description
 					img.card-img-top(src='assets/images/main/description-01.jpg', alt='Descrption 1')
 					.mx-auto.mx-md-0
 						h5.card-title lackierte Fenstergriffe
 						.card-text Um die Optik des Fensters noch vorteilhafter erscheinen zu lassen, bieten wir Ihnen lackierte Fenstergriffe an. 
+
 			.col-md-6.col-xl-4
 				.card.showcase-description.mt-5.mt-md-0
 					img.card-img-top(src='assets/images/main/description-02.jpg', alt='Descrption 2')
