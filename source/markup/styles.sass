@@ -879,18 +879,18 @@ $light-grey: #efefef
 	.columns-md-2
 		column-count: 2
 
-.fixed-height-md
-	+media-breakpoint-down(sm)
-		& > img
-			width: 100%
-	+media-breakpoint-up(md)
-		height: 150%
-		overflow: hidden
-		& > img
-			height: 100%
-			position: relative
-			left: 50%
-			transform: translateX(-50%)
+// .fixed-height-md
+// 	+media-breakpoint-down(sm)
+// 		& > img
+// 			width: 100%
+// 	+media-breakpoint-up(md)
+// 		height: 150%
+// 		overflow: hidden
+// 		& > img
+// 			height: 100%
+// 			position: relative
+// 			left: 50%
+// 			transform: translateX(-50%)
 
 .showcase-item
 	height: 0
@@ -921,19 +921,13 @@ $light-grey: #efefef
 
 .showcase-item-standalone
 	+media-breakpoint-between(md, lg)
-		//padding-top: 72.3%
 		padding-top: 469 / 962 * 100%
 		& > :first-child
-			padding: 6% 10% 0
+			padding: 12% 10% 0
 
 	+media-breakpoint-only(xl)
-		//padding-top: 47.7%
-		// &::before
-		// 	content: ' '
-		// 	display: block
-		// 	padding-top: calc(100% * (640 / 1420))
 		& > :first-child
-			padding: 4% 7% 0
+			padding: 14% 7% 0
 
 
 .proportional
@@ -952,8 +946,14 @@ $light-grey: #efefef
 	+media-breakpoint-up(xl)
 		+aspect-ratio(1078.78, 481.01)
 	.showcase-item
-		height: 100%
-		padding-top: 0
+		+media-breakpoint-between(md, lg)
+			& > :first-child
+				padding: 6% 10% 0
+
+		+media-breakpoint-only(xl)
+			& > :first-child
+				padding: 4% 7% 0
+
 
 
 .proportional-image
