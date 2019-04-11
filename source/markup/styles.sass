@@ -47,7 +47,7 @@ $border-radius-sm: 0
 
 =aspect-ratio-wrapper($width, $height) 
 	position: relative
-	&:before
+	&::before
 		display: block
 		content: ""
 		width: 100%
@@ -60,6 +60,10 @@ $border-radius-sm: 0
 	right: 0
 	bottom: 0
 	overflow: hidden
+
+=aspect-ratio($width, $height)
+	&::before
+		padding-top: ($height / $width) * 100%
 
 html
 	font-size: 14px
@@ -932,32 +936,28 @@ $light-grey: #efefef
 			padding: 4% 7% 0
 
 
-.block-proportional
+.proportional
 	+aspect-ratio-wrapper(1, 1.4)
-	&-inner
-		+aspect-ratio-container()
 	.showcase-item
 		height: 100%
 		padding-top: 0
 
-.block-proportional-fullwidth
-	+aspect-ratio-wrapper(1, 1.4)
+.proportional-inner
+	+aspect-ratio-container()
+
+.proportional-fullwidth
+	+aspect-ratio(1, 1.4)
 	+media-breakpoint-between(md, lg)
-		+aspect-ratio-wrapper(846.98, 576.08)
+		+aspect-ratio(846.98, 576.08)
 	+media-breakpoint-up(xl)
-		+aspect-ratio-wrapper(1078.78, 481.01)
-	&-inner
-		+aspect-ratio-container()
+		+aspect-ratio(1078.78, 481.01)
 	.showcase-item
 		height: 100%
 		padding-top: 0
 
 
-.block-proportional-image
-	+aspect-ratio-wrapper(540, 400)
-	&-inner
-		+aspect-ratio-container()
-
+.proportional-image
+	+aspect-ratio(540, 400)
 
 .block-image
 	img
@@ -965,3 +965,4 @@ $light-grey: #efefef
 		height: 100%
 		left: 50%
 		transform: translateX(-50%)
+
