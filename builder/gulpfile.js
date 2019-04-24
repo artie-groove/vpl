@@ -3,6 +3,7 @@ var watch = require('gulp-watch');
 var rename = require("gulp-rename");
 var pug = require('gulp-pug');
 let sass = require('gulp-sass');
+sass.compiler = require('node-sass');
 // var sourcemaps = require('gulp-sourcemaps');
 var server = require('gulp-server-livereload');
 var yargs = require('yargs');

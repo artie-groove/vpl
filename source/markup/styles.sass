@@ -591,10 +591,16 @@ nav
 
 .card-title
 	font-size: 2rem
-	margin-bottom: 1.5rem
+	margin-bottom: 1rem
+	height: 2.5rem
+	white-space: nowrap
+	+media-breakpoint-up(sm)
+		margin-bottom: 1.5rem
 
 .card-text
-	line-height: 2rem
+	line-height: 1.5rem
+	+media-breakpoint-up(sm)
+		line-height: 2rem
 
 .showcase-item
 	text-align: center
@@ -904,7 +910,7 @@ $light-grey: #efefef
 		bottom: 50%
 		height: 50%
 		width: 100%
-		padding: 25% 25% 0
+		padding: 15% 15% 0
 		img
 			display: block
 			margin: 0 auto
@@ -914,10 +920,14 @@ $light-grey: #efefef
 		position: absolute
 		height: 50%
 		bottom: 0
-		right: 10%
-		left: 10%
+		right: 5%
+		left: 5%
+		+media-breakpoint-up(sm)
+			right: 10%
+			left: 10%
 		.card-title
-			margin-top: 2rem
+			+media-breakpoint-up(sm)
+				margin-top: 2rem
 
 .showcase-item-standalone
 	+media-breakpoint-between(md, lg)
@@ -963,6 +973,8 @@ $light-grey: #efefef
 	img
 		position: relative
 		height: 100%
+		min-width: 100%
 		left: 50%
 		transform: translateX(-50%)
+		object-fit: cover
 
