@@ -8280,6 +8280,8 @@ body {
   @media (max-width: 767.98px) {
     #carouselMain .carousel-caption {
       font-size: 1rem; } }
+  #carouselMain .carousel-caption .row {
+    display: block; }
   #carouselMain .carousel-caption .lead {
     font-size: 1.05em;
     font-weight: 400; }
@@ -8647,18 +8649,34 @@ nav .nav-submenu {
     padding-top: 0;
     padding-left: 1rem; }
 
+nav .vendor-filter a.active > img, nav .vendor-filter img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0); }
+
+nav .vendor-filter a.active .img_wrapper img:first-child {
+  opacity: 1 !important; }
+
+nav .vendor-filter a.active .img_wrapper img:last-child {
+  opacity: 0 !important; }
+
 nav .vendor-filter {
   font-size: 1.1rem; }
+  nav .vendor-filter > * {
+    padding-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+    height: 50px;
+    vertical-align: middle; }
   nav .vendor-filter a {
     margin: 0 1.5rem;
     text-decoration: underline; }
-    nav .vendor-filter a.active img {
-      filter: grayscale(0%); }
+  nav .vendor-filter .img_wrapper {
+    max-height: 30px; }
   nav .vendor-filter img {
     max-height: 30px;
-    filter: grayscale(100%); }
-    nav .vendor-filter img:hover {
-      filter: grayscale(0%); }
+    filter: url("../js/filters.svg#grayscale");
+    filter: gray;
+    -webkit-filter: grayscale(1); }
 
 .card-title {
   font-size: 2rem;
@@ -8963,6 +8981,7 @@ ul.catalog-breadcrumbs {
     position: absolute;
     display: flex;
     align-items: flex-end;
+    left: 0;
     bottom: 50%;
     height: 50%;
     width: 100%;
