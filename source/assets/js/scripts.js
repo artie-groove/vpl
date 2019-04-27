@@ -2,8 +2,8 @@ $(document).ready( () => {
 	let carouselMain = $('#carouselMain');
 	let callbackForm = $('#callbackForm');
 	let callbackFormTriggerBtn = $('.link-callback');
-	let carouselGalerie = $('#carouselGalerie');
-	let carouselAluschale = $('#carouselAluschale');
+	//let carouselGalerie = $('#carouselGalerie');
+	//let carouselAluschale = $('#carouselAluschale');
 
 	function addBlockToggler(btnTrigger, objTop, objBottom) {
 		btnTrigger.on('click', () => {
@@ -16,9 +16,9 @@ $(document).ready( () => {
 		});
 	}
 
-	
+
 	addBlockToggler(callbackFormTriggerBtn, carouselMain, callbackForm);
-	
+
 
 	let baseColor = $('.showcase').data('color');
 	let items, n;
@@ -52,12 +52,15 @@ $(document).ready( () => {
 	});
 
 	$('.thumbs img').on('click', function() {
-		let src = $(this).attr('src');
-		$(this).closest('.carousel-item').find('.viewport-placeholder img').attr('src', src);
-		let caption = $(this).siblings('.caption');
-		if ( caption.length ) {
+        let thumbs = $(this).parent().parent();
+        let placeholder = $(this).closest('.carousel-item').find('.viewport-placeholder');
+        let caption = $(this).siblings('.caption');
+        updateViewportImage(placeholder, $(this), thumbs, caption, true);
+		//$(this).closest('.carousel-item').find('.viewport-placeholder .img0').attr('src', src);
+
+		/*if ( caption.length ) {
 			$(this).closest('.carousel-item').find('.viewport > .caption').text(caption.text());
-		}
+		}*/
 	});
 
 	let vendorFilter = $('.vendor-filter');
@@ -109,19 +112,75 @@ $(document).ready( () => {
 			viewportItem = viewport.children('.covers');
 			let activeParamIdx = $(tab).find('.param-switcher li.active').index();
 			let img = viewportItem.find('img').eq(activeParamIdx);
-			viewport.children().hide();
+			// img.attr('src', img.attr('src'));
+            viewport.children().hide();
 			viewportItem.show();
 		}
 		else {
 			let thumbs = $(slide).find('.product-tabs').children().eq(tabIdx).find('.thumbs');
-			let src = thumbs.children('li').eq(0).children('img').attr('src');
+            let img0 = thumbs.children('li').eq(0).children('img');
+			let src = img0.attr('src');
 			let placeholder = viewport.find('.viewport-placeholder');
-			placeholder.find('img').attr('src', src);
+            let caption = img0.siblings('.caption');
+            updateViewportImage(placeholder, img0, thumbs, caption, false);
+			//placeholder.find('.img0').attr('src', src);
+			/*let halved = thumbs.data('halved');
+			if ( halved ) {
+				placeholder.addClass('h-50');
+			}
+			else placeholder.removeClass('h-50');*/
 			viewportItem = placeholder;
-			viewport.children().hide();
+            viewport.children().hide();
 			viewport.children().not('.covers').show();
 		}
 	}
+
+    function updateViewportImage(placeholder, img, thumbs, caption, byClick = false)
+    {
+        let src = img.attr('src');
+        let layer = parseInt(thumbs.data('layer'));
+        let img0 = placeholder.find('.img0');
+        let captionDiv = placeholder.next();
+
+        if (layer === 0) {
+            placeholder.find('img').each(function(){
+                $(this).hide();
+                captionDiv.text('');
+                $(this).attr('data-caption', '');
+            });
+            img0.attr('src', src);
+            img0.show();
+
+            if (caption.length) {
+                captionDiv.text(caption.text());
+            }
+        } else if (layer > 0) {
+            img0.hide();
+            captionDiv.text('');
+
+            let imgClass = '.img' + layer.toString();
+            let imgLayer = placeholder.find(imgClass);
+            if (imgLayer.is(":hidden") || byClick) {
+                imgLayer.attr('src', src);
+                imgLayer.attr('data-caption', caption.text());
+                imgLayer.show();
+            }
+
+            let captionText = '';
+            placeholder.find('div.layers img').not('.img0').each(function(){
+                if ($(this).attr('data-caption') != '') {
+                    //console.log('123');
+                    if (captionText == '') {
+                        console.log('111');
+                        captionText += $(this).attr('data-caption');
+                    } else {
+                        captionText += ', ' + $(this).attr('data-caption');
+                    }
+                }
+            });
+            captionDiv.text(captionText);
+        }
+    }
 
 	let carouselProduct = $('.carousel-product');
 	let productTabSwitcher = carouselProduct.find('.product-tab-switcher');
@@ -146,9 +205,9 @@ $(document).ready( () => {
 		return cleanText;
 	}
 
-	
+
 	// When the product slider switches slides
-	carouselProduct.on('slide.bs.carousel', function(e) {
+	/*carouselProduct.on('slide.bs.carousel', function(e) {
 		let target = $(e.relatedTarget); // the new slide (.carousel-item)
 		// Switching product tabs content (description, colors, etc.)
 		productTabSwitcher.children('.active').removeClass('active');
@@ -176,8 +235,8 @@ $(document).ready( () => {
 				$(`#${key}`).attr('src', value);
 			});
 		}
-		
-		function swapGalleryImages(elementId, imagesList) {
+
+		/*function swapGalleryImages(elementId, imagesList) {
 			let galleryItems = $(elementId).find('.carousel-inner');
 			galleryItems.children().remove();
 			imagesList.forEach( (src, idx) => {
@@ -203,19 +262,16 @@ $(document).ready( () => {
 		}
 		else {
 			// TODO: hide gallery block
-		}
-	});
+		}*/
+	//});
 
 	let paramSwitcher = $('.param-switcher');
 	paramSwitcher.find('li').on('click', function() {
-		if ( $(this).is('.active') ) return;
+		if ($(this).is('.active')) {
+            return;
+        }
 		$(this).siblings('.active').removeClass('active');
 		$(this).addClass('active');
-		let paramSummary = paramSwitcher.children('.param-summary');
-		let seals = $(this).data('seals');
-		let chambers = $(this).data('chambers');
-		paramSummary.find('.seals b').html(seals);
-		paramSummary.find('.chambers b').html(chambers);
 		let viewport = carouselProduct.find('.carousel-item.active .viewport');
 		let idx = $(this).index();
 		viewport.children('.covers').children().hide();

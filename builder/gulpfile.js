@@ -5,6 +5,7 @@ var pug = require('gulp-pug');
 let sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 // var sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
 var server = require('gulp-server-livereload');
 var yargs = require('yargs');
 var fs = require('fs');
@@ -175,9 +176,13 @@ gulp.task('watch', (cb) => {
 		compileStyles(changedFile.path, bs.router.dstStylesPath)
 	});
 
-	watch(`${bs.router.srcAssetsPath}/js/*.js`, (changedFile) => {
+	watch(`${bs.router.srcAssetsPath}/js/scripts.js`, (changedFile) => {
 		console.log(`Changed: ${changedFile.path}`);
-		io.copy(changedFile.path, `${bs.router.srcAssetsPath}/js/`, `${bs.router.dstAssetsPath}/js`);
+		gulp.src(changedFile.path)
+			.pipe(babel({
+            	presets: ['@babel/env']
+	        }))
+	        .pipe(gulp.dest(`${bs.router.dstAssetsPath}/js/`));
 	});
 
 	cb();

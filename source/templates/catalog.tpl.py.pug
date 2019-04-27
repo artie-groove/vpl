@@ -6,3 +6,9 @@ block navbar
 			
 block footer
 	include ../templates/includes/footer-simple.py.pug
+
+append scripts-delayed
+	script(type='text/javascript' src='assets/js/modernizr.custom.js')
+	script(type='text/javascript' src='assets/js/imagesloaded.pkgd.min.js')
+	script(type='text/javascript' src='assets/js/grayscale.js')
+	script(type='text/javascript' src='assets/js/vendor-filters.js')

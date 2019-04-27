@@ -196,6 +196,8 @@ body
 		+media-breakpoint-down(sm)
 			&
 				font-size: 1rem
+		.row
+			display: block
 		.lead
 			font-size: 1.05em
 			font-weight: 400
@@ -571,21 +573,47 @@ nav
 			font-weight: initial
 			padding-top: 0
 			padding-left: 1rem
+	%no-filter
+		filter: none // Applies to FF + IE
+		-webkit-filter: grayscale(0)
+	%no-filter-ie10
+		img
+			&:first-child
+				opacity: 1 !important
+			&:last-child
+				opacity: 0 !important
 	.vendor-filter
 		font-size: 1.1rem
+		> *
+			padding-bottom: 1rem 
+			display: inline-flex
+			align-items: center
+			height: 50px
+			vertical-align: middle
+		&-title
 		a
 			margin: 0 1.5rem
 			text-decoration: underline
 			&.active
-				img
-					filter: grayscale(0%)
+				> img
+					@extend %no-filter
+				.img_wrapper
+					@extend %no-filter-ie10
+				
+		.img_wrapper
+			max-height: 30px
+			&:hover
+				%no-filter-ie10
 		img
 			max-height: 30px
-			filter: grayscale(100%)
+			filter: url('../js/filters.svg#grayscale') // Firefox 3.5+
+			filter: gray // IE6-9
+			-webkit-filter: grayscale(1) // Webkit Nightlies, Google Chrome Canary and Microsoft Edge
 			&:hover
-				filter: grayscale(0%)
+				@extend %no-filter
 
-				
+
+	
 
 // Product cards customization
 
@@ -907,6 +935,7 @@ $light-grey: #efefef
 		position: absolute
 		display: flex
 		align-items: flex-end
+		left: 0
 		bottom: 50%
 		height: 50%
 		width: 100%
