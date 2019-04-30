@@ -99,30 +99,34 @@ $(document).imagesLoaded( function() {
 		var $images = $(".grayscale img"), imageCount = $images.length, counter = 0;
 
 		// One instead of on, because it need only fire once per image
-		$images.one("load",function(){
+		$images.one("load", function() {
 			// increment counter every time an image finishes loading
 			counter++;
 			if (counter == imageCount) {
 				// do stuff when all have loaded
 				grayscale($('.grayscale img'));
-				// $(".grayscale img").hover(
-				// 	function () {
-				// 		grayscale.reset($(this));
-				// 	}, 
-				// 	function () {
-				// 		grayscale($(this));
-				// 	}
-				// );
+				
 				$(".grayscale .active img").click(
 					function () {
 						grayscale.reset($(this));
 					}
 				);
+
 				$(".grayscale :not(.active) img").click(
+					function () {
+						// grayscale($(this));
+					}
+				);
+
+				$(".grayscale img").hover(
+					function () {
+						grayscale.reset($(this));
+					}, 
 					function () {
 						grayscale($(this));
 					}
 				);
+				
 			}
 		}).each(function () {
 		if (this.complete) {

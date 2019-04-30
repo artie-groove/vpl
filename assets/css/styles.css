@@ -8653,10 +8653,10 @@ nav .vendor-filter a.active > img, nav .vendor-filter img:hover {
   filter: none;
   -webkit-filter: grayscale(0); }
 
-nav .vendor-filter a.active .img_wrapper img:first-child {
+nav .vendor-filter a.active .img_wrapper img:first-child, nav .vendor-filter .img_wrapper:hover img:first-child {
   opacity: 1 !important; }
 
-nav .vendor-filter a.active .img_wrapper img:last-child {
+nav .vendor-filter a.active .img_wrapper img:last-child, nav .vendor-filter .img_wrapper:hover img:last-child {
   opacity: 0 !important; }
 
 nav .vendor-filter {
