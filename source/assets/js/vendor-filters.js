@@ -42,7 +42,7 @@ $(document).imagesLoaded( function() {
 	}
 	 
 	 //Grayscale images only on browsers IE10+ since they removed support for CSS grayscale filter
-	 if(brwoser == "ie10" || brwoser == "ie11" ){
+	 if(brwoser == "ie10" || brwoser == "ie11"){
 	 
 		//If the browser supports Filters, then we assume that it is Microsoft Edge
 		if (Modernizr.cssfilters){
@@ -58,8 +58,6 @@ $(document).imagesLoaded( function() {
 				});
 				this.src = grayscaleIe(this.src);
 			});
-			
-
 			
 			// Quick animation on IE10+ 
 			// $('.grayscale img').hover(
@@ -94,20 +92,32 @@ $(document).imagesLoaded( function() {
 				return canvas.toDataURL();
 			};
 		};
-	 };
-
-	// If the browser does not support CSS filters filters, we are applying grayscale.js function
+	 }
+	// If the browser does not support CSS filters, we are applying grayscale.js function
 	// This part of Grayscale images applies to those browsers that do not support CSS filters
-	if (!Modernizr.cssfilters) {
+	 else if (!Modernizr.cssfilters) {
 		var $images = $(".grayscale img"), imageCount = $images.length, counter = 0;
 
 		// One instead of on, because it need only fire once per image
-		$images.one("load",function(){
+		$images.one("load", function() {
 			// increment counter every time an image finishes loading
 			counter++;
 			if (counter == imageCount) {
 				// do stuff when all have loaded
 				grayscale($('.grayscale img'));
+				
+				$(".grayscale .active img").click(
+					function () {
+						grayscale.reset($(this));
+					}
+				);
+
+				$(".grayscale :not(.active) img").click(
+					function () {
+						// grayscale($(this));
+					}
+				);
+
 				$(".grayscale img").hover(
 					function () {
 						grayscale.reset($(this));
@@ -116,6 +126,7 @@ $(document).imagesLoaded( function() {
 						grayscale($(this));
 					}
 				);
+				
 			}
 		}).each(function () {
 		if (this.complete) {
