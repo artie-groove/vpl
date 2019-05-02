@@ -8705,7 +8705,9 @@ nav .vendor-filter {
   .showcase-item .card-body {
     flex-grow: 0;
     padding-left: 2rem;
-    padding-right: 2rem; }
+    padding-right: 2rem;
+    max-width: 600px;
+    margin: 0 auto; }
   .showcase-item img {
     flex-grow: 0;
     max-width: 75%;
@@ -8714,7 +8716,8 @@ nav .vendor-filter {
     height: auto;
     margin-top: 5%; }
   .showcase-item ul {
-    text-align: left; }
+    text-align: left;
+    padding-left: 1.2em; }
 
 .showcase-description {
   border: 0;
