@@ -6,11 +6,11 @@ block navbar-content
 block content
 	.wrapper.showcase.showcase-subcategories(data-color='#f4f6b5')
 		.row.align-items-stretch
-			.col
+			+showcase-item-wrapper
 				+showcase-item('schiebefenster/pvc-fenster.png', 'PVC-Fenster')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('schiebefenster/aluminium-fenster.png', 'Aluminium-Fenster')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('schiebefenster/zubehor.png', 'Zubehör')
 			
 

@@ -86,3 +86,9 @@ mixin navbar-catalog-items(itemId, title)
 				li #{title}
 		ul.nav.nav-submenu.flex-row
 			+list-submenu-items(itemId)
+
+mixin showcase-item-wrapper()
+	.col
+		.proportional
+			.proportional-inner
+				block

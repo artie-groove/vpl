@@ -28,7 +28,7 @@ block content
 		.row.align-items-stretch
 			- let items = pvcTuren
 			each item, i in items
-				.col
+				+showcase-item-wrapper
 					- let itemCode = item.toLowerCase().replace(/ /g, "-");
 					+showcase-item(`fenster/pvc-fenster/${itemCode}.png`, item)
 						ul

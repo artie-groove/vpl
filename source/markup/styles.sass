@@ -636,17 +636,17 @@ nav
 	border: 0
 	justify-content: center
 	align-items: center
-	padding: 5rem 0
-	
 
 	.card-title
 		margin-top: .8rem
+
 	.card-body
 		flex-grow: 0
 		padding-left: 2rem
 		padding-right: 2rem
+		width: 100%
 		max-width: 600px
-		margin: 0 auto
+
 	img
 		flex-grow: 0
 		max-width: 75%
@@ -654,6 +654,7 @@ nav
 		width: auto
 		height: auto
 		margin-top: 5%
+
 	ul
 		text-align: left
 		padding-left: 1.2em
@@ -729,27 +730,30 @@ nav
 		+media-breakpoint-between(md, lg)
 			&:nth-of-type(odd):last-of-type
 				+make-col(12)
+				.proportional
+					+aspect-ratio(846.98, 576.08)
 				.showcase-item
-					padding-top: 72.3%
-					a
-						padding: 10% 10% 0
+					& > :first-child
+						padding: 6% 10% 0
 
 		+media-breakpoint-only(xl)
 			&:nth-of-type(3n+1):last-of-type
 				+make-col(12)
+				.proportional
+					+aspect-ratio(1078.78, 481.01)
 				.showcase-item
-					padding-top: 47.7%
-					a
-						padding: 7% 7% 0
+					& > :first-child
+						padding: 4% 7% 0
 
 					
 			&:nth-of-type(3n+1):nth-last-of-type(2),
 			&:nth-of-type(3n+2):last-of-type
 				+make-col(6)
+				.proportional
+					+aspect-ratio(698, 640)
 				.showcase-item
-					padding-top: 97.05%
-					a
-						padding: 15% 15% 0
+					& > :first-child
+						padding: 10% 10% 0
 		
 				
 
@@ -935,28 +939,21 @@ $light-grey: #efefef
 	position: relative
 	overflow: hidden
 	& > :first-child
-		position: absolute
-		display: flex
-		align-items: flex-end
-		left: 0
-		bottom: 50%
 		height: 50%
 		width: 100%
 		padding: 15% 15% 0
+		display: flex
+		align-items: flex-end
 		img
 			display: block
 			margin: 0 auto
 			max-width: 100%
 			max-height: 100%
 	.card-body
-		position: absolute
 		height: 50%
-		bottom: 0
-		right: 5%
-		left: 5%
+		padding: 0 15%
 		+media-breakpoint-up(sm)
-			right: 10%
-			left: 10%
+			padding: 0 10%
 		.card-title
 			+media-breakpoint-up(sm)
 				margin-top: 2rem

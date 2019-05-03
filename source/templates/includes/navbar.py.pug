@@ -2,26 +2,36 @@
 	nav.navbar.navbar-expand-xl.navbar-light.px-0
 		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarCollapse')
 			span.navbar-toggler-icon
-		a.navbar-brand.d-block.d-xl-none.mx-auto(href='/')
+		a.navbar-brand.d-block.d-xl-none.mx-auto(href='/generic-front.html')
 			img(src='assets/images/logo-base.svg', alt='Logo', width='43', height='34')
 		div.collapse.navbar-collapse#navbarCollapse.align-items-end.flex-wrap
 			.navbar-nav.flex-shrink-0
-				a.navbar-item.nav-link.active(href='#')
-					| Fenster
+				.navbar-item.dropdown
+					a.nav-link.dropdown-toggle#navbar-dropdown(href='catalog-category-fenster.html', title='Türen', role='button', data-toggle='dropdown')
+						| Fenster
+					.dropdown-menu
+						a.dropdown-item(href='product-fenster.html')
+							| PCV-Tür
+						a.dropdown-item(href='product-fenster.html')
+							| Aliminium-Tür
+						a.dropdown-item(href='product-fenster.html')
+							| Holztür
+						a.dropdown-item(href='product-fenster.html')
+							| Zubehör zur Tür					
 				.navbar-item.dropdown
 					a.nav-link.dropdown-toggle#navbar-dropdown(href='catalog-category-turen.html', title='Türen', role='button', data-toggle='dropdown')
 						| Türen
 					.dropdown-menu
-						a.dropdown-item(href='#')
+						a.dropdown-item(href='product-turen.html')
 							| PCV-Tür
-						a.dropdown-item(href='#')
+						a.dropdown-item(href='product-turen.html')
 							| Aliminium-Tür
-						a.dropdown-item(href='#')
+						a.dropdown-item(href='product-turen.html')
 							| Holztür
-						a.dropdown-item(href='#')
+						a.dropdown-item(href='product-turen.html')
 							| Zubehör zur Tür
 				.navbar-item.dropdown
-					a.nav-link.dropdown-toggle#navbar-dropdown(href='catalog-category-turen.html', title='Schiebefenster', role='button', data-toggle='dropdown')
+					a.nav-link.dropdown-toggle#navbar-dropdown(href='catalog-category-schiebefenster.html', title='Schiebefenster', role='button', data-toggle='dropdown')
 						| Schiebefenster
 					.dropdown-menu
 						a.dropdown-item(href='#')
@@ -32,13 +42,13 @@
 							| Holztür
 						a.dropdown-item(href='#')
 							| Zubehör zur Tür
-				a.navbar-item.nav-link(href='#')
+				a.navbar-item.nav-link(href='catalog-category-rollladen.html')
 					| Rollläden
-				a.navbar-item.nav-link(href='#')
+				a.navbar-item.nav-link(href='product-design.html')
 					| Design
 
 
-			a.navbar-brand.pb-0.text-center.d-none.d-xl-block(href='/')
+			a.navbar-brand.pb-0.text-center.d-none.d-xl-block(href='/generic-front.html')
 				+logo()
 			
 			block extras

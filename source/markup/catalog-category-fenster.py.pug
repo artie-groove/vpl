@@ -6,15 +6,15 @@ block navbar-content
 block content
 	.wrapper.showcase.showcase-subcategories(data-color='#c9eeff')
 		.row.align-items-stretch
-			.col
+			+showcase-item-wrapper
 				+showcase-item('fenster/pvc-fenster.png', 'PVC-Fenster')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('fenster/aluminium-fenster.png', 'Aluminium-Fenster')
-			.col
+			+showcase-item-wrapper
 				+showcase-description('Fenster')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('fenster/holzfenster.png', 'Holzfenster')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('fenster/fensterladen.png', 'Fensterläden')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('fenster/zubehor-fenster.png', 'Zubehör Fenster')
