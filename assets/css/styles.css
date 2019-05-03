@@ -8266,7 +8266,8 @@ body {
   #carouselMain .carousel-item img {
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    left: 50%;
+    transform: translate(-50%, -50%); }
     @media (max-width: 767.98px) {
       #carouselMain .carousel-item img {
         width: auto !important;
