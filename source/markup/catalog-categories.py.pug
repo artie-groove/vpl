@@ -9,15 +9,15 @@ block navbar-content
 block content
 	.wrapper.showcase.showcase-categories
 		.row.align-items-stretch
-			.col
+			+showcase-item-wrapper
 				+showcase-item('design.png', 'Design')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('fenster.png', 'Fenster')
 			.col
 				+showcase-description('Produkte')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('turen.png', 'Turen')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('shiebefenster.png', 'Shiebefenster')
-			.col
+			+showcase-item-wrapper
 				+showcase-item('rollladen.png', 'Rollladen')
