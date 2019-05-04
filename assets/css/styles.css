@@ -8699,15 +8699,28 @@ nav .vendor-filter {
   height: 100%;
   border: 0;
   justify-content: center;
-  align-items: center; }
-  .showcase-item .card-title {
-    margin-top: .8rem; }
-  .showcase-item .card-body {
-    flex-grow: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 15%; }
+  .showcase-item > :first-child {
+    height: 50%;
     width: 100%;
-    max-width: 600px; }
+    padding: 15% 15% 0;
+    display: flex;
+    align-items: flex-end; }
+    .showcase-item > :first-child img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      max-height: 100%; }
+  .showcase-item .card-title {
+    margin-top: 0; }
+  .showcase-item .card-body {
+    height: 50%;
+    width: 100%;
+    flex-grow: 0;
+    max-width: 600px;
+    padding: 2rem 0; }
   .showcase-item img {
     flex-grow: 0;
     max-width: 75%;
@@ -8718,6 +8731,16 @@ nav .vendor-filter {
   .showcase-item ul {
     text-align: left;
     padding-left: 1.2em; }
+
+@media (min-width: 768px) and (max-width: 1139.98px) {
+  .showcase-item-standalone {
+    padding-top: 48.7526%; }
+    .showcase-item-standalone > :first-child {
+      padding: 12% 10% 0; } }
+
+@media (min-width: 1140px) {
+  .showcase-item-standalone > :first-child {
+    padding: 14% 7% 0; } }
 
 .showcase-description {
   border: 0;
@@ -8974,42 +8997,6 @@ ul.catalog-breadcrumbs {
 @media (min-width: 768px) and (max-width: 991.98px) {
   .columns-md-2 {
     column-count: 2; } }
-
-.showcase-item {
-  height: 0;
-  padding-top: 148.15%;
-  position: relative;
-  overflow: hidden; }
-  .showcase-item > :first-child {
-    height: 50%;
-    width: 100%;
-    padding: 15% 15% 0;
-    display: flex;
-    align-items: flex-end; }
-    .showcase-item > :first-child img {
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
-      max-height: 100%; }
-  .showcase-item .card-body {
-    height: 50%;
-    padding: 0 15%; }
-    @media (min-width: 576px) {
-      .showcase-item .card-body {
-        padding: 0 10%; } }
-    @media (min-width: 576px) {
-      .showcase-item .card-body .card-title {
-        margin-top: 2rem; } }
-
-@media (min-width: 768px) and (max-width: 1139.98px) {
-  .showcase-item-standalone {
-    padding-top: 48.7526%; }
-    .showcase-item-standalone > :first-child {
-      padding: 12% 10% 0; } }
-
-@media (min-width: 1140px) {
-  .showcase-item-standalone > :first-child {
-    padding: 14% 7% 0; } }
 
 .proportional {
   position: relative; }
