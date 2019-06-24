@@ -17,7 +17,12 @@ $(document).ready(function () {
     });
   }
 
-  addBlockToggler(callbackFormTriggerBtn, carouselMain, callbackForm);
+  addBlockToggler(callbackFormTriggerBtn, carouselMain, callbackForm); // Раскрашивание карточек
+  // color[i] = spin(baseColor, -10deg * i)
+  // То есть, берётся базовый цвет (цвет первого элемента) и вычисляется конечный оттенок
+  // того же цвета (путём вращения цветового круга). Оттенки промежуточных элементов
+  // равномерно распределены между этими двумя граничными оттенками
+
   var baseColor = $('.showcase').data('color');
   var items, n; // subcategory list colors
 
@@ -64,7 +69,7 @@ $(document).ready(function () {
   });
   var carouselDesign = $('#carouselDesign');
   carouselDesign.on('slide.bs.carousel', function (e) {
-    btnNextOrPrevTriggered = carouselDesign.find('.carousel-control-prev:focus-within').length || carouselDesign.find('.carousel-control-next:focus-within').length;
+    var btnNextOrPrevTriggered = carouselDesign.find('.carousel-control-prev:focus-within').length || carouselDesign.find('.carousel-control-next:focus-within').length;
     if (!btnNextOrPrevTriggered) return;
     var dir = e.direction === 'left' ? 1 : -1;
     var currentItem = carouselDesign.find('.carousel-inner .active');
